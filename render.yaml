@@ -11,6 +11,7 @@ services:
       - {key: TZ, value: Asia/Kolkata}
       - {key: TRUST_PROXY, value: "1"}
       - {key: HTTPS_ONLY, value: "1"}
+      - {key: DATABASE_URL, sync: false}
       - {key: ADMIN_PASSWORD, generateValue: true}
       - {key: ADMIN_KEY, generateValue: true}
       - {key: ALERT_WEBHOOK_URL, sync: false}

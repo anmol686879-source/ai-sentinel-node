@@ -1,4 +1,5 @@
 /* Consistent online backup of the SQLite database: node scripts/backup.js [output-dir] */
+if(process.env.DATABASE_URL){console.error('This script backs up local SQLite databases only. Use Neon backups or pg_dump for PostgreSQL.');process.exit(1)}
 const {DatabaseSync}=require('node:sqlite'),path=require('path'),fs=require('fs');
 const src=process.env.DB_FILE||path.join(process.env.DATA_DIR||path.join(__dirname,'..','data'),'sentinel.db');
 const dir=process.argv[2]||path.join(path.dirname(src),'backups');fs.mkdirSync(dir,{recursive:true});

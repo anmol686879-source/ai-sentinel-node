@@ -3,7 +3,9 @@ RUN apk add --no-cache tzdata su-exec
 # TZ matters: off-hours detection uses the server clock. Change it to your bank's timezone.
 ENV NODE_ENV=production DATA_DIR=/app/data PORT=3000 TZ=Asia/Kolkata SEED_DEMO=0 SIMULATE=0
 WORKDIR /app
-COPY package.json server.js engine.js ./
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev
+COPY server.js engine.js storage.js ./
 COPY public ./public
 COPY seed ./seed
 COPY scripts ./scripts

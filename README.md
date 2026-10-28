@@ -1,6 +1,6 @@
 # AI Sentinel
 
-Insider-fraud early warning for banks, plus bank-message verification and loan-document verification. One Node.js server (REST API + website) with a SQLite database. No npm dependencies. Requires **Node.js 22.5+**.
+Insider-fraud early warning for banks, plus bank-message verification and loan-document verification. One Node.js server (REST API + website) with Neon PostgreSQL in production and SQLite for local development. Requires **Node.js 22.5+**.
 
 ## Two modes
 
@@ -16,7 +16,7 @@ The files in `seed/` are **synthetic** (placeholder IDs, `example.com` emails, "
 ## 1. Run locally
     npm start                 # demo mode  -> http://localhost:3000   (login admin / sentinel123, registration key SENTINEL-2026)
     npm run start:real        # real-data mode, empty
-    npm test                  # 15 API tests
+    npm test                  # API and persistence tests
 
 ## 2. Deploy
 Copy `.env.example` to `.env` and set `ADMIN_PASSWORD`, `ADMIN_KEY` and `TZ`. `.env.example` is already set for real-data mode.
@@ -26,11 +26,11 @@ Copy `.env.example` to `.env` and set `ADMIN_PASSWORD`, `ADMIN_KEY` and `TZ`. `.
     docker compose --profile https up -d --build    # automatic HTTPS for $DOMAIN (Caddy)
 Data lives in the `sentinel-data` volume. The container fixes volume ownership itself, so it also works on Render and Fly.
 
-**Render**: push to GitHub and create a Blueprint from `render.yaml`. The Blueprint uses Render's free plan with synthetic demo data and no persistent disk; the service may spin down when idle, and database changes can be lost when the instance restarts or redeploys. Do not use this free deployment for real data. For real-data mode, use a paid plan with a persistent disk mounted at `/app/data`, and set `SEED_DEMO=0` and `SIMULATE=0`.
+**Render + Neon**: create a Neon PostgreSQL project, copy its pooled connection string with SSL enabled, and set it as `DATABASE_URL` in the Render service environment. The `render.yaml` Blueprint declares this secret as a manually supplied variable. Deploy or redeploy after setting it. When `DATABASE_URL` is set, the app uses Neon; otherwise it uses local SQLite. The included free Render service uses synthetic demo data. Free plans have usage limits; do not use this demo setup for real customer data. For real data, set `SEED_DEMO=0` and `SIMULATE=0`, use strong admin credentials, and configure appropriate database backups and access controls.
 **Fly.io**: edit the app name in `fly.toml`, then `fly launch --no-deploy`, `fly volumes create sentinel_data --size 1`, `fly secrets set ADMIN_PASSWORD=... ADMIN_KEY=...`, `fly deploy`.
 **Plain Linux server**: copy to `/opt/ai-sentinel`, put settings in `.env`, `chown -R www-data /opt/ai-sentinel/data`, install `deploy/ai-sentinel.service` (systemd) or use `ecosystem.config.js` (pm2), and put nginx (`deploy/nginx.conf` + certbot) or Caddy in front for HTTPS.
 
-Serverless hosts (Vercel, Netlify) will not work. Run **one instance only** (SQLite). Do not expose port 3000 to the internet without HTTPS in front.
+Serverless hosts (Vercel, Netlify) will not work. The app keeps operational datasets and alert state in memory and is designed to run **one instance only**. Do not expose port 3000 to the internet without HTTPS in front.
 
 ## 3. Loading your real data
 Sign in, open **Data Import**, choose a dataset, choose your CSV (header row required) and press **Import**. Alerts are raised automatically after each import. Starter headers are in `templates/`.
@@ -66,8 +66,9 @@ Set `ALERT_WEBHOOK_URL` to a Slack, Teams or Discord incoming webhook. A message
 | SESSION_HOURS | 12 | Login lifetime |
 | ALERT_WEBHOOK_URL | | Where high-risk alerts are posted |
 | TRUST_PROXY / HTTPS_ONLY | off | `1` behind a reverse proxy / adds HSTS |
-| DATA_DIR / DB_FILE | ./data | Database location (mount a volume here) |
-| KEEP_BACKUPS | 14 | Backups kept by `npm run backup` |
+| DATABASE_URL | unset | Neon PostgreSQL connection string; when set, this is the application database |
+| DATA_DIR / DB_FILE | ./data / `sentinel.db` | Local SQLite fallback location when `DATABASE_URL` is unset |
+| KEEP_BACKUPS | 14 | SQLite backups kept by `npm run backup` |
 
 The login page shows the default credentials only while the server is still using the built-in defaults.
 
@@ -76,15 +77,15 @@ The login page shows the default credentials only while the server is still usin
     docker compose --profile backup run --rm backup
     crontab deploy/backup.cron           # daily at 02:30
 Restore: stop the app, copy a backup over `data/sentinel.db` (delete `sentinel.db-wal` and `-shm`), start the app.
-`npm run reset-db` deletes the database, users and alerts. With `SEED_DEMO=0` the next start is empty. **Switching an existing demo database to real data: run `npm run reset-db` first**, otherwise the synthetic records stay.
+The backup script operates on local SQLite only. For Neon backups, use Neon’s branching/backup features or `pg_dump` against the connection string. `npm run reset-db` deletes the selected database's records, users and alerts. With `SEED_DEMO=0` the next start is empty. **Switching an existing demo database to real data: reset it first**, otherwise synthetic records stay.
 
 ## 7. Layout
-`server.js` server, API, persistence, rate limiting, security headers | `engine.js` detection rules, scoring, honeypot, cases, graph, import validation, webhook | `public/index.html` the interface | `seed/` synthetic demo CSVs | `preview/ai-sentinel-preview.html` standalone copy of the UI that runs in any browser with no server (demo data, resets on refresh) | `templates/` empty CSV headers | `scripts/` backup and reset | `deploy/` Caddy, nginx, systemd, cron | `tests/` API tests
+`server.js` server, API, persistence, rate limiting, security headers | `storage.js` Neon PostgreSQL and local SQLite adapters | `engine.js` detection rules, scoring, honeypot, cases, graph, import validation, webhook | `public/index.html` the interface | `seed/` synthetic demo CSVs | `preview/ai-sentinel-preview.html` standalone copy of the UI that runs in any browser with no server (demo data, resets on refresh) | `templates/` empty CSV headers | `scripts/` backup and reset | `deploy/` Caddy, nginx, systemd, cron | `tests/` API tests
 
 ## 8. Known limits (read before using real customer data)
 - Detection is rule and model based, tuned on synthetic data. Have your fraud team review thresholds and measure false positives in a pilot before acting on alerts.
 - Data is held in memory and scanned in full. Measured: with 100,000 activity events, a 20,000-row import takes under a second and the dashboard statistics about 0.3 s. Not tested beyond 100,000 events; expect slower responses and higher memory use as it grows. One instance only.
-- Customer details are stored unencrypted in SQLite. Use an encrypted disk and restrict who can reach the server.
+- Customer details are stored unencrypted in the selected database. Use encrypted transport/storage and restrict who can reach the server.
 - Only two roles (admin, analyst). The audit screen shows the latest 30 entries.
 - There are no live connectors to core banking, HR or log systems. Data arrives by CSV import or the API.
 - The message and loan models train in the browser from the records the API serves.
