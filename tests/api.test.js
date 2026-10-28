@@ -11,6 +11,9 @@ test('API needs a token',async()=>{assert.equal((await call('/bootstrap')).s,401
 test('bootstrap returns alerts and employees',async()=>{const r=await call('/bootstrap','GET',null,tok);assert.ok(r.j.alerts.length>0);assert.ok(Object.keys(r.j.emp).length>=400)});
 test('message + loan datasets are seeded (400 each)',async()=>{for(const k of['mv','dv'])assert.equal((await call(`/sv/${k}/records`,'GET',null,tok)).j.rows.length,400)});
 test('import keeps valid rows and skips invalid ones',async()=>{const r=await call('/sv/mv/import','POST',{rows:[{messagetext:'hello http://a.xyz',label:'Suspicious'},{messagetext:'',label:'x'}]},tok);assert.deepEqual([r.j.added,r.j.skipped],[1,1])});
+test('rejected operational imports do not trigger unrelated alert rescans',async()=>{const before=(await call('/data/summary','GET',null,tok)).j;
+ const r=await call('/data/employees','POST',{rows:[{employeeid:'BAD-ID',employeename:'Invalid Import',department:'Test'}]},tok);
+ const after=(await call('/data/summary','GET',null,tok)).j;assert.equal(r.j.loaded,0);assert.equal(r.j.alerts,0);assert.equal(r.j.errors.length,1);assert.equal(after.employees,before.employees)});
 test('data survives a restart, sessions persist',async()=>{await call('/settings','PUT',{email:true,auto:true,thr:66,mask:false},tok);await new Promise(r=>setTimeout(r,600));await stop();await start();
  const r=await call('/bootstrap','GET',null,tok);assert.equal(r.s,200);assert.equal(r.j.settings.thr,66);assert.equal((await call('/sv/mv/records','GET',null,tok)).j.rows.length,401)});
 test('logout invalidates the token',async()=>{await call('/logout','POST',{},tok);assert.equal((await call('/bootstrap','GET',null,tok)).s,401)});
