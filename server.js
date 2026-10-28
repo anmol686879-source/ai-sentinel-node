@@ -43,8 +43,17 @@ for(const u of await db.all('SELECT * FROM users'))E.USERS[u.username]={name:u.n
 const TTL=(+process.env.SESSION_HOURS||12)*36e5,SESS_T={};
 for(const s of await db.all('SELECT * FROM sessions'))if(Date.now()-s.created<TTL&&E.USERS[s.username]){E.sessions[s.token]=s.username;SESS_T[s.token]=+s.created}
 const purge=()=>{const n=Date.now();for(const t of Object.keys(SESS_T))if(!E.sessions[t]||n-SESS_T[t]>TTL){delete E.sessions[t];delete SESS_T[t]}for(const t of Object.keys(E.sessions))SESS_T[t]=SESS_T[t]||n};
-const st0=await db.get("SELECT v FROM kv WHERE k='state'");
-if(st0)try{E.st=JSON.parse(st0.v)}catch(e){console.error('Could not restore saved state:',e.message)}
+const initialState=E.st,st0=await db.get("SELECT v FROM kv WHERE k='state'");
+if(st0)try{
+ E.st=JSON.parse(st0.v);
+ if(!Object.keys(E.st.emp||{}).length&&Object.keys(initialState.emp||{}).length){
+  E.st.emp=initialState.emp;
+  if(!Array.isArray(E.st.alerts)||!E.st.alerts.length)E.st.alerts=initialState.alerts;
+  if(!Object.keys(E.st.touch||{}).length)E.st.touch=initialState.touch;
+  E.st.hp=initialState.hp;
+  E.st.seq=Math.max(+E.st.seq||0,+initialState.seq||0);
+ }
+}catch(e){console.error('Could not restore saved state:',e.message)}
 
 /* ---------- verification datasets (message + loan) ---------- */
 const SV={mv:{idk:'checkid',pre:'MSG',csv:'ai_sentinel_message_verification_400.csv',ok:r=>r.messagetext&&/^(susp|gen)/i.test(r.label||'')},
