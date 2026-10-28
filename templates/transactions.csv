@@ -1,0 +1,1 @@
+TransactionID,CustomerID,EmployeeID,TransactionDate,Amount,Currency,PaymentMethod,TransactionType,TransactionStatus,RiskScore,Flagged

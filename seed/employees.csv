@@ -1,0 +1,401 @@
+EmployeeID,EmployeeName,Department,Role,Email,AttendanceStatus,CheckInTime,CheckOutTime,HoursWorked,ProductivityScore,SecurityRisk,AlertsCount,LastActivityApp,LastActivityTime,EmployeeStatus
+EMP0001,Krishna Sharma,Operations,Operations Manager,employee0001@example.com,Present,08:57,16:14,7.28,92,Low,2,Email,2026-10-24 16:00,On Leave
+EMP0002,Vivaan Gupta,Sales,Sales Manager,employee0002@example.com,Present,10:09,18:26,8.28,46,Medium,2,Spreadsheet,2026-10-23 18:45,On Leave
+EMP0003,Dev Shah,Operations,Operations Executive,employee0003@example.com,On Leave,,,0.0,0,Low,2,Database,2026-10-14 13:15,Active
+EMP0004,Ayaan Gupta,Security,Compliance Analyst,employee0004@example.com,Present,09:31,18:19,8.8,67,Medium,3,Code Editor,2026-10-26 08:45,Active
+EMP0005,Rohan Gupta,Support,Customer Support Executive,employee0005@example.com,Present,09:32,17:45,8.22,57,High,3,Spreadsheet,2026-10-02 18:10,Active
+EMP0006,Ayaan Das,Operations,Process Analyst,employee0006@example.com,Late,09:33,16:53,7.33,68,Low,0,Code Editor,2026-10-22 12:45,Inactive
+EMP0007,Varun Patel,Support,Support Lead,employee0007@example.com,Absent,,,0.0,7,Low,1,Spreadsheet,2026-10-13 12:45,Inactive
+EMP0008,Rahul Verma,Sales,Account Manager,employee0008@example.com,On Leave,,,0.0,1,Low,1,Database,2026-10-09 09:10,On Leave
+EMP0009,Saanvi Yadav,Security,Compliance Analyst,employee0009@example.com,Absent,,,0.0,14,Low,1,Browser,2026-10-05 11:45,On Leave
+EMP0010,Simran Mishra,Security,Compliance Analyst,employee0010@example.com,Present,08:56,16:13,7.28,77,Medium,1,CRM,2026-10-25 08:00,Active
+EMP0011,Kavya Rao,HR,HR Executive,employee0011@example.com,Late,09:37,17:53,8.27,74,Medium,3,Browser,2026-10-18 08:45,Inactive
+EMP0012,Neha Singh,Operations,Operations Executive,employee0012@example.com,Late,08:40,16:38,7.97,45,High,8,Browser,2026-10-09 16:10,On Leave
+EMP0013,Siddharth Rao,Sales,Sales Executive,employee0013@example.com,Present,09:35,18:12,8.62,55,Medium,5,Code Editor,2026-10-01 17:15,Active
+EMP0014,Priya Nair,Sales,Sales Executive,employee0014@example.com,Present,09:01,17:53,8.87,81,Low,0,CRM,2026-10-24 15:00,On Leave
+EMP0015,Kabir Saxena,Finance,Financial Analyst,employee0015@example.com,Present,10:15,19:06,8.85,83,Medium,2,Database,2026-10-18 11:45,Active
+EMP0016,Dev Bansal,Marketing,Marketing Executive,employee0016@example.com,Present,09:03,16:31,7.47,49,Low,0,Email,2026-10-19 16:10,On Leave
+EMP0017,Arjun Verma,Sales,Sales Executive,employee0017@example.com,Present,08:08,16:58,8.83,66,Low,2,CRM,2026-10-08 12:45,Active
+EMP0018,Arnav Shah,Marketing,Content Specialist,employee0018@example.com,Present,10:01,18:44,8.72,71,Low,0,Project Management,2026-10-04 18:20,Active
+EMP0019,Meera Verma,HR,HR Executive,employee0019@example.com,Present,09:43,18:16,8.55,66,Low,0,Project Management,2026-10-07 11:30,Active
+EMP0020,Diya Reddy,Marketing,Marketing Executive,employee0020@example.com,Present,08:19,16:15,7.93,96,Medium,1,Spreadsheet,2026-10-02 18:30,Active
+EMP0021,Ananya Mishra,Marketing,Content Specialist,employee0021@example.com,Late,08:54,17:44,8.83,70,Low,0,Browser,2026-10-13 08:20,Active
+EMP0022,Kavya Saxena,Marketing,Content Specialist,employee0022@example.com,Present,08:48,16:25,7.62,58,Low,2,Email,2026-10-24 16:00,Inactive
+EMP0023,Vihaan Shah,Marketing,Marketing Executive,employee0023@example.com,Remote,10:15,17:35,7.33,48,Medium,1,Spreadsheet,2026-10-28 10:00,On Leave
+EMP0024,Sneha Singh,Sales,Sales Executive,employee0024@example.com,Remote,08:10,16:29,8.32,50,Medium,5,Database,2026-10-19 16:15,Active
+EMP0025,Ira Reddy,Security,Security Analyst,employee0025@example.com,Present,09:16,17:14,7.97,65,Low,0,Spreadsheet,2026-10-15 17:30,Active
+EMP0026,Siddharth Reddy,Finance,Financial Analyst,employee0026@example.com,Present,08:17,17:09,8.87,60,Low,1,Email,2026-10-06 15:30,Inactive
+EMP0027,Tanya Nair,HR,HR Executive,employee0027@example.com,Present,09:07,16:21,7.23,51,High,7,Database,2026-10-05 12:15,On Leave
+EMP0028,Saanvi Reddy,Support,Customer Support Executive,employee0028@example.com,Late,09:04,17:59,8.92,99,Low,0,Database,2026-10-21 14:15,Active
+EMP0029,Ishaan Reddy,Finance,Finance Executive,employee0029@example.com,Absent,,,0.0,14,Medium,4,CRM,2026-10-18 08:00,Active
+EMP0030,Yash Verma,Research,Research Analyst,employee0030@example.com,Remote,10:21,17:39,7.3,72,Low,0,Spreadsheet,2026-10-10 13:00,Active
+EMP0031,Ayaan Chopra,Support,Customer Support Executive,employee0031@example.com,On Leave,,,0.0,13,Medium,2,CRM,2026-10-08 10:10,Active
+EMP0032,Neha Mishra,Sales,Sales Executive,employee0032@example.com,Present,08:40,17:20,8.67,89,Low,1,Document Editor,2026-10-28 08:20,Active
+EMP0033,Karan Nair,Sales,Account Manager,employee0033@example.com,Present,08:06,16:30,8.4,57,Medium,3,Project Management,2026-10-09 09:15,Active
+EMP0034,Yash Malhotra,IT,Data Analyst,employee0034@example.com,Present,09:06,16:28,7.37,82,Low,0,Project Management,2026-10-04 17:20,Active
+EMP0035,Varun Bansal,HR,HR Manager,employee0035@example.com,Late,10:27,17:51,7.4,61,Low,2,Spreadsheet,2026-10-14 08:30,On Leave
+EMP0036,Priya Mishra,HR,HR Manager,employee0036@example.com,Absent,,,0.0,10,Medium,3,Browser,2026-10-22 09:45,Active
+EMP0037,Aman Malhotra,Security,Compliance Analyst,employee0037@example.com,Absent,,,0.0,9,Medium,2,CRM,2026-10-07 14:45,Active
+EMP0038,Ishita Shah,Operations,Process Analyst,employee0038@example.com,Late,10:20,19:06,8.77,45,Low,1,Database,2026-10-07 14:30,On Leave
+EMP0039,Meera Kapoor,Marketing,Content Specialist,employee0039@example.com,Absent,,,0.0,6,Medium,4,Database,2026-10-26 10:45,Active
+EMP0040,Reyansh Mehta,Operations,Operations Manager,employee0040@example.com,Present,08:50,16:08,7.3,46,Low,0,Spreadsheet,2026-10-16 17:00,Active
+EMP0041,Rohan Yadav,Security,Compliance Analyst,employee0041@example.com,Present,08:37,17:00,8.38,89,Low,0,Document Editor,2026-10-25 14:10,Active
+EMP0042,Vihaan Saxena,Sales,Account Manager,employee0042@example.com,On Leave,,,0.0,3,Medium,2,Database,2026-10-26 15:45,On Leave
+EMP0043,Dev Rao,Support,Support Lead,employee0043@example.com,Late,10:20,18:17,7.95,55,High,9,Browser,2026-10-16 15:15,Active
+EMP0044,Pooja Yadav,Sales,Sales Executive,employee0044@example.com,Present,09:52,17:01,7.15,90,Low,0,CRM,2026-10-09 13:15,On Leave
+EMP0045,Shaurya Mehta,Security,Compliance Analyst,employee0045@example.com,Absent,,,0.0,4,High,4,Document Editor,2026-10-03 14:20,Active
+EMP0046,Aman Verma,Sales,Sales Manager,employee0046@example.com,On Leave,,,0.0,13,Medium,5,Email,2026-10-23 08:30,Active
+EMP0047,Karan Nair,Security,Security Analyst,employee0047@example.com,On Leave,,,0.0,13,Medium,5,Browser,2026-10-26 17:10,Active
+EMP0048,Kavya Yadav,IT,Software Engineer,employee0048@example.com,Late,09:26,17:51,8.42,88,Medium,2,Project Management,2026-10-27 15:10,On Leave
+EMP0049,Simran Shah,IT,System Administrator,employee0049@example.com,Present,09:49,17:06,7.28,100,Medium,2,Document Editor,2026-10-02 12:20,Active
+EMP0050,Rahul Malhotra,Security,Security Analyst,employee0050@example.com,Present,09:47,17:19,7.53,98,Low,1,Code Editor,2026-10-01 16:00,Active
+EMP0051,Aditya Sharma,Sales,Sales Executive,employee0051@example.com,Present,08:05,16:24,8.32,54,Low,0,Document Editor,2026-10-16 18:00,On Leave
+EMP0052,Anika Chopra,Finance,Finance Executive,employee0052@example.com,Remote,08:29,17:08,8.65,97,Low,1,Project Management,2026-10-04 17:00,Active
+EMP0053,Sneha Joshi,HR,Recruiter,employee0053@example.com,Remote,09:02,16:15,7.22,89,Low,2,Project Management,2026-10-20 09:30,Active
+EMP0054,Priya Gupta,Support,Technical Support Agent,employee0054@example.com,Absent,,,0.0,10,Low,1,Document Editor,2026-10-27 15:00,Active
+EMP0055,Shaurya Mishra,Finance,Financial Analyst,employee0055@example.com,Absent,,,0.0,16,High,5,Browser,2026-10-20 16:20,Active
+EMP0056,Rahul Mehta,HR,HR Executive,employee0056@example.com,Present,09:55,17:26,7.52,93,Medium,5,Document Editor,2026-10-20 18:20,Active
+EMP0057,Rahul Patel,Marketing,Digital Marketer,employee0057@example.com,Present,09:30,18:12,8.7,61,Low,1,Spreadsheet,2026-10-20 12:30,Active
+EMP0058,Reyansh Mehta,Security,Security Analyst,employee0058@example.com,Late,10:22,18:59,8.62,60,High,6,Browser,2026-10-21 15:20,Active
+EMP0059,Myra Das,Sales,Sales Manager,employee0059@example.com,Present,10:28,18:15,7.78,75,Medium,5,Database,2026-10-12 14:45,On Leave
+EMP0060,Meera Reddy,Operations,Operations Executive,employee0060@example.com,Present,08:59,16:14,7.25,91,Low,1,Spreadsheet,2026-10-04 16:45,Active
+EMP0061,Kabir Reddy,Support,Customer Support Executive,employee0061@example.com,Remote,09:12,16:24,7.2,98,Low,1,CRM,2026-10-08 13:10,Active
+EMP0062,Pari Verma,IT,Data Analyst,employee0062@example.com,Remote,09:14,17:43,8.48,53,High,9,Document Editor,2026-10-25 15:00,Active
+EMP0063,Kabir Kapoor,Research,Research Analyst,employee0063@example.com,Present,08:13,15:45,7.53,100,Medium,1,Email,2026-10-27 09:20,Active
+EMP0064,Shaurya Kumar,Operations,Operations Manager,employee0064@example.com,Present,09:03,16:18,7.25,80,Medium,5,Document Editor,2026-10-20 17:10,On Leave
+EMP0065,Dev Nair,Security,SOC Operator,employee0065@example.com,Present,10:25,18:44,8.32,48,Medium,1,Code Editor,2026-10-25 11:45,Active
+EMP0066,Ananya Mehta,Finance,Accountant,employee0066@example.com,Remote,08:19,15:39,7.33,45,Medium,4,Spreadsheet,2026-10-23 17:20,Active
+EMP0067,Riya Nair,Marketing,Digital Marketer,employee0067@example.com,Present,08:59,17:57,8.97,61,High,7,Spreadsheet,2026-10-22 11:20,Active
+EMP0068,Shaurya Reddy,Finance,Accountant,employee0068@example.com,Present,08:15,15:36,7.35,95,Low,2,Document Editor,2026-10-24 17:15,Active
+EMP0069,Kiara Das,Operations,Process Analyst,employee0069@example.com,Remote,10:18,18:21,8.05,73,Low,2,Browser,2026-10-02 14:45,Active
+EMP0070,Vivaan Gupta,Sales,Sales Executive,employee0070@example.com,Absent,,,0.0,18,Medium,1,CRM,2026-10-25 18:15,On Leave
+EMP0071,Kabir Bansal,Marketing,Content Specialist,employee0071@example.com,Present,08:46,17:00,8.23,72,High,9,Database,2026-10-16 09:20,Active
+EMP0072,Rahul Singh,Finance,Accountant,employee0072@example.com,Present,09:45,18:13,8.47,76,Low,2,Database,2026-10-13 16:00,Active
+EMP0073,Anika Malhotra,HR,HR Executive,employee0073@example.com,On Leave,,,0.0,12,Medium,1,Spreadsheet,2026-10-22 16:20,Active
+EMP0074,Pooja Chopra,Marketing,Content Specialist,employee0074@example.com,Absent,,,0.0,14,Low,0,Document Editor,2026-10-09 16:10,Active
+EMP0075,Krishna Sharma,Sales,Sales Executive,employee0075@example.com,Absent,,,0.0,5,Low,2,Code Editor,2026-10-01 16:20,Active
+EMP0076,Meera Singh,Finance,Financial Analyst,employee0076@example.com,Late,09:14,17:19,8.08,90,Low,1,CRM,2026-10-27 15:20,Active
+EMP0077,Rohan Joshi,Support,Technical Support Agent,employee0077@example.com,Absent,,,0.0,4,Low,1,Email,2026-10-25 14:15,On Leave
+EMP0078,Riya Nair,Marketing,Digital Marketer,employee0078@example.com,On Leave,,,0.0,4,Medium,5,Project Management,2026-10-16 13:15,On Leave
+EMP0079,Meera Malhotra,Sales,Account Manager,employee0079@example.com,Absent,,,0.0,7,Medium,4,Document Editor,2026-10-08 14:00,Active
+EMP0080,Rohan Das,Finance,Finance Executive,employee0080@example.com,Late,08:09,15:25,7.27,77,Medium,3,Document Editor,2026-10-28 09:20,Active
+EMP0081,Aarav Kumar,Security,Compliance Analyst,employee0081@example.com,On Leave,,,0.0,20,Low,0,Project Management,2026-10-16 12:15,On Leave
+EMP0082,Reyansh Malhotra,Support,Support Lead,employee0082@example.com,Late,09:21,17:41,8.33,90,Medium,5,Browser,2026-10-02 17:00,Active
+EMP0083,Myra Gupta,Security,SOC Operator,employee0083@example.com,Present,08:25,16:21,7.93,55,High,5,Database,2026-10-01 08:15,Active
+EMP0084,Priya Mishra,Finance,Finance Executive,employee0084@example.com,Present,10:15,18:07,7.87,81,High,9,Project Management,2026-10-06 10:10,Active
+EMP0085,Ishita Mehta,Marketing,Content Specialist,employee0085@example.com,Remote,08:36,16:05,7.48,74,High,5,Browser,2026-10-15 12:45,Active
+EMP0086,Yash Patel,HR,HR Executive,employee0086@example.com,Late,09:28,17:43,8.25,64,High,6,Project Management,2026-10-23 12:20,Active
+EMP0087,Kabir Singh,Sales,Sales Manager,employee0087@example.com,Late,10:26,18:11,7.75,81,Low,2,Email,2026-10-10 08:45,Active
+EMP0088,Arnav Verma,Marketing,Marketing Executive,employee0088@example.com,On Leave,,,0.0,9,Low,2,Browser,2026-10-26 13:10,Inactive
+EMP0089,Ishaan Singh,IT,IT Support Engineer,employee0089@example.com,Present,09:52,16:56,7.07,82,Low,2,CRM,2026-10-05 09:15,Active
+EMP0090,Aadhya Kumar,Support,Technical Support Agent,employee0090@example.com,Present,10:15,18:19,8.07,62,Low,1,Code Editor,2026-10-27 15:15,Inactive
+EMP0091,Meera Gupta,Finance,Accountant,employee0091@example.com,On Leave,,,0.0,7,High,8,Project Management,2026-10-22 14:30,Active
+EMP0092,Aarav Reddy,Support,Technical Support Agent,employee0092@example.com,Present,09:56,17:43,7.78,88,High,8,Code Editor,2026-10-09 17:20,Inactive
+EMP0093,Myra Yadav,IT,Data Analyst,employee0093@example.com,Remote,10:23,18:04,7.68,84,Low,2,Project Management,2026-10-03 18:20,Inactive
+EMP0094,Krishna Kumar,IT,Data Analyst,employee0094@example.com,Present,09:17,17:20,8.05,52,Low,0,Project Management,2026-10-18 10:20,Active
+EMP0095,Simran Kumar,Security,SOC Operator,employee0095@example.com,Absent,,,0.0,3,Medium,5,Spreadsheet,2026-10-14 12:00,Inactive
+EMP0096,Dev Kapoor,Sales,Sales Executive,employee0096@example.com,On Leave,,,0.0,11,Low,2,Project Management,2026-10-12 16:45,Active
+EMP0097,Pari Joshi,HR,HR Executive,employee0097@example.com,On Leave,,,0.0,14,Low,2,Email,2026-10-07 18:45,On Leave
+EMP0098,Neha Mehta,Finance,Accountant,employee0098@example.com,On Leave,,,0.0,18,Low,0,Spreadsheet,2026-10-27 16:10,On Leave
+EMP0099,Neha Kumar,IT,Software Engineer,employee0099@example.com,Present,08:37,15:53,7.27,79,Low,0,Database,2026-10-04 18:00,Active
+EMP0100,Ira Shah,Research,Research Analyst,employee0100@example.com,Present,08:44,16:17,7.55,48,Low,2,Document Editor,2026-10-14 16:00,Inactive
+EMP0101,Dev Chopra,Support,Technical Support Agent,employee0101@example.com,Remote,08:27,16:24,7.95,77,Low,2,Email,2026-10-02 18:30,Active
+EMP0102,Vihaan Yadav,Security,Security Analyst,employee0102@example.com,Late,08:27,16:29,8.03,90,Medium,1,CRM,2026-10-03 13:30,Active
+EMP0103,Pari Rao,Support,Support Lead,employee0103@example.com,Absent,,,0.0,10,Medium,5,Project Management,2026-10-17 12:20,On Leave
+EMP0104,Ayaan Singh,Support,Technical Support Agent,employee0104@example.com,Absent,,,0.0,6,Medium,4,Project Management,2026-10-08 14:15,Active
+EMP0105,Ayaan Malhotra,Security,SOC Operator,employee0105@example.com,Present,09:05,16:52,7.78,54,High,6,Code Editor,2026-10-03 09:00,Active
+EMP0106,Priya Kumar,Support,Technical Support Agent,employee0106@example.com,Present,10:30,18:41,8.18,80,Low,2,Email,2026-10-04 14:15,Inactive
+EMP0107,Riya Rao,Operations,Operations Manager,employee0107@example.com,Present,08:26,16:39,8.22,77,Low,0,Database,2026-10-22 15:10,Active
+EMP0108,Krishna Reddy,Sales,Sales Executive,employee0108@example.com,On Leave,,,0.0,13,Medium,5,Browser,2026-10-20 18:45,On Leave
+EMP0109,Vivaan Patel,Operations,Process Analyst,employee0109@example.com,Absent,,,0.0,24,Low,1,Project Management,2026-10-12 08:10,Active
+EMP0110,Arjun Kumar,IT,Data Analyst,employee0110@example.com,Present,10:15,17:42,7.45,69,Medium,4,Code Editor,2026-10-11 10:15,Active
+EMP0111,Vihaan Kumar,Finance,Financial Analyst,employee0111@example.com,On Leave,,,0.0,19,Low,2,Document Editor,2026-10-03 12:20,Inactive
+EMP0112,Varun Kapoor,Security,Compliance Analyst,employee0112@example.com,Present,08:55,17:31,8.6,77,Low,1,Document Editor,2026-10-14 09:15,Inactive
+EMP0113,Pooja Nair,IT,Data Analyst,employee0113@example.com,Present,09:41,17:57,8.27,48,Low,0,Database,2026-10-10 11:10,Active
+EMP0114,Krishna Sharma,Marketing,Digital Marketer,employee0114@example.com,Absent,,,0.0,13,Low,0,Database,2026-10-13 16:45,Active
+EMP0115,Arjun Das,IT,IT Support Engineer,employee0115@example.com,Late,08:04,16:02,7.97,49,Low,2,Browser,2026-10-14 17:20,Inactive
+EMP0116,Krishna Das,IT,IT Support Engineer,employee0116@example.com,Present,08:43,17:25,8.7,84,Medium,3,Project Management,2026-10-03 14:00,Active
+EMP0117,Pooja Gupta,Security,Compliance Analyst,employee0117@example.com,On Leave,,,0.0,9,High,5,Code Editor,2026-10-08 13:10,Active
+EMP0118,Pooja Bansal,Sales,Sales Executive,employee0118@example.com,On Leave,,,0.0,11,Low,2,CRM,2026-10-27 18:10,Active
+EMP0119,Anika Joshi,Finance,Finance Executive,employee0119@example.com,Remote,08:39,17:16,8.62,93,High,3,Document Editor,2026-10-06 18:20,Active
+EMP0120,Arnav Rao,Research,Data Scientist,employee0120@example.com,On Leave,,,0.0,20,Low,0,Browser,2026-10-15 09:20,Active
+EMP0121,Pari Shah,IT,Software Engineer,employee0121@example.com,Present,10:09,17:18,7.15,64,Medium,4,Code Editor,2026-10-02 08:15,Active
+EMP0122,Ishita Rao,Support,Technical Support Agent,employee0122@example.com,Late,09:58,18:12,8.23,80,High,3,Document Editor,2026-10-15 17:45,Active
+EMP0123,Siddharth Kumar,IT,Software Engineer,employee0123@example.com,Late,08:26,17:09,8.72,98,Low,2,Spreadsheet,2026-10-03 16:45,Active
+EMP0124,Dev Kapoor,Support,Customer Support Executive,employee0124@example.com,Remote,08:40,16:26,7.77,68,Low,1,Database,2026-10-14 13:45,On Leave
+EMP0125,Arjun Malhotra,HR,HR Executive,employee0125@example.com,Remote,09:38,17:14,7.6,61,High,9,CRM,2026-10-22 17:10,Active
+EMP0126,Karan Nair,Security,Compliance Analyst,employee0126@example.com,Present,08:21,16:00,7.65,80,Medium,3,Code Editor,2026-10-27 10:45,Inactive
+EMP0127,Kavya Bansal,Research,Research Analyst,employee0127@example.com,Present,09:32,17:11,7.65,56,Low,1,CRM,2026-10-25 15:10,Active
+EMP0128,Arjun Nair,HR,HR Manager,employee0128@example.com,Remote,10:18,19:04,8.77,92,Medium,1,Project Management,2026-10-22 13:30,Active
+EMP0129,Shaurya Patel,Finance,Financial Analyst,employee0129@example.com,On Leave,,,0.0,22,Medium,2,Spreadsheet,2026-10-24 15:00,Active
+EMP0130,Dev Rao,Operations,Operations Executive,employee0130@example.com,On Leave,,,0.0,23,Medium,2,Database,2026-10-18 11:15,Active
+EMP0131,Arnav Kapoor,Marketing,Digital Marketer,employee0131@example.com,On Leave,,,0.0,9,Medium,5,CRM,2026-10-17 14:10,Active
+EMP0132,Anika Verma,Marketing,Marketing Executive,employee0132@example.com,On Leave,,,0.0,11,Medium,1,CRM,2026-10-23 16:00,Active
+EMP0133,Pari Kapoor,Support,Support Lead,employee0133@example.com,Present,09:51,17:02,7.18,59,Medium,3,Database,2026-10-01 14:00,Active
+EMP0134,Ira Das,HR,HR Executive,employee0134@example.com,Present,08:57,16:00,7.05,65,Low,2,Browser,2026-10-21 13:10,Active
+EMP0135,Kabir Kumar,Marketing,Digital Marketer,employee0135@example.com,Late,08:01,16:56,8.92,50,Low,1,Project Management,2026-10-07 10:30,Inactive
+EMP0136,Krishna Nair,Sales,Account Manager,employee0136@example.com,Present,08:31,15:37,7.1,60,Medium,5,Email,2026-10-15 09:00,Active
+EMP0137,Siddharth Shah,Sales,Account Manager,employee0137@example.com,Absent,,,0.0,4,Low,1,Project Management,2026-10-01 17:15,Active
+EMP0138,Diya Gupta,Support,Customer Support Executive,employee0138@example.com,Present,08:17,16:24,8.12,79,Medium,5,Project Management,2026-10-18 08:20,Active
+EMP0139,Priya Reddy,IT,Data Analyst,employee0139@example.com,Present,08:17,16:01,7.73,60,High,8,CRM,2026-10-21 09:30,Inactive
+EMP0140,Aditya Chopra,Support,Customer Support Executive,employee0140@example.com,Present,08:44,17:30,8.77,94,High,6,Code Editor,2026-10-23 15:45,Active
+EMP0141,Meera Verma,Operations,Operations Manager,employee0141@example.com,Present,08:11,16:52,8.68,57,Low,1,Browser,2026-10-10 16:20,On Leave
+EMP0142,Aditya Joshi,Operations,Process Analyst,employee0142@example.com,Present,08:12,17:02,8.83,86,Low,1,Document Editor,2026-10-04 13:20,Active
+EMP0143,Rohan Malhotra,Finance,Accountant,employee0143@example.com,Late,10:07,17:54,7.78,96,Medium,3,Project Management,2026-10-26 09:45,Active
+EMP0144,Varun Patel,Support,Support Lead,employee0144@example.com,Present,09:22,16:35,7.22,50,Low,2,Project Management,2026-10-10 12:20,On Leave
+EMP0145,Ananya Kapoor,Research,Research Analyst,employee0145@example.com,Late,08:10,16:43,8.55,100,Low,2,Project Management,2026-10-14 12:45,Active
+EMP0146,Priya Bansal,Finance,Accountant,employee0146@example.com,Present,08:36,17:24,8.8,83,High,9,Database,2026-10-15 08:10,Active
+EMP0147,Priya Das,IT,Data Analyst,employee0147@example.com,Remote,08:39,17:05,8.43,73,Low,1,Project Management,2026-10-15 09:30,Active
+EMP0148,Rahul Reddy,Sales,Sales Manager,employee0148@example.com,Present,08:06,16:40,8.57,56,Medium,5,Document Editor,2026-10-13 16:00,Active
+EMP0149,Saanvi Rao,Operations,Process Analyst,employee0149@example.com,Absent,,,0.0,15,Low,0,Document Editor,2026-10-05 09:20,Active
+EMP0150,Reyansh Malhotra,Research,Data Scientist,employee0150@example.com,Absent,,,0.0,2,Medium,5,CRM,2026-10-10 12:10,Inactive
+EMP0151,Priya Bansal,Sales,Sales Manager,employee0151@example.com,Present,08:51,17:32,8.68,53,Low,1,Document Editor,2026-10-01 13:30,On Leave
+EMP0152,Tanya Kumar,HR,HR Executive,employee0152@example.com,Present,09:19,17:09,7.83,90,High,6,CRM,2026-10-17 14:20,On Leave
+EMP0153,Rahul Gupta,Marketing,Marketing Executive,employee0153@example.com,Late,10:12,17:56,7.73,53,Medium,5,Code Editor,2026-10-06 10:20,On Leave
+EMP0154,Pooja Kumar,Operations,Operations Executive,employee0154@example.com,Present,08:41,16:22,7.68,90,Low,1,Browser,2026-10-17 12:00,Active
+EMP0155,Ishaan Nair,Support,Support Lead,employee0155@example.com,Present,10:08,18:30,8.37,55,Medium,5,Database,2026-10-05 10:45,On Leave
+EMP0156,Arnav Verma,IT,Software Engineer,employee0156@example.com,Present,08:11,16:33,8.37,94,Medium,3,Document Editor,2026-10-21 11:30,Active
+EMP0157,Yash Nair,Operations,Operations Executive,employee0157@example.com,Late,09:02,17:45,8.72,96,High,6,CRM,2026-10-10 15:00,Inactive
+EMP0158,Dev Mishra,Marketing,Content Specialist,employee0158@example.com,Late,08:52,16:35,7.72,83,Low,1,CRM,2026-10-28 13:45,Active
+EMP0159,Priya Bansal,Support,Customer Support Executive,employee0159@example.com,Present,09:21,16:51,7.5,74,Low,1,Browser,2026-10-15 11:10,Active
+EMP0160,Rohan Rao,Security,SOC Operator,employee0160@example.com,Present,08:40,17:24,8.73,65,Medium,3,Document Editor,2026-10-07 10:20,On Leave
+EMP0161,Kiara Yadav,IT,Data Analyst,employee0161@example.com,Present,09:40,17:44,8.07,74,Low,0,Document Editor,2026-10-19 13:00,Active
+EMP0162,Varun Yadav,Operations,Operations Executive,employee0162@example.com,Remote,08:02,16:50,8.8,51,Medium,2,Project Management,2026-10-09 13:20,Active
+EMP0163,Vihaan Shah,Support,Support Lead,employee0163@example.com,Present,09:32,17:42,8.17,63,Low,1,Code Editor,2026-10-17 15:30,Active
+EMP0164,Ishaan Singh,Security,Security Analyst,employee0164@example.com,Present,09:26,17:37,8.18,68,Low,0,Email,2026-10-20 16:20,On Leave
+EMP0165,Aditya Kumar,Research,Research Associate,employee0165@example.com,On Leave,,,0.0,15,Medium,4,Database,2026-10-05 17:30,Active
+EMP0166,Ananya Das,Operations,Operations Executive,employee0166@example.com,Remote,09:26,17:30,8.07,98,Medium,5,Database,2026-10-16 17:15,Active
+EMP0167,Neha Singh,Security,Compliance Analyst,employee0167@example.com,Remote,09:18,17:59,8.68,91,High,8,Spreadsheet,2026-10-01 17:20,Active
+EMP0168,Vihaan Shah,Marketing,Digital Marketer,employee0168@example.com,Present,10:14,18:34,8.33,91,Medium,4,Code Editor,2026-10-05 18:10,Active
+EMP0169,Aadhya Sharma,Marketing,Digital Marketer,employee0169@example.com,Present,09:47,17:06,7.32,71,High,4,Email,2026-10-14 16:30,Active
+EMP0170,Ishaan Bansal,Sales,Sales Manager,employee0170@example.com,Remote,09:23,17:47,8.4,75,Medium,4,Database,2026-10-11 10:20,On Leave
+EMP0171,Anika Rao,Marketing,Digital Marketer,employee0171@example.com,Present,09:03,16:38,7.58,80,Low,0,Document Editor,2026-10-10 12:45,Active
+EMP0172,Rahul Yadav,Research,Research Associate,employee0172@example.com,Remote,09:10,16:46,7.6,52,Medium,5,Email,2026-10-13 14:15,Active
+EMP0173,Riya Gupta,Research,Data Scientist,employee0173@example.com,Late,09:05,17:40,8.58,75,Low,0,Browser,2026-10-27 16:15,On Leave
+EMP0174,Ishaan Singh,Sales,Sales Manager,employee0174@example.com,Present,08:12,16:37,8.42,78,Low,2,Document Editor,2026-10-08 08:00,Active
+EMP0175,Ayaan Kumar,IT,Data Analyst,employee0175@example.com,Remote,08:40,16:32,7.87,86,Medium,4,Email,2026-10-21 11:15,Active
+EMP0176,Reyansh Shah,Sales,Account Manager,employee0176@example.com,Remote,08:09,17:05,8.93,56,Medium,2,Browser,2026-10-02 14:20,Active
+EMP0177,Aditya Sharma,Operations,Operations Executive,employee0177@example.com,Remote,08:27,17:25,8.97,66,Low,1,Document Editor,2026-10-21 16:30,Active
+EMP0178,Pari Joshi,HR,Recruiter,employee0178@example.com,Present,08:41,17:14,8.55,74,High,5,Browser,2026-10-23 10:00,Inactive
+EMP0179,Arnav Joshi,Finance,Accountant,employee0179@example.com,Remote,09:43,18:28,8.75,72,Medium,3,CRM,2026-10-03 14:45,Active
+EMP0180,Kabir Malhotra,Sales,Account Manager,employee0180@example.com,Present,09:06,16:55,7.82,60,Medium,3,Email,2026-10-11 12:30,Inactive
+EMP0181,Anika Chopra,Sales,Account Manager,employee0181@example.com,Present,08:30,16:29,7.98,64,Low,1,Code Editor,2026-10-22 16:45,Active
+EMP0182,Riya Chopra,Sales,Sales Manager,employee0182@example.com,Present,08:34,16:35,8.02,54,Medium,5,Spreadsheet,2026-10-12 14:45,On Leave
+EMP0183,Ira Rao,HR,HR Manager,employee0183@example.com,Remote,09:54,18:01,8.12,90,Low,0,Spreadsheet,2026-10-19 09:00,On Leave
+EMP0184,Arnav Saxena,Finance,Financial Analyst,employee0184@example.com,Present,09:23,18:12,8.82,78,Medium,1,Code Editor,2026-10-22 11:45,On Leave
+EMP0185,Siddharth Kapoor,IT,Data Analyst,employee0185@example.com,Late,08:33,16:38,8.08,71,Medium,5,Email,2026-10-02 16:20,Inactive
+EMP0186,Sneha Reddy,IT,Software Engineer,employee0186@example.com,Absent,,,0.0,6,Medium,1,Email,2026-10-02 14:15,Inactive
+EMP0187,Arjun Yadav,IT,IT Support Engineer,employee0187@example.com,Present,09:44,17:07,7.38,94,Low,2,Document Editor,2026-10-24 18:20,Active
+EMP0188,Rohan Das,HR,HR Manager,employee0188@example.com,Absent,,,0.0,21,Medium,2,Project Management,2026-10-21 13:00,Active
+EMP0189,Pooja Kumar,Sales,Sales Manager,employee0189@example.com,On Leave,,,0.0,0,Low,1,Project Management,2026-10-15 18:45,On Leave
+EMP0190,Myra Mehta,Marketing,Digital Marketer,employee0190@example.com,Present,08:39,16:14,7.58,57,High,9,Email,2026-10-04 08:45,Active
+EMP0191,Ira Joshi,HR,HR Executive,employee0191@example.com,Present,08:08,16:05,7.95,83,High,8,Project Management,2026-10-28 08:10,Inactive
+EMP0192,Dev Mehta,Support,Support Lead,employee0192@example.com,Present,08:14,15:31,7.28,77,Low,0,Database,2026-10-27 17:15,On Leave
+EMP0193,Ira Nair,Finance,Finance Executive,employee0193@example.com,Absent,,,0.0,16,Low,1,CRM,2026-10-10 12:00,On Leave
+EMP0194,Kavya Saxena,Marketing,Content Specialist,employee0194@example.com,Present,09:28,18:28,9.0,86,High,6,Project Management,2026-10-26 16:15,Inactive
+EMP0195,Shaurya Nair,Security,Compliance Analyst,employee0195@example.com,Present,10:17,18:17,8.0,60,Low,1,Project Management,2026-10-28 10:20,Active
+EMP0196,Aman Saxena,Support,Customer Support Executive,employee0196@example.com,Present,09:39,17:10,7.52,61,Low,1,Spreadsheet,2026-10-21 09:20,Active
+EMP0197,Vihaan Reddy,Security,Compliance Analyst,employee0197@example.com,Absent,,,0.0,19,Medium,1,Spreadsheet,2026-10-28 09:10,On Leave
+EMP0198,Kabir Joshi,Research,Data Scientist,employee0198@example.com,Present,08:03,15:30,7.45,57,High,3,Spreadsheet,2026-10-24 15:10,Inactive
+EMP0199,Sneha Mehta,Support,Technical Support Agent,employee0199@example.com,Present,09:12,17:00,7.8,74,Medium,3,Document Editor,2026-10-10 12:15,On Leave
+EMP0200,Ayaan Yadav,Research,Research Analyst,employee0200@example.com,Present,09:34,17:14,7.67,71,Low,2,Browser,2026-10-28 11:45,Active
+EMP0201,Tanya Shah,Security,Compliance Analyst,employee0201@example.com,Present,08:39,16:04,7.42,66,Low,1,Database,2026-10-19 11:20,On Leave
+EMP0202,Anika Yadav,Marketing,Digital Marketer,employee0202@example.com,Late,08:43,17:16,8.55,95,Low,0,Email,2026-10-05 16:20,Active
+EMP0203,Pooja Verma,HR,HR Executive,employee0203@example.com,On Leave,,,0.0,21,Low,0,CRM,2026-10-14 10:45,Active
+EMP0204,Aarav Joshi,Support,Customer Support Executive,employee0204@example.com,Late,09:35,16:42,7.12,84,High,8,Email,2026-10-20 15:45,Active
+EMP0205,Yash Saxena,Security,Compliance Analyst,employee0205@example.com,Present,08:04,16:11,8.12,91,Low,2,Project Management,2026-10-10 08:30,Inactive
+EMP0206,Diya Singh,HR,HR Executive,employee0206@example.com,Remote,08:38,16:08,7.5,57,Medium,5,Database,2026-10-09 13:15,Active
+EMP0207,Sneha Kapoor,Sales,Sales Executive,employee0207@example.com,Absent,,,0.0,7,Low,2,Code Editor,2026-10-27 09:45,Inactive
+EMP0208,Sneha Das,Security,Compliance Analyst,employee0208@example.com,Remote,10:01,17:08,7.12,85,Low,2,Database,2026-10-06 09:20,Active
+EMP0209,Arnav Singh,Support,Support Lead,employee0209@example.com,Present,08:58,16:25,7.45,100,High,7,Browser,2026-10-16 12:00,Active
+EMP0210,Yash Shah,IT,System Administrator,employee0210@example.com,Present,09:20,16:22,7.03,58,Medium,2,Spreadsheet,2026-10-25 14:00,Active
+EMP0211,Arnav Das,Support,Technical Support Agent,employee0211@example.com,Present,09:38,18:14,8.6,92,Low,2,Email,2026-10-24 09:30,Inactive
+EMP0212,Ayaan Mishra,Sales,Sales Manager,employee0212@example.com,On Leave,,,0.0,2,Low,2,Email,2026-10-25 17:30,Active
+EMP0213,Pari Kapoor,Marketing,Marketing Executive,employee0213@example.com,Present,09:31,17:41,8.17,69,Medium,2,Browser,2026-10-22 17:45,Active
+EMP0214,Ira Gupta,HR,HR Executive,employee0214@example.com,Present,08:39,16:27,7.8,90,High,4,Code Editor,2026-10-24 14:15,Active
+EMP0215,Aarav Nair,Marketing,Digital Marketer,employee0215@example.com,Present,09:09,16:22,7.22,53,Low,0,Project Management,2026-10-14 15:30,On Leave
+EMP0216,Ayaan Sharma,HR,Recruiter,employee0216@example.com,Present,10:21,17:32,7.18,83,Medium,3,Project Management,2026-10-28 14:00,Active
+EMP0217,Reyansh Saxena,Sales,Sales Manager,employee0217@example.com,Remote,10:13,17:34,7.35,88,Medium,2,CRM,2026-10-05 12:15,Active
+EMP0218,Arjun Patel,Security,SOC Operator,employee0218@example.com,Present,09:47,17:25,7.63,75,Low,1,Spreadsheet,2026-10-09 11:45,Inactive
+EMP0219,Meera Singh,Finance,Financial Analyst,employee0219@example.com,Present,08:01,15:51,7.83,66,Medium,4,CRM,2026-10-26 13:20,Active
+EMP0220,Kiara Malhotra,Sales,Sales Executive,employee0220@example.com,Late,09:20,16:42,7.37,70,Low,1,Database,2026-10-24 18:20,On Leave
+EMP0221,Rohan Reddy,Security,Security Analyst,employee0221@example.com,Present,08:29,17:28,8.98,81,Low,2,Document Editor,2026-10-18 10:45,On Leave
+EMP0222,Saanvi Kapoor,Operations,Operations Manager,employee0222@example.com,On Leave,,,0.0,22,Low,1,Spreadsheet,2026-10-22 15:10,Inactive
+EMP0223,Anika Kumar,Security,Compliance Analyst,employee0223@example.com,On Leave,,,0.0,12,Low,1,Project Management,2026-10-20 15:30,Active
+EMP0224,Yash Verma,Research,Data Scientist,employee0224@example.com,Absent,,,0.0,25,Medium,5,Database,2026-10-21 09:00,Active
+EMP0225,Ananya Rao,IT,System Administrator,employee0225@example.com,Remote,09:42,18:18,8.6,66,Medium,1,Document Editor,2026-10-01 09:15,Active
+EMP0226,Priya Das,Marketing,Marketing Executive,employee0226@example.com,On Leave,,,0.0,21,Medium,5,Browser,2026-10-05 13:00,Active
+EMP0227,Aman Gupta,HR,HR Manager,employee0227@example.com,On Leave,,,0.0,23,Low,1,Document Editor,2026-10-10 13:20,Active
+EMP0228,Karan Yadav,HR,HR Manager,employee0228@example.com,Late,09:55,17:35,7.67,49,Low,0,Code Editor,2026-10-26 09:00,Active
+EMP0229,Ananya Mehta,Support,Customer Support Executive,employee0229@example.com,Present,10:21,17:41,7.33,66,Medium,4,CRM,2026-10-15 11:20,Inactive
+EMP0230,Kavya Das,IT,System Administrator,employee0230@example.com,Absent,,,0.0,19,Low,1,Spreadsheet,2026-10-19 14:20,Active
+EMP0231,Pari Gupta,HR,Recruiter,employee0231@example.com,On Leave,,,0.0,17,Low,1,Document Editor,2026-10-11 11:20,Active
+EMP0232,Pooja Malhotra,Security,Compliance Analyst,employee0232@example.com,Remote,09:40,17:55,8.25,52,Low,1,Browser,2026-10-28 15:30,Active
+EMP0233,Ishita Shah,HR,Recruiter,employee0233@example.com,Absent,,,0.0,4,Low,0,CRM,2026-10-08 12:00,Active
+EMP0234,Siddharth Das,Security,Compliance Analyst,employee0234@example.com,Remote,08:35,16:48,8.22,69,Medium,2,CRM,2026-10-16 18:30,Inactive
+EMP0235,Tanya Patel,Marketing,Marketing Executive,employee0235@example.com,Present,08:35,15:58,7.38,65,Medium,5,Spreadsheet,2026-10-02 13:00,Active
+EMP0236,Rohan Saxena,Support,Customer Support Executive,employee0236@example.com,Absent,,,0.0,15,Medium,4,Email,2026-10-14 15:20,Active
+EMP0237,Myra Nair,IT,Software Engineer,employee0237@example.com,Present,08:57,17:05,8.13,63,Low,1,Code Editor,2026-10-19 15:30,On Leave
+EMP0238,Pari Saxena,Research,Data Scientist,employee0238@example.com,Remote,08:10,16:47,8.62,91,Medium,5,Spreadsheet,2026-10-07 14:00,Inactive
+EMP0239,Kiara Verma,Marketing,Digital Marketer,employee0239@example.com,Present,09:29,18:19,8.83,97,Low,1,Database,2026-10-28 09:10,Active
+EMP0240,Ishita Mishra,Finance,Finance Executive,employee0240@example.com,Remote,08:35,17:15,8.67,58,Low,0,CRM,2026-10-19 13:30,Active
+EMP0241,Rahul Nair,Operations,Operations Manager,employee0241@example.com,Remote,09:08,17:57,8.82,77,High,9,CRM,2026-10-04 10:20,Active
+EMP0242,Ishaan Mehta,Finance,Finance Executive,employee0242@example.com,Absent,,,0.0,10,Low,2,Browser,2026-10-13 15:10,On Leave
+EMP0243,Aman Das,Marketing,Content Specialist,employee0243@example.com,Present,08:23,16:14,7.85,77,High,5,Email,2026-10-23 13:20,Active
+EMP0244,Reyansh Kapoor,Research,Research Associate,employee0244@example.com,On Leave,,,0.0,2,Medium,4,Database,2026-10-07 14:10,Active
+EMP0245,Riya Malhotra,Support,Support Lead,employee0245@example.com,Remote,08:33,16:45,8.2,99,Medium,3,Document Editor,2026-10-22 08:00,Active
+EMP0246,Vivaan Singh,Finance,Financial Analyst,employee0246@example.com,Late,09:56,16:56,7.0,72,Low,2,Code Editor,2026-10-05 18:15,Active
+EMP0247,Priya Reddy,HR,HR Executive,employee0247@example.com,Present,08:42,15:48,7.1,70,High,5,Code Editor,2026-10-24 11:20,Inactive
+EMP0248,Aarav Joshi,Marketing,Marketing Executive,employee0248@example.com,Present,08:33,16:48,8.25,59,Medium,4,Project Management,2026-10-01 08:45,Active
+EMP0249,Ishaan Yadav,HR,Recruiter,employee0249@example.com,Present,09:38,16:49,7.18,91,Low,0,CRM,2026-10-11 13:15,Active
+EMP0250,Shaurya Gupta,Support,Customer Support Executive,employee0250@example.com,Remote,08:02,16:20,8.3,86,Low,1,Project Management,2026-10-12 11:45,Inactive
+EMP0251,Ishita Kapoor,Sales,Sales Manager,employee0251@example.com,Present,08:25,15:42,7.28,93,Low,2,CRM,2026-10-24 14:15,Active
+EMP0252,Ira Reddy,HR,HR Executive,employee0252@example.com,Present,10:21,18:37,8.27,83,High,7,Spreadsheet,2026-10-10 08:45,Active
+EMP0253,Sneha Nair,IT,Software Engineer,employee0253@example.com,On Leave,,,0.0,25,Low,1,Email,2026-10-13 09:10,Active
+EMP0254,Priya Malhotra,Finance,Finance Executive,employee0254@example.com,Late,10:25,18:18,7.88,68,Medium,2,Code Editor,2026-10-25 15:00,Active
+EMP0255,Aarav Reddy,Sales,Account Manager,employee0255@example.com,Present,08:15,16:56,8.68,70,Medium,3,Project Management,2026-10-21 16:20,Active
+EMP0256,Reyansh Saxena,Support,Technical Support Agent,employee0256@example.com,Remote,08:39,16:14,7.58,50,Low,0,Project Management,2026-10-17 11:10,On Leave
+EMP0257,Simran Gupta,Operations,Operations Manager,employee0257@example.com,Absent,,,0.0,13,High,9,Code Editor,2026-10-08 08:10,Active
+EMP0258,Meera Rao,IT,Data Analyst,employee0258@example.com,Present,08:44,15:59,7.25,45,High,4,Browser,2026-10-23 08:10,Active
+EMP0259,Ananya Chopra,Finance,Financial Analyst,employee0259@example.com,Absent,,,0.0,24,Low,2,Code Editor,2026-10-04 08:15,Active
+EMP0260,Anika Shah,HR,HR Executive,employee0260@example.com,Late,09:56,18:01,8.08,68,Low,1,Browser,2026-10-28 17:10,Active
+EMP0261,Ayaan Shah,HR,HR Executive,employee0261@example.com,Present,10:10,17:10,7.0,47,Low,0,CRM,2026-10-02 15:15,Active
+EMP0262,Aditya Saxena,Security,Security Analyst,employee0262@example.com,Present,09:22,16:53,7.52,71,High,5,Email,2026-10-09 09:30,Active
+EMP0263,Diya Mehta,Support,Customer Support Executive,employee0263@example.com,Present,09:42,16:50,7.13,74,Low,1,Database,2026-10-11 09:30,Active
+EMP0264,Aadhya Nair,Operations,Process Analyst,employee0264@example.com,Absent,,,0.0,19,Low,1,Spreadsheet,2026-10-12 17:20,Active
+EMP0265,Shaurya Sharma,Security,Compliance Analyst,employee0265@example.com,Present,08:59,17:08,8.15,67,High,9,Project Management,2026-10-23 08:15,Active
+EMP0266,Kiara Singh,Sales,Sales Executive,employee0266@example.com,Remote,09:00,16:53,7.88,76,Low,0,Project Management,2026-10-23 12:00,Active
+EMP0267,Priya Kapoor,HR,HR Executive,employee0267@example.com,Remote,08:24,16:28,8.07,53,High,9,Project Management,2026-10-13 09:30,On Leave
+EMP0268,Ishaan Mehta,Operations,Operations Executive,employee0268@example.com,Present,09:20,18:18,8.97,96,Medium,3,Spreadsheet,2026-10-11 15:15,Active
+EMP0269,Ishaan Shah,HR,HR Executive,employee0269@example.com,Present,08:27,15:48,7.35,73,Medium,3,Document Editor,2026-10-14 09:30,Active
+EMP0270,Kiara Kapoor,Operations,Process Analyst,employee0270@example.com,On Leave,,,0.0,3,Low,0,Email,2026-10-26 18:15,Inactive
+EMP0271,Saanvi Malhotra,Finance,Accountant,employee0271@example.com,Present,09:03,16:48,7.75,70,Medium,1,Project Management,2026-10-22 12:15,Active
+EMP0272,Dev Saxena,Support,Customer Support Executive,employee0272@example.com,Present,08:24,16:23,7.98,51,Low,0,Project Management,2026-10-01 08:10,Active
+EMP0273,Priya Gupta,Operations,Operations Executive,employee0273@example.com,On Leave,,,0.0,2,Low,0,Database,2026-10-07 18:20,Active
+EMP0274,Krishna Verma,Marketing,Content Specialist,employee0274@example.com,Present,08:43,17:41,8.97,81,Medium,4,CRM,2026-10-16 08:20,Inactive
+EMP0275,Karan Joshi,Finance,Financial Analyst,employee0275@example.com,Present,09:11,17:08,7.95,54,Low,2,Document Editor,2026-10-20 17:10,Inactive
+EMP0276,Aman Saxena,Marketing,Digital Marketer,employee0276@example.com,Present,08:22,15:57,7.58,69,Low,1,Email,2026-10-07 18:30,Active
+EMP0277,Rohan Chopra,Marketing,Content Specialist,employee0277@example.com,Remote,10:04,17:48,7.73,81,Medium,3,Spreadsheet,2026-10-13 12:10,Active
+EMP0278,Vivaan Reddy,IT,Software Engineer,employee0278@example.com,On Leave,,,0.0,15,Medium,3,Spreadsheet,2026-10-25 17:10,Active
+EMP0279,Ira Reddy,Support,Technical Support Agent,employee0279@example.com,On Leave,,,0.0,25,High,3,CRM,2026-10-25 11:30,Active
+EMP0280,Diya Mehta,Research,Research Associate,employee0280@example.com,On Leave,,,0.0,23,High,5,CRM,2026-10-19 08:45,Inactive
+EMP0281,Arnav Joshi,Marketing,Marketing Executive,employee0281@example.com,Remote,09:19,16:41,7.37,76,Low,0,Document Editor,2026-10-02 11:30,Active
+EMP0282,Aarav Malhotra,Sales,Sales Executive,employee0282@example.com,On Leave,,,0.0,4,Low,2,CRM,2026-10-06 13:00,Active
+EMP0283,Krishna Bansal,Research,Research Analyst,employee0283@example.com,Present,09:35,18:05,8.5,87,Medium,5,CRM,2026-10-04 13:15,Active
+EMP0284,Kavya Yadav,Research,Research Associate,employee0284@example.com,Present,10:23,18:51,8.47,84,Low,0,Browser,2026-10-22 17:10,Active
+EMP0285,Ishaan Patel,IT,System Administrator,employee0285@example.com,Absent,,,0.0,18,Medium,5,Code Editor,2026-10-02 10:30,Active
+EMP0286,Nisha Kumar,Research,Data Scientist,employee0286@example.com,Absent,,,0.0,2,Low,1,Database,2026-10-11 10:45,Active
+EMP0287,Dev Sharma,Operations,Operations Executive,employee0287@example.com,Present,09:03,17:31,8.47,49,Low,1,Project Management,2026-10-26 09:45,Active
+EMP0288,Dev Mishra,Finance,Finance Executive,employee0288@example.com,Late,10:06,18:58,8.87,69,Low,2,Spreadsheet,2026-10-13 09:20,On Leave
+EMP0289,Ananya Kapoor,HR,Recruiter,employee0289@example.com,On Leave,,,0.0,1,Low,0,CRM,2026-10-11 12:00,Active
+EMP0290,Rohan Patel,HR,HR Executive,employee0290@example.com,Remote,08:23,16:06,7.72,83,Medium,4,Project Management,2026-10-23 08:20,Inactive
+EMP0291,Ananya Verma,HR,Recruiter,employee0291@example.com,Present,08:52,16:16,7.4,71,High,7,Browser,2026-10-24 16:15,Inactive
+EMP0292,Ira Singh,IT,Software Engineer,employee0292@example.com,Late,10:26,18:36,8.17,98,Medium,2,Browser,2026-10-02 13:00,Active
+EMP0293,Varun Yadav,Sales,Sales Manager,employee0293@example.com,Present,08:06,15:32,7.43,55,High,5,Document Editor,2026-10-03 15:00,Active
+EMP0294,Nisha Reddy,HR,Recruiter,employee0294@example.com,Absent,,,0.0,17,Medium,2,Email,2026-10-12 14:15,Active
+EMP0295,Anika Kapoor,Marketing,Digital Marketer,employee0295@example.com,Present,08:57,17:44,8.78,62,Medium,1,Database,2026-10-05 18:00,Active
+EMP0296,Yash Mishra,Sales,Sales Executive,employee0296@example.com,Remote,08:15,17:02,8.78,69,Medium,4,Document Editor,2026-10-18 18:20,On Leave
+EMP0297,Kiara Gupta,Security,Compliance Analyst,employee0297@example.com,On Leave,,,0.0,22,Low,2,CRM,2026-10-19 16:30,Inactive
+EMP0298,Krishna Kapoor,Finance,Accountant,employee0298@example.com,Present,08:54,17:37,8.72,57,Low,0,CRM,2026-10-14 09:45,Active
+EMP0299,Varun Reddy,Research,Research Associate,employee0299@example.com,Absent,,,0.0,25,Low,0,Browser,2026-10-13 16:20,On Leave
+EMP0300,Pooja Kapoor,IT,System Administrator,employee0300@example.com,On Leave,,,0.0,22,Medium,5,CRM,2026-10-17 14:00,Active
+EMP0301,Arnav Shah,HR,HR Manager,employee0301@example.com,Present,10:24,19:03,8.65,51,Low,2,Document Editor,2026-10-12 14:15,Active
+EMP0302,Arnav Rao,Marketing,Marketing Executive,employee0302@example.com,Present,08:44,16:19,7.58,70,Low,2,Project Management,2026-10-20 18:45,Active
+EMP0303,Neha Mehta,IT,Data Analyst,employee0303@example.com,Absent,,,0.0,15,Low,1,Document Editor,2026-10-01 13:15,Active
+EMP0304,Ayaan Mehta,Finance,Accountant,employee0304@example.com,Present,09:53,18:32,8.65,97,Low,1,Spreadsheet,2026-10-24 14:30,Inactive
+EMP0305,Dev Joshi,Security,Security Analyst,employee0305@example.com,Absent,,,0.0,15,Medium,3,Browser,2026-10-27 08:30,Active
+EMP0306,Siddharth Das,Finance,Accountant,employee0306@example.com,On Leave,,,0.0,16,Medium,1,Email,2026-10-06 11:10,Active
+EMP0307,Meera Verma,Research,Data Scientist,employee0307@example.com,Absent,,,0.0,6,Low,1,Code Editor,2026-10-27 15:30,Active
+EMP0308,Vivaan Mehta,Research,Research Associate,employee0308@example.com,Late,09:54,17:16,7.37,100,Medium,5,Code Editor,2026-10-18 13:15,Active
+EMP0309,Riya Sharma,Security,SOC Operator,employee0309@example.com,Present,08:41,17:30,8.82,81,Low,0,Project Management,2026-10-21 11:45,Active
+EMP0310,Siddharth Sharma,IT,Data Analyst,employee0310@example.com,Late,08:33,16:55,8.37,56,Medium,1,Project Management,2026-10-08 12:30,Active
+EMP0311,Rohan Chopra,Marketing,Marketing Executive,employee0311@example.com,Present,08:55,16:54,7.98,64,High,7,Email,2026-10-27 17:20,On Leave
+EMP0312,Siddharth Chopra,Support,Customer Support Executive,employee0312@example.com,Absent,,,0.0,19,Medium,3,Database,2026-10-10 18:00,Active
+EMP0313,Pari Malhotra,Operations,Operations Manager,employee0313@example.com,Present,09:16,16:40,7.4,54,Medium,2,CRM,2026-10-02 17:20,Inactive
+EMP0314,Vivaan Yadav,Operations,Process Analyst,employee0314@example.com,Present,09:47,17:38,7.85,69,High,3,Spreadsheet,2026-10-19 17:10,Active
+EMP0315,Yash Yadav,Research,Research Analyst,employee0315@example.com,Remote,09:16,18:04,8.8,55,High,7,Browser,2026-10-06 12:00,Active
+EMP0316,Tanya Patel,Research,Research Associate,employee0316@example.com,Absent,,,0.0,2,Low,1,Browser,2026-10-08 12:20,Active
+EMP0317,Simran Nair,Marketing,Digital Marketer,employee0317@example.com,On Leave,,,0.0,3,Medium,1,Code Editor,2026-10-28 18:30,On Leave
+EMP0318,Kabir Joshi,Support,Technical Support Agent,employee0318@example.com,Present,09:37,17:44,8.12,64,Medium,1,Project Management,2026-10-28 10:10,Active
+EMP0319,Arnav Kapoor,Finance,Accountant,employee0319@example.com,Present,08:46,17:25,8.65,50,Medium,3,Email,2026-10-21 10:15,Inactive
+EMP0320,Dev Reddy,Sales,Sales Executive,employee0320@example.com,On Leave,,,0.0,24,Low,2,Project Management,2026-10-25 10:20,Active
+EMP0321,Kavya Das,Security,Compliance Analyst,employee0321@example.com,Late,09:38,16:38,7.0,47,Medium,2,Spreadsheet,2026-10-24 13:00,Active
+EMP0322,Vivaan Sharma,Sales,Sales Executive,employee0322@example.com,Present,09:28,17:07,7.65,53,Low,1,Email,2026-10-17 17:15,Active
+EMP0323,Kiara Nair,Marketing,Content Specialist,employee0323@example.com,Absent,,,0.0,16,Medium,5,Document Editor,2026-10-11 14:45,Active
+EMP0324,Karan Joshi,Finance,Accountant,employee0324@example.com,On Leave,,,0.0,12,Low,0,CRM,2026-10-08 10:10,Inactive
+EMP0325,Krishna Chopra,IT,Software Engineer,employee0325@example.com,Late,09:05,17:43,8.63,79,Medium,1,Email,2026-10-20 08:45,Active
+EMP0326,Krishna Mishra,Marketing,Content Specialist,employee0326@example.com,Late,08:31,16:41,8.17,61,Medium,2,Project Management,2026-10-07 18:45,Active
+EMP0327,Ayaan Bansal,Operations,Operations Executive,employee0327@example.com,Remote,08:35,16:28,7.88,98,Low,2,Code Editor,2026-10-24 17:00,Active
+EMP0328,Nisha Joshi,Sales,Sales Executive,employee0328@example.com,On Leave,,,0.0,8,Medium,2,Document Editor,2026-10-12 14:15,Active
+EMP0329,Saanvi Yadav,Research,Research Analyst,employee0329@example.com,Present,08:00,15:01,7.02,87,Low,0,Code Editor,2026-10-27 17:45,Active
+EMP0330,Siddharth Gupta,HR,Recruiter,employee0330@example.com,Present,08:59,16:57,7.97,63,Low,1,Database,2026-10-02 09:10,Active
+EMP0331,Rahul Mishra,HR,Recruiter,employee0331@example.com,Present,08:11,15:12,7.02,99,Low,2,Browser,2026-10-21 10:15,Active
+EMP0332,Reyansh Chopra,Research,Research Associate,employee0332@example.com,Present,08:29,16:20,7.85,70,Medium,3,CRM,2026-10-27 14:45,Active
+EMP0333,Krishna Kumar,IT,IT Support Engineer,employee0333@example.com,On Leave,,,0.0,5,Low,1,CRM,2026-10-19 15:30,Inactive
+EMP0334,Ishita Das,Research,Research Associate,employee0334@example.com,Remote,08:07,16:57,8.83,88,High,4,Email,2026-10-16 15:00,Active
+EMP0335,Arjun Reddy,Research,Data Scientist,employee0335@example.com,Present,10:14,18:52,8.63,92,Medium,5,Code Editor,2026-10-08 18:15,On Leave
+EMP0336,Kavya Mehta,Marketing,Digital Marketer,employee0336@example.com,Present,09:38,16:57,7.32,98,Medium,5,Document Editor,2026-10-02 08:45,Active
+EMP0337,Nisha Patel,HR,HR Executive,employee0337@example.com,On Leave,,,0.0,15,Low,0,Project Management,2026-10-11 12:00,On Leave
+EMP0338,Sneha Mehta,HR,HR Executive,employee0338@example.com,Late,09:53,18:35,8.7,81,Medium,1,Document Editor,2026-10-28 15:20,Active
+EMP0339,Vivaan Singh,Security,SOC Operator,employee0339@example.com,Late,08:09,16:20,8.18,80,Low,0,Spreadsheet,2026-10-26 17:30,Inactive
+EMP0340,Meera Malhotra,Research,Research Associate,employee0340@example.com,On Leave,,,0.0,1,Low,1,Database,2026-10-11 16:30,On Leave
+EMP0341,Dev Singh,HR,HR Manager,employee0341@example.com,On Leave,,,0.0,21,Low,0,Database,2026-10-11 13:45,Active
+EMP0342,Ayaan Verma,Finance,Accountant,employee0342@example.com,Late,08:35,17:20,8.75,90,High,8,Spreadsheet,2026-10-14 09:15,On Leave
+EMP0343,Krishna Das,Sales,Sales Executive,employee0343@example.com,Late,08:48,17:19,8.52,66,Low,1,Document Editor,2026-10-02 18:45,On Leave
+EMP0344,Meera Shah,Support,Support Lead,employee0344@example.com,Present,10:07,17:07,7.0,78,High,3,CRM,2026-10-18 14:30,Active
+EMP0345,Simran Patel,Finance,Finance Executive,employee0345@example.com,Present,09:39,18:03,8.4,83,Medium,3,Spreadsheet,2026-10-17 14:20,On Leave
+EMP0346,Pari Das,Research,Data Scientist,employee0346@example.com,Present,09:55,18:38,8.72,53,Low,1,Database,2026-10-20 16:15,Inactive
+EMP0347,Tanya Joshi,Sales,Account Manager,employee0347@example.com,Present,09:14,17:41,8.45,67,High,4,Database,2026-10-23 18:10,On Leave
+EMP0348,Krishna Chopra,Support,Customer Support Executive,employee0348@example.com,Late,10:29,18:42,8.22,87,High,6,Code Editor,2026-10-22 16:15,Active
+EMP0349,Vivaan Das,Finance,Finance Executive,employee0349@example.com,Present,08:14,15:39,7.42,62,Low,1,Browser,2026-10-22 12:10,Active
+EMP0350,Saanvi Saxena,IT,IT Support Engineer,employee0350@example.com,Present,09:55,17:08,7.22,84,High,8,Spreadsheet,2026-10-18 11:45,Inactive
+EMP0351,Siddharth Nair,IT,Data Analyst,employee0351@example.com,Late,09:39,17:32,7.88,95,High,5,Spreadsheet,2026-10-18 08:00,Inactive
+EMP0352,Ishita Kapoor,Sales,Account Manager,employee0352@example.com,Absent,,,0.0,22,High,8,Spreadsheet,2026-10-12 17:30,Inactive
+EMP0353,Aadhya Nair,Marketing,Content Specialist,employee0353@example.com,Present,08:19,15:42,7.38,56,High,7,Browser,2026-10-04 14:00,Active
+EMP0354,Ishaan Patel,Operations,Process Analyst,employee0354@example.com,Present,09:24,17:23,7.98,90,Low,0,Browser,2026-10-05 13:30,Active
+EMP0355,Nisha Shah,Support,Support Lead,employee0355@example.com,Present,08:18,16:58,8.67,90,Low,2,CRM,2026-10-08 10:30,Active
+EMP0356,Aman Saxena,Support,Customer Support Executive,employee0356@example.com,Late,08:23,16:07,7.73,59,Low,2,Document Editor,2026-10-11 13:15,Active
+EMP0357,Tanya Sharma,HR,HR Executive,employee0357@example.com,Absent,,,0.0,11,Medium,2,Database,2026-10-21 17:30,Active
+EMP0358,Rohan Singh,Security,SOC Operator,employee0358@example.com,Present,10:18,18:50,8.53,63,Low,2,Document Editor,2026-10-27 13:30,On Leave
+EMP0359,Aditya Nair,Sales,Sales Executive,employee0359@example.com,Present,10:11,17:21,7.17,51,Low,2,Spreadsheet,2026-10-18 08:45,Active
+EMP0360,Kavya Singh,Sales,Account Manager,employee0360@example.com,Remote,09:51,18:13,8.37,97,Low,2,Database,2026-10-22 10:00,Active
+EMP0361,Aditya Gupta,HR,Recruiter,employee0361@example.com,Present,08:45,17:26,8.68,61,Medium,1,Document Editor,2026-10-19 11:15,Active
+EMP0362,Sneha Mishra,Research,Data Scientist,employee0362@example.com,Present,09:39,18:05,8.43,52,Medium,1,Email,2026-10-21 17:00,Inactive
+EMP0363,Arjun Chopra,Support,Technical Support Agent,employee0363@example.com,Present,09:14,17:54,8.67,88,Low,2,Email,2026-10-03 12:20,Active
+EMP0364,Kabir Patel,Support,Support Lead,employee0364@example.com,Present,08:34,17:09,8.58,70,Medium,3,Database,2026-10-21 10:15,Inactive
+EMP0365,Aarav Saxena,Support,Technical Support Agent,employee0365@example.com,Present,08:31,15:36,7.08,45,Medium,5,Spreadsheet,2026-10-13 16:30,Active
+EMP0366,Karan Joshi,Security,Security Analyst,employee0366@example.com,Absent,,,0.0,16,Low,0,Code Editor,2026-10-06 11:30,Active
+EMP0367,Diya Shah,IT,Software Engineer,employee0367@example.com,On Leave,,,0.0,24,Medium,4,Browser,2026-10-21 16:00,Active
+EMP0368,Ayaan Joshi,Marketing,Marketing Executive,employee0368@example.com,Present,09:31,16:47,7.27,87,High,4,Database,2026-10-04 12:30,Active
+EMP0369,Nisha Kapoor,Research,Research Analyst,employee0369@example.com,Remote,09:18,17:46,8.47,82,Low,2,Email,2026-10-19 13:15,Active
+EMP0370,Rahul Mehta,Sales,Account Manager,employee0370@example.com,Absent,,,0.0,23,High,6,Database,2026-10-09 13:10,Inactive
+EMP0371,Kabir Kapoor,Marketing,Marketing Executive,employee0371@example.com,Present,09:18,17:20,8.03,80,Low,0,Spreadsheet,2026-10-21 17:00,Active
+EMP0372,Anika Gupta,HR,HR Manager,employee0372@example.com,Present,10:09,18:29,8.33,46,Medium,5,Browser,2026-10-13 17:10,Active
+EMP0373,Yash Saxena,Marketing,Content Specialist,employee0373@example.com,Absent,,,0.0,24,Low,1,CRM,2026-10-13 11:30,Inactive
+EMP0374,Meera Bansal,Support,Support Lead,employee0374@example.com,Present,09:41,17:27,7.77,77,Low,2,CRM,2026-10-08 17:45,Active
+EMP0375,Dev Patel,Finance,Accountant,employee0375@example.com,Remote,10:24,18:48,8.4,100,Low,2,Document Editor,2026-10-24 15:15,Active
+EMP0376,Myra Gupta,Operations,Operations Manager,employee0376@example.com,Present,08:59,16:04,7.08,87,Low,2,Email,2026-10-26 13:20,Active
+EMP0377,Aditya Malhotra,HR,HR Manager,employee0377@example.com,Absent,,,0.0,16,High,9,CRM,2026-10-09 12:30,On Leave
+EMP0378,Rohan Das,Research,Research Associate,employee0378@example.com,Remote,08:19,16:25,8.1,61,Medium,2,Document Editor,2026-10-17 14:15,Active
+EMP0379,Varun Sharma,Support,Customer Support Executive,employee0379@example.com,Present,09:52,17:13,7.35,59,Low,2,CRM,2026-10-21 12:10,Active
+EMP0380,Priya Rao,HR,Recruiter,employee0380@example.com,Absent,,,0.0,7,Medium,3,Document Editor,2026-10-24 09:20,Inactive
+EMP0381,Saanvi Shah,Finance,Accountant,employee0381@example.com,Absent,,,0.0,13,Low,0,CRM,2026-10-02 10:30,On Leave
+EMP0382,Siddharth Verma,Finance,Finance Executive,employee0382@example.com,Present,08:42,16:15,7.55,56,Medium,4,Browser,2026-10-20 17:45,Active
+EMP0383,Reyansh Joshi,Marketing,Digital Marketer,employee0383@example.com,Remote,10:00,18:51,8.85,75,Low,0,CRM,2026-10-27 14:30,Active
+EMP0384,Ishita Bansal,Operations,Operations Executive,employee0384@example.com,Present,09:27,18:25,8.97,74,Medium,5,Code Editor,2026-10-03 11:20,Active
+EMP0385,Vivaan Joshi,Support,Customer Support Executive,employee0385@example.com,On Leave,,,0.0,16,High,6,Document Editor,2026-10-27 10:30,Active
+EMP0386,Ishita Rao,IT,Software Engineer,employee0386@example.com,On Leave,,,0.0,17,Medium,1,Project Management,2026-10-03 15:45,Active
+EMP0387,Pooja Mishra,Research,Research Associate,employee0387@example.com,On Leave,,,0.0,1,High,7,Code Editor,2026-10-14 11:20,Active
+EMP0388,Kavya Kumar,Operations,Operations Executive,employee0388@example.com,Late,08:59,17:55,8.93,99,Low,1,Email,2026-10-20 16:20,Active
+EMP0389,Aarav Shah,Support,Customer Support Executive,employee0389@example.com,Present,10:13,17:13,7.0,69,High,4,CRM,2026-10-23 13:20,Active
+EMP0390,Kavya Shah,Operations,Operations Manager,employee0390@example.com,Present,10:17,18:11,7.9,81,Low,2,Document Editor,2026-10-09 18:20,Active
+EMP0391,Diya Chopra,Support,Support Lead,employee0391@example.com,Remote,10:03,17:35,7.53,64,Medium,3,Code Editor,2026-10-25 14:45,Active
+EMP0392,Myra Kapoor,Finance,Accountant,employee0392@example.com,Present,08:54,16:59,8.08,70,Low,2,Project Management,2026-10-20 18:45,Active
+EMP0393,Aarav Gupta,Finance,Finance Executive,employee0393@example.com,Late,09:51,17:02,7.18,49,Low,0,Project Management,2026-10-12 09:30,Active
+EMP0394,Sneha Rao,Support,Support Lead,employee0394@example.com,Present,08:14,16:53,8.65,97,Low,2,Browser,2026-10-16 15:00,Active
+EMP0395,Aadhya Verma,Support,Customer Support Executive,employee0395@example.com,Remote,08:59,17:17,8.3,55,High,3,Code Editor,2026-10-12 11:45,Active
+EMP0396,Pari Das,Research,Data Scientist,employee0396@example.com,Absent,,,0.0,12,Medium,5,Code Editor,2026-10-07 16:00,Inactive
+EMP0397,Reyansh Saxena,Operations,Operations Executive,employee0397@example.com,Absent,,,0.0,17,Medium,3,Document Editor,2026-10-12 12:10,On Leave
+EMP0398,Sneha Shah,IT,Software Engineer,employee0398@example.com,Present,08:44,16:36,7.87,77,Low,2,Browser,2026-10-03 16:15,Active
+EMP0399,Yash Shah,Operations,Process Analyst,employee0399@example.com,Absent,,,0.0,14,Medium,5,Document Editor,2026-10-16 11:15,Active
+EMP0400,Simran Sharma,Marketing,Content Specialist,employee0400@example.com,Present,09:06,16:14,7.13,69,High,9,Project Management,2026-10-08 18:45,Active

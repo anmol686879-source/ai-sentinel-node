@@ -1,0 +1,15 @@
+# sudo cp deploy/ai-sentinel.service /etc/systemd/system/ && sudo systemctl enable --now ai-sentinel
+# Put the project in /opt/ai-sentinel and your settings in /opt/ai-sentinel/.env (see .env.example)
+# The service user must be able to write the data folder:  sudo mkdir -p /opt/ai-sentinel/data && sudo chown -R www-data:www-data /opt/ai-sentinel/data
+[Unit]
+Description=AI Sentinel
+After=network.target
+[Service]
+WorkingDirectory=/opt/ai-sentinel
+EnvironmentFile=/opt/ai-sentinel/.env
+ExecStart=/usr/bin/node --no-warnings server.js
+Restart=always
+User=www-data
+NoNewPrivileges=true
+[Install]
+WantedBy=multi-user.target

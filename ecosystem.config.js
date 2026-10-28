@@ -1,0 +1,1 @@
+module.exports={apps:[{name:'ai-sentinel',script:'server.js',node_args:'--no-warnings',env:{NODE_ENV:'production',SEED_DEMO:'0',SIMULATE:'0',TZ:'Asia/Kolkata'},max_restarts:20}]}; // pm2 start ecosystem.config.js  (set ADMIN_PASSWORD, ADMIN_KEY, TRUST_PROXY, HTTPS_ONLY, ALERT_WEBHOOK_URL in your shell first)

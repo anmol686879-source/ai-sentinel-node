@@ -1,0 +1,26 @@
+# docker compose up -d --build                  -> http://localhost:3000
+# docker compose --profile https up -d --build  -> automatic HTTPS on $DOMAIN (ports 80/443 must be open)
+services:
+  app:
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    volumes: [sentinel-data:/app/data]
+    ports: ["3000:3000"]
+  caddy:
+    image: caddy:2-alpine
+    profiles: ["https"]
+    restart: unless-stopped
+    env_file: .env
+    ports: ["80:80", "443:443"]
+    volumes: ["./deploy/Caddyfile:/etc/caddy/Caddyfile:ro", "caddy-data:/data"]
+    depends_on: [app]
+  backup:
+    build: .
+    profiles: ["backup"]
+    env_file: .env
+    volumes: [sentinel-data:/app/data]
+    command: ["node","--no-warnings","scripts/backup.js"]
+volumes:
+  sentinel-data:
+  caddy-data:

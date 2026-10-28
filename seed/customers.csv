@@ -1,0 +1,401 @@
+CustomerID,CustomerName,Email,Phone,City,State,CustomerSegment,SignupDate,CustomerStatus,TotalOrders,LifetimeValue
+CUS0001,Rohan Rao,customer0001@example.com,+917113185974,Lucknow,Uttar Pradesh,Education,2022-09-21,Active,65,191629.09
+CUS0002,Siddharth Gupta,customer0002@example.com,+919191699258,Aligarh,Uttar Pradesh,Government,2024-03-04,Active,2,1202.61
+CUS0003,Rohan Sharma,customer0003@example.com,+919754950693,Lucknow,Uttar Pradesh,Enterprise,2025-08-07,Inactive,34,182293.33
+CUS0004,Siddharth Joshi,customer0004@example.com,+916079272565,Noida,Uttar Pradesh,Individual,2023-07-17,Prospect,65,108842.17
+CUS0005,Vivaan Malhotra,customer0005@example.com,+917800108422,Mumbai,Maharashtra,Small Business,2024-02-07,Active,23,22856.41
+CUS0006,Diya Reddy,customer0006@example.com,+918375720085,Meerut,Uttar Pradesh,Small Business,2022-10-05,Inactive,4,242860.04
+CUS0007,Arjun Yadav,customer0007@example.com,+918414404946,Bengaluru,Karnataka,Government,2024-08-15,Prospect,22,81280.44
+CUS0008,Reyansh Bansal,customer0008@example.com,+916008672994,Roorkee,Uttarakhand,Government,2025-10-16,Active,40,215779.9
+CUS0009,Tanya Saxena,customer0009@example.com,+919737839137,Lucknow,Uttar Pradesh,Small Business,2024-12-16,Active,66,192659.45
+CUS0010,Arjun Chopra,customer0010@example.com,+916791628404,Bengaluru,Karnataka,Individual,2025-11-15,Inactive,56,117337.66
+CUS0011,Rohan Shah,customer0011@example.com,+917981242692,Noida,Uttar Pradesh,Small Business,2024-06-29,Active,44,90079.65
+CUS0012,Diya Shah,customer0012@example.com,+916250591855,Chandigarh,Chandigarh,Government,2023-01-24,Inactive,63,209088.68
+CUS0013,Rahul Joshi,customer0013@example.com,+916496890514,Haridwar,Uttarakhand,Small Business,2023-11-05,Inactive,38,38390.88
+CUS0014,Rahul Yadav,customer0014@example.com,+917426008263,Gurugram,Haryana,Education,2022-08-31,Inactive,30,61670.08
+CUS0015,Rahul Gupta,customer0015@example.com,+918972623349,Dehradun,Uttarakhand,Individual,2025-08-06,Active,4,164888.71
+CUS0016,Rahul Gupta,customer0016@example.com,+917201682183,Roorkee,Uttarakhand,Enterprise,2024-05-24,Inactive,21,176812.87
+CUS0017,Kavya Verma,customer0017@example.com,+916371458039,Gurugram,Haryana,Government,2022-10-18,Active,2,34710.2
+CUS0018,Riya Das,customer0018@example.com,+919304823380,Lucknow,Uttar Pradesh,Education,2026-05-13,Active,59,132246.77
+CUS0019,Reyansh Chopra,customer0019@example.com,+919757706972,Dehradun,Uttarakhand,Small Business,2024-02-05,Prospect,10,132343.76
+CUS0020,Reyansh Mehta,customer0020@example.com,+917961813263,Noida,Uttar Pradesh,Education,2023-10-06,Active,68,53324.03
+CUS0021,Arjun Malhotra,customer0021@example.com,+917256446093,Jaipur,Rajasthan,Individual,2025-11-19,Prospect,17,241419.16
+CUS0022,Nisha Sharma,customer0022@example.com,+917755135894,Haridwar,Uttarakhand,Government,2025-01-19,Active,54,185180.83
+CUS0023,Ira Mehta,customer0023@example.com,+916337440923,Mumbai,Maharashtra,Education,2024-09-20,Active,35,179872.5
+CUS0024,Ishita Nair,customer0024@example.com,+918706431017,Hyderabad,Telangana,Small Business,2022-09-14,Prospect,33,180172.16
+CUS0025,Myra Mehta,customer0025@example.com,+919101437424,Lucknow,Uttar Pradesh,Individual,2025-09-07,Active,29,158131.8
+CUS0026,Vivaan Kapoor,customer0026@example.com,+918860887141,Dehradun,Uttarakhand,Enterprise,2023-10-14,Active,31,95959.76
+CUS0027,Rahul Rao,customer0027@example.com,+918168560100,Noida,Uttar Pradesh,Government,2023-01-24,Active,59,725.82
+CUS0028,Pari Gupta,customer0028@example.com,+917353313548,Gurugram,Haryana,Education,2023-05-13,Inactive,54,217241.81
+CUS0029,Diya Mishra,customer0029@example.com,+919070108016,Noida,Uttar Pradesh,Individual,2022-10-01,Inactive,18,245549.48
+CUS0030,Saanvi Bansal,customer0030@example.com,+917653218563,Gurugram,Haryana,Government,2026-05-20,Active,34,76499.84
+CUS0031,Nisha Joshi,customer0031@example.com,+919500510446,Bengaluru,Karnataka,Individual,2025-11-16,Active,19,81170.54
+CUS0032,Rahul Joshi,customer0032@example.com,+919313574333,Meerut,Uttar Pradesh,Enterprise,2025-11-30,Inactive,42,108946.65
+CUS0033,Ishaan Mishra,customer0033@example.com,+919825725399,Delhi,Delhi,Enterprise,2024-11-10,Prospect,47,78890.89
+CUS0034,Aadhya Yadav,customer0034@example.com,+918536722156,Gurugram,Haryana,Small Business,2024-08-05,Active,27,245098.46
+CUS0035,Karan Shah,customer0035@example.com,+918325351277,Aligarh,Uttar Pradesh,Small Business,2026-02-02,Inactive,15,53690.49
+CUS0036,Reyansh Saxena,customer0036@example.com,+918712169886,Hyderabad,Telangana,Government,2025-07-31,Active,7,57949.12
+CUS0037,Rohan Kapoor,customer0037@example.com,+918872915243,Roorkee,Uttarakhand,Enterprise,2024-06-10,Active,40,44753.94
+CUS0038,Tanya Mehta,customer0038@example.com,+917254427077,Jaipur,Rajasthan,Individual,2026-05-28,Prospect,75,194992.66
+CUS0039,Aadhya Yadav,customer0039@example.com,+918600310405,Jaipur,Rajasthan,Education,2023-12-11,Inactive,8,241463.23
+CUS0040,Krishna Verma,customer0040@example.com,+919720183784,Delhi,Delhi,Education,2025-05-07,Prospect,36,204535.91
+CUS0041,Aditya Nair,customer0041@example.com,+916843233370,Noida,Uttar Pradesh,Government,2025-11-02,Active,65,168942.08
+CUS0042,Priya Shah,customer0042@example.com,+917449116896,Pune,Maharashtra,Education,2026-07-04,Active,71,21218.24
+CUS0043,Pari Reddy,customer0043@example.com,+918262012127,Noida,Uttar Pradesh,Education,2025-03-29,Active,28,41589.89
+CUS0044,Pari Rao,customer0044@example.com,+918429352718,Bengaluru,Karnataka,Government,2024-04-22,Prospect,23,53032.51
+CUS0045,Vihaan Joshi,customer0045@example.com,+918897941458,Haridwar,Uttarakhand,Government,2023-01-25,Active,74,113909.26
+CUS0046,Dev Shah,customer0046@example.com,+916273226363,Delhi,Delhi,Small Business,2025-07-26,Active,21,21237.44
+CUS0047,Simran Rao,customer0047@example.com,+918048246368,Chandigarh,Chandigarh,Government,2023-05-18,Active,67,249429.12
+CUS0048,Pooja Patel,customer0048@example.com,+918507456771,Mumbai,Maharashtra,Education,2026-03-29,Active,38,11694.16
+CUS0049,Myra Verma,customer0049@example.com,+916496687248,Meerut,Uttar Pradesh,Individual,2025-11-28,Active,0,70773.51
+CUS0050,Anika Rao,customer0050@example.com,+916613290541,Roorkee,Uttarakhand,Enterprise,2025-07-26,Active,68,155360.48
+CUS0051,Reyansh Bansal,customer0051@example.com,+917458050049,Bengaluru,Karnataka,Education,2024-11-05,Prospect,49,103115.9
+CUS0052,Arjun Gupta,customer0052@example.com,+917366750717,Pune,Maharashtra,Small Business,2023-03-16,Prospect,17,108225.07
+CUS0053,Sneha Gupta,customer0053@example.com,+918548599559,Noida,Uttar Pradesh,Education,2025-01-02,Active,38,163756.19
+CUS0054,Kavya Shah,customer0054@example.com,+919436373991,Chandigarh,Chandigarh,Government,2024-04-15,Prospect,5,109634.37
+CUS0055,Ayaan Rao,customer0055@example.com,+917591840669,Roorkee,Uttarakhand,Individual,2024-12-23,Active,71,46475.75
+CUS0056,Pari Yadav,customer0056@example.com,+918317122173,Bengaluru,Karnataka,Small Business,2025-08-10,Prospect,69,140739.79
+CUS0057,Vivaan Mehta,customer0057@example.com,+916558597911,Mumbai,Maharashtra,Small Business,2024-09-17,Prospect,24,43790.8
+CUS0058,Riya Kapoor,customer0058@example.com,+916874104908,Chandigarh,Chandigarh,Small Business,2024-10-05,Inactive,12,84057.04
+CUS0059,Dev Shah,customer0059@example.com,+918848225631,Dehradun,Uttarakhand,Education,2023-09-30,Prospect,71,9455.61
+CUS0060,Rohan Sharma,customer0060@example.com,+917414568502,Haridwar,Uttarakhand,Small Business,2024-03-01,Active,14,108204.9
+CUS0061,Aman Mehta,customer0061@example.com,+919556342727,Aligarh,Uttar Pradesh,Education,2025-01-21,Active,40,205477.77
+CUS0062,Vivaan Chopra,customer0062@example.com,+917144500067,Hyderabad,Telangana,Individual,2025-05-26,Active,14,24085.22
+CUS0063,Meera Nair,customer0063@example.com,+916682857158,Hyderabad,Telangana,Small Business,2023-06-28,Active,70,131449.73
+CUS0064,Myra Kumar,customer0064@example.com,+918324036725,Chandigarh,Chandigarh,Individual,2024-05-13,Prospect,5,618.35
+CUS0065,Vivaan Reddy,customer0065@example.com,+918365775330,Delhi,Delhi,Government,2024-06-01,Active,65,53558.53
+CUS0066,Vihaan Nair,customer0066@example.com,+919954553184,Aligarh,Uttar Pradesh,Small Business,2026-04-07,Active,60,1039.59
+CUS0067,Siddharth Yadav,customer0067@example.com,+919788714626,Noida,Uttar Pradesh,Enterprise,2026-09-26,Active,21,135030.85
+CUS0068,Yash Mehta,customer0068@example.com,+918449905728,Pune,Maharashtra,Education,2024-10-08,Inactive,34,229859.91
+CUS0069,Aman Mehta,customer0069@example.com,+917802125925,Aligarh,Uttar Pradesh,Small Business,2026-09-24,Active,42,136585.17
+CUS0070,Meera Mishra,customer0070@example.com,+916198023142,Meerut,Uttar Pradesh,Individual,2025-01-21,Active,58,210934.12
+CUS0071,Ira Yadav,customer0071@example.com,+918863929267,Lucknow,Uttar Pradesh,Enterprise,2023-11-09,Active,41,236867.66
+CUS0072,Riya Nair,customer0072@example.com,+917191532533,Chandigarh,Chandigarh,Education,2024-02-02,Active,25,123157.07
+CUS0073,Shaurya Mehta,customer0073@example.com,+916518846761,Bengaluru,Karnataka,Government,2025-02-28,Active,58,79845.64
+CUS0074,Aditya Saxena,customer0074@example.com,+917448814780,Roorkee,Uttarakhand,Government,2024-01-13,Active,2,97884.06
+CUS0075,Meera Chopra,customer0075@example.com,+917843473814,Jaipur,Rajasthan,Government,2024-08-05,Active,10,142533.22
+CUS0076,Pooja Nair,customer0076@example.com,+918660771178,Delhi,Delhi,Small Business,2024-04-16,Active,48,64003.46
+CUS0077,Meera Malhotra,customer0077@example.com,+916855877415,Bengaluru,Karnataka,Individual,2024-08-07,Active,74,144512.79
+CUS0078,Krishna Das,customer0078@example.com,+917923098567,Bengaluru,Karnataka,Education,2025-04-04,Active,9,41361.7
+CUS0079,Saanvi Malhotra,customer0079@example.com,+919515611652,Jaipur,Rajasthan,Enterprise,2026-08-31,Active,32,47606.66
+CUS0080,Varun Shah,customer0080@example.com,+917544855086,Jaipur,Rajasthan,Education,2026-09-21,Active,58,166507.78
+CUS0081,Saanvi Bansal,customer0081@example.com,+918590536984,Delhi,Delhi,Education,2023-06-18,Inactive,22,180238.06
+CUS0082,Rohan Gupta,customer0082@example.com,+917567322258,Delhi,Delhi,Government,2024-11-16,Active,71,215552.38
+CUS0083,Dev Patel,customer0083@example.com,+916498108690,Dehradun,Uttarakhand,Education,2023-10-26,Active,5,177255.05
+CUS0084,Nisha Kumar,customer0084@example.com,+916661901067,Pune,Maharashtra,Enterprise,2024-02-09,Active,35,12369.93
+CUS0085,Ira Reddy,customer0085@example.com,+919836443864,Dehradun,Uttarakhand,Government,2026-02-03,Prospect,1,144974.98
+CUS0086,Vivaan Saxena,customer0086@example.com,+919023211610,Hyderabad,Telangana,Individual,2024-06-27,Active,54,217926.99
+CUS0087,Neha Patel,customer0087@example.com,+919315256864,Delhi,Delhi,Small Business,2023-09-22,Prospect,7,224483.77
+CUS0088,Tanya Singh,customer0088@example.com,+918411808920,Chandigarh,Chandigarh,Education,2024-10-09,Active,18,63296.14
+CUS0089,Ananya Joshi,customer0089@example.com,+919425098257,Lucknow,Uttar Pradesh,Government,2026-02-05,Active,49,102001.47
+CUS0090,Myra Kapoor,customer0090@example.com,+918665448643,Bengaluru,Karnataka,Education,2025-08-29,Active,23,165073.17
+CUS0091,Diya Bansal,customer0091@example.com,+919666965255,Dehradun,Uttarakhand,Individual,2023-05-21,Active,31,48349.74
+CUS0092,Priya Shah,customer0092@example.com,+917876656553,Hyderabad,Telangana,Education,2024-07-01,Active,7,420.54
+CUS0093,Kabir Mehta,customer0093@example.com,+919329856916,Dehradun,Uttarakhand,Individual,2022-11-12,Inactive,62,30259.67
+CUS0094,Anika Mehta,customer0094@example.com,+919428117718,Meerut,Uttar Pradesh,Small Business,2023-10-07,Active,66,37152.47
+CUS0095,Rahul Shah,customer0095@example.com,+916845248272,Dehradun,Uttarakhand,Education,2024-01-21,Active,69,40390.13
+CUS0096,Karan Bansal,customer0096@example.com,+919101380851,Noida,Uttar Pradesh,Enterprise,2026-06-13,Active,45,84314.68
+CUS0097,Ishaan Rao,customer0097@example.com,+916021455313,Hyderabad,Telangana,Individual,2025-04-02,Prospect,3,243471.64
+CUS0098,Vihaan Malhotra,customer0098@example.com,+917179296636,Haridwar,Uttarakhand,Education,2025-03-02,Active,75,174773.54
+CUS0099,Kabir Verma,customer0099@example.com,+918629354919,Dehradun,Uttarakhand,Education,2025-05-27,Active,40,68989.43
+CUS0100,Neha Mishra,customer0100@example.com,+916557188017,Delhi,Delhi,Education,2026-07-26,Active,51,39569.76
+CUS0101,Vivaan Saxena,customer0101@example.com,+916409335046,Jaipur,Rajasthan,Enterprise,2025-07-16,Inactive,23,3006.08
+CUS0102,Shaurya Yadav,customer0102@example.com,+919409376522,Gurugram,Haryana,Individual,2024-10-07,Active,28,79670.19
+CUS0103,Sneha Mishra,customer0103@example.com,+917143855077,Chandigarh,Chandigarh,Small Business,2026-01-22,Active,17,230101.5
+CUS0104,Ira Chopra,customer0104@example.com,+917792892207,Haridwar,Uttarakhand,Individual,2026-08-04,Inactive,34,17260.86
+CUS0105,Kabir Gupta,customer0105@example.com,+916915668491,Jaipur,Rajasthan,Government,2025-05-21,Active,55,80572.47
+CUS0106,Rahul Das,customer0106@example.com,+919458915988,Chandigarh,Chandigarh,Individual,2026-03-26,Active,0,136346.02
+CUS0107,Ishaan Verma,customer0107@example.com,+917854526287,Roorkee,Uttarakhand,Government,2026-07-25,Prospect,7,93776.66
+CUS0108,Aman Reddy,customer0108@example.com,+918328809946,Hyderabad,Telangana,Government,2022-09-10,Active,37,2669.48
+CUS0109,Vivaan Verma,customer0109@example.com,+917003354410,Aligarh,Uttar Pradesh,Enterprise,2024-09-16,Prospect,44,170768.99
+CUS0110,Aditya Gupta,customer0110@example.com,+917004752617,Dehradun,Uttarakhand,Small Business,2022-10-20,Active,51,20531.82
+CUS0111,Aman Verma,customer0111@example.com,+919387096430,Mumbai,Maharashtra,Small Business,2025-07-17,Inactive,25,66649.7
+CUS0112,Ira Singh,customer0112@example.com,+916987199768,Lucknow,Uttar Pradesh,Enterprise,2024-08-20,Active,30,186673.04
+CUS0113,Vivaan Shah,customer0113@example.com,+917677298173,Mumbai,Maharashtra,Enterprise,2024-12-21,Active,52,17024.86
+CUS0114,Varun Singh,customer0114@example.com,+916590974499,Mumbai,Maharashtra,Enterprise,2025-06-12,Active,55,161972.45
+CUS0115,Ishita Rao,customer0115@example.com,+918670211883,Haridwar,Uttarakhand,Education,2026-07-22,Active,9,23185.21
+CUS0116,Aarav Verma,customer0116@example.com,+916442061926,Meerut,Uttar Pradesh,Government,2026-04-05,Active,37,40700.21
+CUS0117,Tanya Patel,customer0117@example.com,+917723120981,Aligarh,Uttar Pradesh,Enterprise,2026-09-07,Active,52,93345.45
+CUS0118,Rohan Malhotra,customer0118@example.com,+917994493460,Pune,Maharashtra,Government,2023-01-08,Prospect,8,218482.25
+CUS0119,Pooja Saxena,customer0119@example.com,+917730636139,Lucknow,Uttar Pradesh,Education,2026-06-16,Prospect,51,27319.6
+CUS0120,Yash Rao,customer0120@example.com,+917009575039,Delhi,Delhi,Small Business,2024-02-22,Active,5,167589.11
+CUS0121,Nisha Malhotra,customer0121@example.com,+917240882481,Haridwar,Uttarakhand,Individual,2024-02-09,Active,53,1046.43
+CUS0122,Rahul Singh,customer0122@example.com,+918936300994,Delhi,Delhi,Small Business,2022-12-11,Prospect,70,247305.91
+CUS0123,Shaurya Verma,customer0123@example.com,+917099716467,Meerut,Uttar Pradesh,Enterprise,2023-06-20,Active,12,249576.15
+CUS0124,Aman Malhotra,customer0124@example.com,+916935380309,Delhi,Delhi,Small Business,2025-12-01,Active,22,232162.76
+CUS0125,Yash Chopra,customer0125@example.com,+916896264378,Mumbai,Maharashtra,Small Business,2023-07-05,Inactive,9,184241.24
+CUS0126,Arjun Das,customer0126@example.com,+919340401342,Meerut,Uttar Pradesh,Government,2023-06-13,Active,49,188366.75
+CUS0127,Diya Das,customer0127@example.com,+918728907209,Pune,Maharashtra,Small Business,2025-05-11,Active,2,61136.97
+CUS0128,Aarav Rao,customer0128@example.com,+917913882350,Jaipur,Rajasthan,Enterprise,2023-08-03,Prospect,63,205005.16
+CUS0129,Krishna Saxena,customer0129@example.com,+916498668851,Jaipur,Rajasthan,Small Business,2024-07-09,Active,45,244262.02
+CUS0130,Aarav Das,customer0130@example.com,+916221675217,Lucknow,Uttar Pradesh,Small Business,2024-02-12,Prospect,73,241735.4
+CUS0131,Siddharth Mehta,customer0131@example.com,+917830129717,Aligarh,Uttar Pradesh,Enterprise,2026-08-15,Inactive,25,183408.19
+CUS0132,Aadhya Sharma,customer0132@example.com,+916533366314,Bengaluru,Karnataka,Small Business,2023-08-21,Prospect,45,151820.12
+CUS0133,Ananya Mehta,customer0133@example.com,+917828371849,Chandigarh,Chandigarh,Small Business,2025-04-07,Active,74,158181.68
+CUS0134,Reyansh Rao,customer0134@example.com,+917419894054,Dehradun,Uttarakhand,Individual,2023-08-20,Active,35,104893.76
+CUS0135,Dev Reddy,customer0135@example.com,+919088390991,Haridwar,Uttarakhand,Government,2024-04-27,Prospect,6,209239.41
+CUS0136,Myra Singh,customer0136@example.com,+917766106915,Delhi,Delhi,Individual,2023-02-01,Active,10,88989.51
+CUS0137,Anika Mehta,customer0137@example.com,+917402239641,Pune,Maharashtra,Individual,2025-08-08,Active,36,207674.88
+CUS0138,Pooja Kapoor,customer0138@example.com,+917106240787,Bengaluru,Karnataka,Education,2026-07-17,Active,59,118014.84
+CUS0139,Aarav Chopra,customer0139@example.com,+916374856035,Chandigarh,Chandigarh,Education,2024-11-15,Inactive,43,81660.93
+CUS0140,Riya Das,customer0140@example.com,+917854437293,Gurugram,Haryana,Government,2023-02-14,Active,68,181295.82
+CUS0141,Karan Shah,customer0141@example.com,+917159403797,Gurugram,Haryana,Small Business,2026-09-10,Prospect,20,33501.72
+CUS0142,Sneha Gupta,customer0142@example.com,+917738917529,Pune,Maharashtra,Individual,2023-10-17,Active,20,35626.14
+CUS0143,Nisha Singh,customer0143@example.com,+919839336121,Dehradun,Uttarakhand,Government,2024-12-17,Prospect,34,195651.16
+CUS0144,Simran Nair,customer0144@example.com,+918904009716,Pune,Maharashtra,Individual,2024-12-03,Active,29,120108.63
+CUS0145,Ananya Singh,customer0145@example.com,+918552185535,Mumbai,Maharashtra,Small Business,2025-07-27,Active,28,180453.26
+CUS0146,Nisha Chopra,customer0146@example.com,+918250051831,Dehradun,Uttarakhand,Education,2025-08-11,Inactive,30,95016.56
+CUS0147,Yash Kapoor,customer0147@example.com,+918341469548,Aligarh,Uttar Pradesh,Small Business,2026-05-13,Active,23,85696.2
+CUS0148,Ananya Bansal,customer0148@example.com,+916364655330,Lucknow,Uttar Pradesh,Small Business,2024-01-13,Active,74,111324.27
+CUS0149,Kiara Reddy,customer0149@example.com,+918143112797,Gurugram,Haryana,Enterprise,2023-08-26,Active,62,199727.57
+CUS0150,Varun Patel,customer0150@example.com,+916581706093,Mumbai,Maharashtra,Individual,2024-06-11,Active,6,100150.39
+CUS0151,Aditya Yadav,customer0151@example.com,+919801087616,Dehradun,Uttarakhand,Enterprise,2024-04-18,Inactive,35,98904.56
+CUS0152,Aadhya Gupta,customer0152@example.com,+919708374293,Hyderabad,Telangana,Individual,2023-04-15,Inactive,37,140434.46
+CUS0153,Myra Reddy,customer0153@example.com,+919655765357,Dehradun,Uttarakhand,Individual,2025-12-14,Active,21,237899.76
+CUS0154,Ira Bansal,customer0154@example.com,+916644517039,Gurugram,Haryana,Government,2024-10-03,Prospect,14,79539.61
+CUS0155,Aadhya Rao,customer0155@example.com,+918892668442,Noida,Uttar Pradesh,Enterprise,2024-07-11,Active,74,106794.65
+CUS0156,Dev Das,customer0156@example.com,+916197313979,Roorkee,Uttarakhand,Education,2026-04-30,Active,48,206291.94
+CUS0157,Myra Yadav,customer0157@example.com,+917094802636,Hyderabad,Telangana,Enterprise,2026-02-14,Active,55,166687.47
+CUS0158,Arjun Mehta,customer0158@example.com,+918443905231,Haridwar,Uttarakhand,Small Business,2024-10-05,Active,71,27215.88
+CUS0159,Ishita Joshi,customer0159@example.com,+919197041276,Roorkee,Uttarakhand,Individual,2024-02-29,Active,14,149581.62
+CUS0160,Anika Rao,customer0160@example.com,+917090154142,Pune,Maharashtra,Enterprise,2022-09-21,Prospect,34,12614.54
+CUS0161,Kabir Rao,customer0161@example.com,+916829432786,Chandigarh,Chandigarh,Small Business,2024-09-26,Inactive,45,195494.65
+CUS0162,Arnav Mishra,customer0162@example.com,+918967921617,Pune,Maharashtra,Individual,2022-12-29,Active,63,148580.09
+CUS0163,Riya Patel,customer0163@example.com,+916674109617,Roorkee,Uttarakhand,Education,2025-02-10,Active,19,180770.13
+CUS0164,Meera Das,customer0164@example.com,+916419628810,Jaipur,Rajasthan,Education,2025-05-01,Active,58,37336.91
+CUS0165,Sneha Verma,customer0165@example.com,+919464618818,Gurugram,Haryana,Small Business,2025-12-22,Active,15,224809.75
+CUS0166,Sneha Bansal,customer0166@example.com,+916320523054,Noida,Uttar Pradesh,Education,2024-01-09,Active,22,69650.1
+CUS0167,Saanvi Malhotra,customer0167@example.com,+918614760495,Roorkee,Uttarakhand,Individual,2026-04-26,Active,14,89699.8
+CUS0168,Reyansh Singh,customer0168@example.com,+916326314197,Pune,Maharashtra,Enterprise,2025-11-29,Prospect,42,184035.14
+CUS0169,Neha Gupta,customer0169@example.com,+916153020463,Jaipur,Rajasthan,Government,2024-11-11,Active,41,174543.4
+CUS0170,Ananya Chopra,customer0170@example.com,+918613152627,Lucknow,Uttar Pradesh,Government,2023-01-03,Prospect,31,15107.23
+CUS0171,Tanya Yadav,customer0171@example.com,+918643718874,Mumbai,Maharashtra,Education,2025-09-25,Inactive,36,185227.17
+CUS0172,Meera Reddy,customer0172@example.com,+917246150839,Delhi,Delhi,Small Business,2023-08-20,Inactive,7,206429.63
+CUS0173,Ishaan Yadav,customer0173@example.com,+919937604610,Pune,Maharashtra,Education,2022-09-18,Prospect,67,95538.51
+CUS0174,Neha Kapoor,customer0174@example.com,+917002396457,Aligarh,Uttar Pradesh,Government,2023-09-01,Active,48,192542.56
+CUS0175,Aadhya Patel,customer0175@example.com,+919821775062,Noida,Uttar Pradesh,Individual,2024-04-12,Inactive,56,124802.58
+CUS0176,Myra Singh,customer0176@example.com,+918013203767,Jaipur,Rajasthan,Individual,2025-06-14,Active,41,28415.02
+CUS0177,Yash Shah,customer0177@example.com,+917384956316,Hyderabad,Telangana,Small Business,2026-07-17,Inactive,33,189783.42
+CUS0178,Reyansh Saxena,customer0178@example.com,+919917088117,Mumbai,Maharashtra,Enterprise,2022-11-19,Active,48,135769.1
+CUS0179,Neha Joshi,customer0179@example.com,+916250889926,Bengaluru,Karnataka,Education,2025-05-15,Active,63,162425.33
+CUS0180,Rahul Joshi,customer0180@example.com,+919316917305,Pune,Maharashtra,Education,2026-08-23,Active,10,197283.22
+CUS0181,Kabir Reddy,customer0181@example.com,+918040347440,Hyderabad,Telangana,Education,2023-03-01,Prospect,1,116456.93
+CUS0182,Shaurya Saxena,customer0182@example.com,+917988084750,Chandigarh,Chandigarh,Small Business,2024-10-24,Active,54,114180.47
+CUS0183,Aadhya Mehta,customer0183@example.com,+917081414276,Noida,Uttar Pradesh,Small Business,2024-09-21,Prospect,41,214158.19
+CUS0184,Pooja Das,customer0184@example.com,+917366584287,Chandigarh,Chandigarh,Government,2022-08-26,Active,33,209629.99
+CUS0185,Riya Sharma,customer0185@example.com,+919363789720,Roorkee,Uttarakhand,Individual,2025-02-14,Prospect,57,239874.76
+CUS0186,Shaurya Patel,customer0186@example.com,+917452790479,Chandigarh,Chandigarh,Government,2024-11-03,Prospect,1,36269.78
+CUS0187,Ira Patel,customer0187@example.com,+918223239559,Chandigarh,Chandigarh,Enterprise,2026-03-25,Active,68,148389.39
+CUS0188,Neha Mishra,customer0188@example.com,+918221667588,Meerut,Uttar Pradesh,Education,2026-07-10,Active,1,237419.32
+CUS0189,Anika Sharma,customer0189@example.com,+917953302664,Delhi,Delhi,Small Business,2023-07-29,Inactive,9,206906.51
+CUS0190,Kiara Verma,customer0190@example.com,+916105139832,Pune,Maharashtra,Government,2024-04-22,Inactive,23,106571.18
+CUS0191,Shaurya Singh,customer0191@example.com,+916327283830,Meerut,Uttar Pradesh,Education,2026-06-07,Active,66,84546.21
+CUS0192,Ishaan Sharma,customer0192@example.com,+916515440653,Noida,Uttar Pradesh,Government,2024-02-19,Active,71,182143.01
+CUS0193,Dev Nair,customer0193@example.com,+917895156790,Chandigarh,Chandigarh,Government,2023-12-07,Inactive,50,2098.96
+CUS0194,Arjun Das,customer0194@example.com,+919584425292,Noida,Uttar Pradesh,Individual,2026-03-11,Active,14,68232.43
+CUS0195,Anika Das,customer0195@example.com,+917670136532,Gurugram,Haryana,Small Business,2023-03-19,Active,75,75210.15
+CUS0196,Ayaan Sharma,customer0196@example.com,+918586301582,Haridwar,Uttarakhand,Individual,2023-08-25,Inactive,4,77023.73
+CUS0197,Myra Bansal,customer0197@example.com,+916915666827,Lucknow,Uttar Pradesh,Education,2026-09-22,Prospect,42,5690.19
+CUS0198,Yash Nair,customer0198@example.com,+916570844945,Lucknow,Uttar Pradesh,Education,2026-07-12,Active,18,27918.62
+CUS0199,Ayaan Nair,customer0199@example.com,+917233697827,Dehradun,Uttarakhand,Enterprise,2025-10-02,Active,9,228601.42
+CUS0200,Rohan Singh,customer0200@example.com,+916413115926,Chandigarh,Chandigarh,Enterprise,2025-07-10,Active,43,144277.98
+CUS0201,Priya Kapoor,customer0201@example.com,+919960331867,Delhi,Delhi,Small Business,2023-10-29,Active,54,97702.39
+CUS0202,Kiara Mehta,customer0202@example.com,+917559777923,Dehradun,Uttarakhand,Small Business,2025-09-12,Active,56,43484.42
+CUS0203,Arnav Chopra,customer0203@example.com,+917009216011,Gurugram,Haryana,Individual,2025-08-26,Prospect,73,173725.11
+CUS0204,Arjun Yadav,customer0204@example.com,+919203184246,Delhi,Delhi,Enterprise,2025-10-07,Prospect,6,53612.08
+CUS0205,Aman Reddy,customer0205@example.com,+918047226796,Delhi,Delhi,Enterprise,2025-06-29,Active,13,27553.96
+CUS0206,Ira Patel,customer0206@example.com,+916326240460,Roorkee,Uttarakhand,Individual,2023-06-18,Active,26,33196.79
+CUS0207,Riya Malhotra,customer0207@example.com,+916377908569,Chandigarh,Chandigarh,Education,2026-05-24,Active,60,161844.29
+CUS0208,Siddharth Shah,customer0208@example.com,+917986265674,Noida,Uttar Pradesh,Small Business,2026-01-06,Active,22,157214.03
+CUS0209,Kabir Verma,customer0209@example.com,+916582956965,Chandigarh,Chandigarh,Small Business,2024-08-27,Active,8,231557.04
+CUS0210,Riya Malhotra,customer0210@example.com,+917405464557,Bengaluru,Karnataka,Individual,2023-12-02,Active,33,214046.35
+CUS0211,Reyansh Mishra,customer0211@example.com,+917525988670,Mumbai,Maharashtra,Enterprise,2025-03-13,Prospect,42,120449.91
+CUS0212,Anika Saxena,customer0212@example.com,+919638525215,Haridwar,Uttarakhand,Enterprise,2023-09-24,Active,71,91791.1
+CUS0213,Ira Saxena,customer0213@example.com,+917478097574,Haridwar,Uttarakhand,Government,2025-04-22,Prospect,56,105162.26
+CUS0214,Aadhya Patel,customer0214@example.com,+919644486162,Hyderabad,Telangana,Small Business,2023-08-19,Active,67,115245.44
+CUS0215,Rohan Das,customer0215@example.com,+918597383891,Hyderabad,Telangana,Government,2024-08-24,Prospect,65,152923.72
+CUS0216,Diya Rao,customer0216@example.com,+917501732670,Jaipur,Rajasthan,Small Business,2026-07-06,Prospect,29,173227.54
+CUS0217,Diya Mehta,customer0217@example.com,+917846924491,Delhi,Delhi,Small Business,2023-01-18,Inactive,5,248568.43
+CUS0218,Siddharth Singh,customer0218@example.com,+917074926872,Chandigarh,Chandigarh,Individual,2023-01-23,Inactive,48,101090.47
+CUS0219,Aadhya Nair,customer0219@example.com,+916823973892,Dehradun,Uttarakhand,Individual,2024-04-25,Active,18,207667.46
+CUS0220,Ishaan Saxena,customer0220@example.com,+916010260677,Bengaluru,Karnataka,Education,2025-10-08,Active,9,228503.73
+CUS0221,Ishita Joshi,customer0221@example.com,+918799436760,Jaipur,Rajasthan,Individual,2023-12-12,Active,5,183356.85
+CUS0222,Aditya Mishra,customer0222@example.com,+918209143155,Pune,Maharashtra,Education,2025-07-13,Active,8,240218.84
+CUS0223,Ishaan Das,customer0223@example.com,+918780713760,Gurugram,Haryana,Enterprise,2024-03-31,Prospect,17,21641.22
+CUS0224,Vivaan Shah,customer0224@example.com,+917463575764,Pune,Maharashtra,Small Business,2025-03-10,Active,67,81137.9
+CUS0225,Meera Chopra,customer0225@example.com,+919573753653,Pune,Maharashtra,Education,2024-02-10,Active,61,207570.85
+CUS0226,Vivaan Gupta,customer0226@example.com,+918718867723,Mumbai,Maharashtra,Education,2025-01-11,Prospect,11,88067.14
+CUS0227,Ayaan Bansal,customer0227@example.com,+919559912939,Haridwar,Uttarakhand,Enterprise,2023-04-03,Active,28,59945.4
+CUS0228,Kiara Kapoor,customer0228@example.com,+918920756900,Delhi,Delhi,Enterprise,2024-06-19,Active,73,79332.62
+CUS0229,Nisha Mehta,customer0229@example.com,+918001125445,Pune,Maharashtra,Education,2024-05-26,Active,6,193133.97
+CUS0230,Pooja Kapoor,customer0230@example.com,+916622135013,Bengaluru,Karnataka,Small Business,2024-03-06,Inactive,50,4773.03
+CUS0231,Ishaan Das,customer0231@example.com,+917113215663,Chandigarh,Chandigarh,Small Business,2026-05-17,Active,35,227840.28
+CUS0232,Rahul Shah,customer0232@example.com,+918685382532,Haridwar,Uttarakhand,Education,2023-10-19,Inactive,19,140595.6
+CUS0233,Aadhya Bansal,customer0233@example.com,+918980164700,Noida,Uttar Pradesh,Individual,2023-02-02,Active,16,2978.14
+CUS0234,Priya Mehta,customer0234@example.com,+919122308673,Pune,Maharashtra,Government,2025-01-16,Active,16,209007.19
+CUS0235,Arjun Bansal,customer0235@example.com,+917783309691,Jaipur,Rajasthan,Education,2025-09-09,Active,70,193365.36
+CUS0236,Ishita Malhotra,customer0236@example.com,+916777396493,Mumbai,Maharashtra,Individual,2026-06-22,Inactive,54,205915.57
+CUS0237,Reyansh Joshi,customer0237@example.com,+916807332802,Roorkee,Uttarakhand,Individual,2025-03-23,Inactive,48,205735.31
+CUS0238,Neha Mishra,customer0238@example.com,+916777326684,Dehradun,Uttarakhand,Small Business,2023-03-06,Prospect,58,234153.61
+CUS0239,Arnav Nair,customer0239@example.com,+919150107854,Chandigarh,Chandigarh,Education,2026-08-17,Active,30,157690.46
+CUS0240,Arjun Patel,customer0240@example.com,+917617893848,Pune,Maharashtra,Enterprise,2024-04-29,Inactive,37,64975.31
+CUS0241,Varun Das,customer0241@example.com,+918984465532,Haridwar,Uttarakhand,Government,2025-01-02,Inactive,48,28096.45
+CUS0242,Karan Reddy,customer0242@example.com,+917555697079,Pune,Maharashtra,Enterprise,2022-11-17,Active,17,61892.68
+CUS0243,Saanvi Patel,customer0243@example.com,+916359876291,Delhi,Delhi,Individual,2024-09-17,Inactive,42,168707.36
+CUS0244,Arnav Chopra,customer0244@example.com,+916951635552,Hyderabad,Telangana,Individual,2024-10-11,Prospect,55,153347.8
+CUS0245,Ishaan Kumar,customer0245@example.com,+918483234725,Chandigarh,Chandigarh,Small Business,2023-06-05,Active,1,13592.85
+CUS0246,Ira Singh,customer0246@example.com,+918677190334,Pune,Maharashtra,Government,2026-09-18,Active,47,4435.47
+CUS0247,Ananya Mehta,customer0247@example.com,+916263654256,Hyderabad,Telangana,Government,2023-07-05,Prospect,0,146214.93
+CUS0248,Vivaan Malhotra,customer0248@example.com,+916734045584,Dehradun,Uttarakhand,Government,2024-06-19,Active,8,60229.26
+CUS0249,Reyansh Saxena,customer0249@example.com,+916980366900,Dehradun,Uttarakhand,Small Business,2026-05-25,Active,26,95354.11
+CUS0250,Aadhya Chopra,customer0250@example.com,+916446245832,Aligarh,Uttar Pradesh,Education,2024-03-24,Active,70,167017.22
+CUS0251,Pari Patel,customer0251@example.com,+916229795244,Delhi,Delhi,Enterprise,2023-07-18,Active,54,155394.66
+CUS0252,Vihaan Verma,customer0252@example.com,+917596477486,Meerut,Uttar Pradesh,Government,2023-09-09,Active,29,53548.69
+CUS0253,Simran Saxena,customer0253@example.com,+917727351635,Jaipur,Rajasthan,Small Business,2026-04-05,Prospect,52,11173.05
+CUS0254,Anika Chopra,customer0254@example.com,+919668760663,Lucknow,Uttar Pradesh,Education,2022-10-06,Active,27,101693.0
+CUS0255,Karan Nair,customer0255@example.com,+916543755147,Noida,Uttar Pradesh,Enterprise,2025-05-29,Active,42,184271.57
+CUS0256,Varun Sharma,customer0256@example.com,+918810136238,Gurugram,Haryana,Individual,2023-08-07,Active,59,230907.66
+CUS0257,Rahul Reddy,customer0257@example.com,+919559612827,Roorkee,Uttarakhand,Government,2026-09-29,Active,51,128919.77
+CUS0258,Vihaan Kumar,customer0258@example.com,+917770509586,Mumbai,Maharashtra,Education,2026-07-08,Active,14,208731.5
+CUS0259,Aditya Shah,customer0259@example.com,+918268782164,Haridwar,Uttarakhand,Education,2023-08-07,Active,74,109137.81
+CUS0260,Ishaan Singh,customer0260@example.com,+918104075037,Aligarh,Uttar Pradesh,Enterprise,2025-07-09,Active,47,163414.56
+CUS0261,Anika Singh,customer0261@example.com,+919126707737,Gurugram,Haryana,Small Business,2025-01-07,Inactive,30,215166.97
+CUS0262,Karan Gupta,customer0262@example.com,+916542279252,Chandigarh,Chandigarh,Education,2024-05-10,Prospect,37,138442.82
+CUS0263,Varun Bansal,customer0263@example.com,+916445018909,Chandigarh,Chandigarh,Education,2023-09-15,Active,56,145070.34
+CUS0264,Diya Rao,customer0264@example.com,+917192463714,Lucknow,Uttar Pradesh,Government,2025-02-06,Inactive,53,146263.48
+CUS0265,Reyansh Rao,customer0265@example.com,+916914469054,Jaipur,Rajasthan,Education,2024-04-04,Active,54,249427.16
+CUS0266,Simran Patel,customer0266@example.com,+916130082331,Delhi,Delhi,Individual,2024-06-10,Prospect,22,166391.37
+CUS0267,Shaurya Joshi,customer0267@example.com,+917011297672,Gurugram,Haryana,Government,2024-12-14,Active,50,186712.44
+CUS0268,Sneha Yadav,customer0268@example.com,+916058402846,Meerut,Uttar Pradesh,Individual,2024-08-05,Active,68,238817.57
+CUS0269,Rahul Patel,customer0269@example.com,+916847245196,Bengaluru,Karnataka,Enterprise,2022-11-20,Active,10,14011.09
+CUS0270,Krishna Yadav,customer0270@example.com,+917280098883,Delhi,Delhi,Small Business,2024-06-17,Inactive,25,171474.4
+CUS0271,Pooja Malhotra,customer0271@example.com,+917510575533,Chandigarh,Chandigarh,Small Business,2023-08-22,Prospect,59,184530.39
+CUS0272,Vihaan Singh,customer0272@example.com,+917934447559,Bengaluru,Karnataka,Individual,2026-02-02,Active,43,51509.09
+CUS0273,Kabir Mehta,customer0273@example.com,+916591755637,Noida,Uttar Pradesh,Individual,2026-03-26,Inactive,67,175628.2
+CUS0274,Meera Bansal,customer0274@example.com,+919635144211,Gurugram,Haryana,Individual,2024-03-03,Active,2,235599.75
+CUS0275,Dev Singh,customer0275@example.com,+917090356399,Noida,Uttar Pradesh,Individual,2025-08-02,Active,39,102765.52
+CUS0276,Varun Shah,customer0276@example.com,+918499212880,Pune,Maharashtra,Enterprise,2025-10-31,Active,44,247914.55
+CUS0277,Simran Malhotra,customer0277@example.com,+917957929916,Haridwar,Uttarakhand,Small Business,2023-10-04,Active,69,116015.46
+CUS0278,Varun Kumar,customer0278@example.com,+917500647135,Gurugram,Haryana,Small Business,2023-02-05,Inactive,17,135577.37
+CUS0279,Meera Bansal,customer0279@example.com,+918902344362,Meerut,Uttar Pradesh,Individual,2023-11-17,Inactive,33,161892.86
+CUS0280,Neha Das,customer0280@example.com,+918299105354,Aligarh,Uttar Pradesh,Government,2026-08-22,Active,19,207633.63
+CUS0281,Karan Kapoor,customer0281@example.com,+916523346221,Haridwar,Uttarakhand,Enterprise,2023-06-01,Active,60,76061.94
+CUS0282,Ayaan Sharma,customer0282@example.com,+918305812167,Delhi,Delhi,Individual,2024-11-03,Active,74,171394.21
+CUS0283,Aarav Rao,customer0283@example.com,+919123244681,Lucknow,Uttar Pradesh,Individual,2023-07-11,Active,27,89772.63
+CUS0284,Ira Verma,customer0284@example.com,+919729789121,Pune,Maharashtra,Education,2024-06-19,Active,59,55754.58
+CUS0285,Vihaan Malhotra,customer0285@example.com,+919638321436,Pune,Maharashtra,Individual,2026-08-27,Active,30,205718.94
+CUS0286,Myra Rao,customer0286@example.com,+918576295342,Lucknow,Uttar Pradesh,Individual,2025-01-26,Prospect,75,48815.35
+CUS0287,Meera Verma,customer0287@example.com,+917909440457,Bengaluru,Karnataka,Small Business,2026-05-23,Active,63,214024.43
+CUS0288,Aarav Verma,customer0288@example.com,+919759574758,Haridwar,Uttarakhand,Individual,2024-07-25,Active,15,140420.74
+CUS0289,Ishita Sharma,customer0289@example.com,+918952701358,Pune,Maharashtra,Education,2025-03-17,Inactive,61,206458.3
+CUS0290,Rahul Kapoor,customer0290@example.com,+917188760903,Gurugram,Haryana,Enterprise,2025-06-10,Active,19,12451.13
+CUS0291,Vivaan Reddy,customer0291@example.com,+917544297512,Roorkee,Uttarakhand,Small Business,2023-03-15,Inactive,33,241261.9
+CUS0292,Riya Singh,customer0292@example.com,+919248228491,Roorkee,Uttarakhand,Government,2023-07-01,Active,22,53237.73
+CUS0293,Pooja Joshi,customer0293@example.com,+917290015297,Lucknow,Uttar Pradesh,Small Business,2023-07-14,Prospect,5,79850.44
+CUS0294,Tanya Verma,customer0294@example.com,+916067595761,Mumbai,Maharashtra,Education,2024-01-18,Active,19,10663.44
+CUS0295,Reyansh Gupta,customer0295@example.com,+917575055437,Hyderabad,Telangana,Enterprise,2024-09-06,Active,69,87416.81
+CUS0296,Rohan Patel,customer0296@example.com,+916790553326,Hyderabad,Telangana,Government,2026-08-31,Active,17,162489.22
+CUS0297,Saanvi Nair,customer0297@example.com,+919636811340,Chandigarh,Chandigarh,Small Business,2024-01-03,Inactive,26,90080.45
+CUS0298,Vivaan Mishra,customer0298@example.com,+919746442876,Aligarh,Uttar Pradesh,Small Business,2023-12-24,Active,48,192798.58
+CUS0299,Nisha Patel,customer0299@example.com,+918944443842,Chandigarh,Chandigarh,Education,2026-04-20,Prospect,58,180613.64
+CUS0300,Arnav Saxena,customer0300@example.com,+916077475064,Pune,Maharashtra,Education,2024-03-01,Active,22,162141.05
+CUS0301,Kiara Patel,customer0301@example.com,+916345862127,Lucknow,Uttar Pradesh,Small Business,2026-07-30,Active,48,246331.87
+CUS0302,Arjun Kapoor,customer0302@example.com,+918549768691,Aligarh,Uttar Pradesh,Small Business,2022-10-22,Active,18,162693.71
+CUS0303,Ishita Saxena,customer0303@example.com,+918600568884,Gurugram,Haryana,Small Business,2023-01-20,Active,25,194466.79
+CUS0304,Siddharth Singh,customer0304@example.com,+918218957626,Aligarh,Uttar Pradesh,Small Business,2026-02-01,Active,13,197561.7
+CUS0305,Sneha Mehta,customer0305@example.com,+917402365721,Bengaluru,Karnataka,Small Business,2023-08-03,Active,58,104859.26
+CUS0306,Myra Rao,customer0306@example.com,+916898725569,Hyderabad,Telangana,Enterprise,2023-06-16,Active,17,179823.67
+CUS0307,Shaurya Singh,customer0307@example.com,+919245721732,Roorkee,Uttarakhand,Education,2024-01-27,Active,3,67002.37
+CUS0308,Aadhya Sharma,customer0308@example.com,+918359317789,Gurugram,Haryana,Individual,2024-02-09,Active,50,131121.73
+CUS0309,Varun Mishra,customer0309@example.com,+918216301280,Mumbai,Maharashtra,Individual,2026-08-01,Inactive,74,86095.28
+CUS0310,Reyansh Yadav,customer0310@example.com,+919745914477,Roorkee,Uttarakhand,Small Business,2024-03-27,Active,42,248669.53
+CUS0311,Myra Rao,customer0311@example.com,+919093320804,Hyderabad,Telangana,Enterprise,2023-07-26,Inactive,16,140519.49
+CUS0312,Siddharth Kumar,customer0312@example.com,+916880226748,Hyderabad,Telangana,Small Business,2024-09-09,Active,21,228077.36
+CUS0313,Sneha Kumar,customer0313@example.com,+916204732604,Dehradun,Uttarakhand,Individual,2023-03-11,Active,70,237353.15
+CUS0314,Karan Verma,customer0314@example.com,+917593879375,Roorkee,Uttarakhand,Education,2022-10-29,Active,75,78554.64
+CUS0315,Varun Singh,customer0315@example.com,+917143855789,Aligarh,Uttar Pradesh,Individual,2025-01-17,Active,50,208076.5
+CUS0316,Ishita Malhotra,customer0316@example.com,+916006985628,Noida,Uttar Pradesh,Individual,2025-05-17,Prospect,17,180039.63
+CUS0317,Nisha Shah,customer0317@example.com,+917888570871,Dehradun,Uttarakhand,Individual,2023-02-09,Inactive,24,91323.68
+CUS0318,Simran Nair,customer0318@example.com,+918018698365,Meerut,Uttar Pradesh,Government,2026-03-21,Active,8,188172.84
+CUS0319,Meera Mehta,customer0319@example.com,+917156607617,Lucknow,Uttar Pradesh,Education,2022-12-30,Active,70,95184.14
+CUS0320,Ira Reddy,customer0320@example.com,+919848594596,Roorkee,Uttarakhand,Education,2024-10-10,Prospect,61,164175.84
+CUS0321,Krishna Bansal,customer0321@example.com,+919282320464,Chandigarh,Chandigarh,Enterprise,2026-09-17,Prospect,1,106026.54
+CUS0322,Aadhya Verma,customer0322@example.com,+918346696077,Pune,Maharashtra,Individual,2025-08-13,Prospect,62,121717.11
+CUS0323,Krishna Singh,customer0323@example.com,+916419008036,Gurugram,Haryana,Education,2023-10-13,Prospect,60,204225.21
+CUS0324,Nisha Malhotra,customer0324@example.com,+916072617988,Delhi,Delhi,Government,2026-05-19,Active,67,99362.41
+CUS0325,Vivaan Gupta,customer0325@example.com,+919549529052,Bengaluru,Karnataka,Small Business,2026-03-22,Prospect,39,224503.29
+CUS0326,Karan Kumar,customer0326@example.com,+916612020853,Chandigarh,Chandigarh,Individual,2023-02-23,Active,14,41576.79
+CUS0327,Aditya Gupta,customer0327@example.com,+917063734421,Delhi,Delhi,Government,2023-10-31,Inactive,71,212610.15
+CUS0328,Reyansh Kapoor,customer0328@example.com,+916415833309,Bengaluru,Karnataka,Education,2023-11-29,Prospect,36,27074.31
+CUS0329,Tanya Sharma,customer0329@example.com,+916839731584,Noida,Uttar Pradesh,Enterprise,2023-08-29,Active,20,211952.57
+CUS0330,Kabir Joshi,customer0330@example.com,+919483086093,Pune,Maharashtra,Small Business,2024-09-27,Active,66,8447.32
+CUS0331,Pari Shah,customer0331@example.com,+917118957530,Aligarh,Uttar Pradesh,Enterprise,2024-10-10,Active,26,38797.43
+CUS0332,Siddharth Verma,customer0332@example.com,+919974360838,Delhi,Delhi,Government,2024-05-05,Prospect,26,110757.89
+CUS0333,Vihaan Sharma,customer0333@example.com,+916638029185,Delhi,Delhi,Government,2022-12-01,Inactive,7,173266.47
+CUS0334,Ishaan Malhotra,customer0334@example.com,+918841824830,Aligarh,Uttar Pradesh,Education,2025-09-23,Prospect,72,205274.01
+CUS0335,Reyansh Saxena,customer0335@example.com,+919493841308,Bengaluru,Karnataka,Small Business,2025-09-22,Prospect,34,45279.43
+CUS0336,Tanya Chopra,customer0336@example.com,+919831186686,Haridwar,Uttarakhand,Government,2026-09-07,Inactive,42,51327.49
+CUS0337,Krishna Patel,customer0337@example.com,+918023997083,Aligarh,Uttar Pradesh,Education,2025-08-31,Active,18,145347.43
+CUS0338,Kabir Yadav,customer0338@example.com,+919949160202,Delhi,Delhi,Enterprise,2025-02-13,Active,45,191493.68
+CUS0339,Aditya Yadav,customer0339@example.com,+916346318314,Aligarh,Uttar Pradesh,Individual,2022-09-19,Inactive,69,169641.6
+CUS0340,Shaurya Mishra,customer0340@example.com,+919287780496,Aligarh,Uttar Pradesh,Government,2025-05-07,Prospect,4,105763.12
+CUS0341,Simran Joshi,customer0341@example.com,+919970629419,Mumbai,Maharashtra,Government,2025-12-03,Prospect,31,32413.77
+CUS0342,Aman Chopra,customer0342@example.com,+919917448604,Gurugram,Haryana,Government,2023-03-20,Active,34,204212.36
+CUS0343,Reyansh Nair,customer0343@example.com,+917954831792,Jaipur,Rajasthan,Education,2023-04-02,Active,19,247470.25
+CUS0344,Pari Patel,customer0344@example.com,+916028648804,Haridwar,Uttarakhand,Government,2026-05-07,Prospect,68,237904.49
+CUS0345,Vivaan Bansal,customer0345@example.com,+917381043431,Dehradun,Uttarakhand,Small Business,2023-12-22,Active,31,143078.82
+CUS0346,Arjun Kapoor,customer0346@example.com,+918676307943,Gurugram,Haryana,Government,2023-11-20,Active,50,136756.14
+CUS0347,Vihaan Saxena,customer0347@example.com,+917833397788,Roorkee,Uttarakhand,Individual,2023-07-25,Active,54,185228.12
+CUS0348,Ira Reddy,customer0348@example.com,+919410625880,Gurugram,Haryana,Government,2026-08-25,Prospect,52,16243.23
+CUS0349,Meera Malhotra,customer0349@example.com,+919408582716,Chandigarh,Chandigarh,Education,2023-05-16,Active,50,144123.97
+CUS0350,Ishaan Bansal,customer0350@example.com,+918722161893,Pune,Maharashtra,Government,2026-08-23,Active,48,108880.74
+CUS0351,Rahul Rao,customer0351@example.com,+918228655939,Dehradun,Uttarakhand,Individual,2022-08-31,Active,30,90414.82
+CUS0352,Simran Das,customer0352@example.com,+918545991136,Aligarh,Uttar Pradesh,Individual,2025-06-10,Active,28,41196.34
+CUS0353,Tanya Kapoor,customer0353@example.com,+919976006692,Pune,Maharashtra,Individual,2026-05-23,Prospect,20,209281.12
+CUS0354,Diya Bansal,customer0354@example.com,+918159154918,Mumbai,Maharashtra,Education,2024-05-31,Active,52,5213.99
+CUS0355,Ishita Mehta,customer0355@example.com,+919557789596,Gurugram,Haryana,Enterprise,2025-09-14,Active,15,203454.92
+CUS0356,Arnav Nair,customer0356@example.com,+916470887562,Aligarh,Uttar Pradesh,Individual,2025-09-20,Active,34,65060.35
+CUS0357,Kabir Das,customer0357@example.com,+918294925256,Mumbai,Maharashtra,Individual,2023-11-04,Active,56,36588.71
+CUS0358,Kavya Shah,customer0358@example.com,+918679190914,Haridwar,Uttarakhand,Education,2023-04-20,Active,52,177322.56
+CUS0359,Reyansh Verma,customer0359@example.com,+916596830641,Chandigarh,Chandigarh,Individual,2024-08-28,Prospect,43,142329.85
+CUS0360,Aditya Mishra,customer0360@example.com,+917746565947,Mumbai,Maharashtra,Individual,2023-09-06,Active,34,8459.99
+CUS0361,Vivaan Verma,customer0361@example.com,+917350775564,Bengaluru,Karnataka,Enterprise,2023-05-12,Active,2,124995.84
+CUS0362,Dev Mehta,customer0362@example.com,+918127259278,Noida,Uttar Pradesh,Individual,2022-12-16,Active,63,247211.9
+CUS0363,Vihaan Chopra,customer0363@example.com,+918688242692,Delhi,Delhi,Individual,2024-04-12,Active,0,227470.52
+CUS0364,Vivaan Kumar,customer0364@example.com,+919744022631,Bengaluru,Karnataka,Government,2023-09-18,Active,13,125808.89
+CUS0365,Siddharth Joshi,customer0365@example.com,+918391680274,Roorkee,Uttarakhand,Individual,2022-10-23,Prospect,21,190758.74
+CUS0366,Priya Reddy,customer0366@example.com,+916283551722,Meerut,Uttar Pradesh,Individual,2024-09-09,Active,5,9207.91
+CUS0367,Ayaan Mehta,customer0367@example.com,+917733343400,Delhi,Delhi,Individual,2023-08-10,Active,29,91106.14
+CUS0368,Kavya Joshi,customer0368@example.com,+917561663992,Aligarh,Uttar Pradesh,Small Business,2024-05-18,Active,15,180311.38
+CUS0369,Karan Shah,customer0369@example.com,+916441608144,Delhi,Delhi,Enterprise,2022-09-12,Active,54,116755.33
+CUS0370,Ananya Reddy,customer0370@example.com,+918955363997,Jaipur,Rajasthan,Enterprise,2024-11-05,Active,22,151071.15
+CUS0371,Dev Mishra,customer0371@example.com,+917137341497,Delhi,Delhi,Individual,2024-05-11,Prospect,65,171478.38
+CUS0372,Vivaan Nair,customer0372@example.com,+917072240671,Meerut,Uttar Pradesh,Small Business,2023-09-11,Active,55,38198.64
+CUS0373,Simran Yadav,customer0373@example.com,+918829853146,Hyderabad,Telangana,Education,2025-11-22,Active,8,76567.87
+CUS0374,Siddharth Das,customer0374@example.com,+918032564853,Mumbai,Maharashtra,Government,2025-05-10,Active,65,196612.73
+CUS0375,Pooja Chopra,customer0375@example.com,+916598776112,Lucknow,Uttar Pradesh,Education,2023-08-06,Active,65,223668.77
+CUS0376,Diya Kapoor,customer0376@example.com,+918396865896,Chandigarh,Chandigarh,Enterprise,2023-06-15,Prospect,52,140675.2
+CUS0377,Siddharth Malhotra,customer0377@example.com,+917264551066,Bengaluru,Karnataka,Small Business,2024-05-18,Active,8,123127.17
+CUS0378,Pooja Sharma,customer0378@example.com,+916234713126,Dehradun,Uttarakhand,Small Business,2024-03-17,Active,73,228621.64
+CUS0379,Rahul Verma,customer0379@example.com,+916061976976,Lucknow,Uttar Pradesh,Individual,2024-05-14,Active,71,128111.98
+CUS0380,Tanya Bansal,customer0380@example.com,+916438138912,Delhi,Delhi,Enterprise,2024-01-08,Prospect,26,156512.28
+CUS0381,Ayaan Patel,customer0381@example.com,+916886417373,Delhi,Delhi,Individual,2024-08-10,Prospect,2,75401.11
+CUS0382,Kabir Kumar,customer0382@example.com,+918001167482,Meerut,Uttar Pradesh,Individual,2025-11-20,Active,47,102234.52
+CUS0383,Sneha Das,customer0383@example.com,+916059496656,Noida,Uttar Pradesh,Small Business,2025-07-01,Prospect,66,234630.58
+CUS0384,Pooja Mishra,customer0384@example.com,+917633975729,Jaipur,Rajasthan,Enterprise,2024-12-27,Active,10,16314.06
+CUS0385,Ira Malhotra,customer0385@example.com,+917584105523,Roorkee,Uttarakhand,Individual,2022-10-22,Active,28,135324.97
+CUS0386,Anika Mehta,customer0386@example.com,+916792552723,Jaipur,Rajasthan,Government,2024-01-31,Prospect,32,139120.19
+CUS0387,Pooja Bansal,customer0387@example.com,+916959798521,Aligarh,Uttar Pradesh,Enterprise,2022-10-04,Active,62,46179.06
+CUS0388,Ishaan Nair,customer0388@example.com,+919174835343,Dehradun,Uttarakhand,Education,2023-03-30,Active,43,30965.16
+CUS0389,Simran Mishra,customer0389@example.com,+918683531285,Roorkee,Uttarakhand,Government,2023-03-12,Active,64,194388.61
+CUS0390,Ayaan Gupta,customer0390@example.com,+917976030379,Dehradun,Uttarakhand,Individual,2025-06-01,Active,22,125910.55
+CUS0391,Pooja Kapoor,customer0391@example.com,+916178119322,Jaipur,Rajasthan,Government,2025-10-03,Active,14,3628.61
+CUS0392,Krishna Rao,customer0392@example.com,+916166176851,Jaipur,Rajasthan,Government,2025-09-19,Active,44,30005.86
+CUS0393,Tanya Das,customer0393@example.com,+917437281433,Dehradun,Uttarakhand,Enterprise,2023-05-26,Active,41,42906.33
+CUS0394,Diya Malhotra,customer0394@example.com,+918333920362,Mumbai,Maharashtra,Government,2023-10-30,Prospect,38,5630.41
+CUS0395,Neha Patel,customer0395@example.com,+918342315708,Delhi,Delhi,Individual,2023-10-04,Active,71,139553.48
+CUS0396,Vihaan Malhotra,customer0396@example.com,+919036071475,Dehradun,Uttarakhand,Education,2024-05-14,Prospect,41,154225.49
+CUS0397,Ayaan Kapoor,customer0397@example.com,+919572940775,Roorkee,Uttarakhand,Education,2023-01-31,Prospect,35,34236.72
+CUS0398,Arjun Gupta,customer0398@example.com,+916421273304,Noida,Uttar Pradesh,Small Business,2024-11-26,Active,16,124149.22
+CUS0399,Vivaan Nair,customer0399@example.com,+917858063852,Meerut,Uttar Pradesh,Small Business,2023-08-25,Active,24,222508.58
+CUS0400,Diya Mehta,customer0400@example.com,+917666349238,Pune,Maharashtra,Individual,2025-04-17,Active,36,20184.65

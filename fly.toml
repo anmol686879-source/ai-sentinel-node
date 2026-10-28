@@ -1,0 +1,23 @@
+app = "ai-sentinel"            # change to a unique name, then: fly launch --no-deploy; fly volumes create sentinel_data --size 1
+primary_region = "bom"
+[build]
+[env]
+  NODE_ENV = "production"
+  TRUST_PROXY = "1"
+  HTTPS_ONLY = "1"
+  SIMULATE = "0"
+  SEED_DEMO = "0"
+  TZ = "Asia/Kolkata"
+[mounts]
+  source = "sentinel_data"
+  destination = "/app/data"
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = false
+  min_machines_running = 1
+  [[http_service.checks]]
+    path = "/api/health"
+    interval = "30s"
+    timeout = "5s"
+# then: fly secrets set ADMIN_PASSWORD=... ADMIN_KEY=... [ALERT_WEBHOOK_URL=...]   and   fly deploy   (keep to ONE machine: SQLite)

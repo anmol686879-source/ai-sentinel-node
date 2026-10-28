@@ -1,0 +1,2 @@
+# Daily 02:30 backup, keeps 14 copies:   crontab deploy/backup.cron
+30 2 * * * cd /opt/ai-sentinel && /usr/bin/node --no-warnings scripts/backup.js >> data/backup.log 2>&1

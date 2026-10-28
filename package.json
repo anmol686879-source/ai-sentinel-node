@@ -1,0 +1,18 @@
+{
+  "name": "ai-sentinel",
+  "version": "1.0.0",
+  "description": "Insider fraud early warning + bank message and loan document verification",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --no-warnings server.js",
+    "test": "node --no-warnings --test \"tests/*.test.js\"",
+    "backup": "node --no-warnings scripts/backup.js",
+    "reset-db": "node scripts/reset-db.js",
+    "start:real": "SEED_DEMO=0 node --no-warnings server.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

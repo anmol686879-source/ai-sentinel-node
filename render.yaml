@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: ai-sentinel
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - {key: NODE_ENV, value: production}
+      - {key: SEED_DEMO, value: "1"}
+      - {key: SIMULATE, value: "1"}
+      - {key: TZ, value: Asia/Kolkata}
+      - {key: TRUST_PROXY, value: "1"}
+      - {key: HTTPS_ONLY, value: "1"}
+      - {key: ADMIN_PASSWORD, generateValue: true}
+      - {key: ADMIN_KEY, generateValue: true}
+      - {key: ALERT_WEBHOOK_URL, sync: false}

@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🛡️%3C/text%3E%3C/svg%3E"><title>AI Sentinel – Insider Fraud Early Warning</title>
+<style>
+:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#F4F6FC;--card:#fff;--ink:#1B2540;--mut:#5B6784;--line:#E6EBF5;--or:#F26B21;--or2:#FF9A5A;--ort:#FFE8D9;--bl:#2563EB;--blt:#E0EAFF;--rd:#D64545;--rdt:#FDE8E8;--gn:#14A38B;--gnt:#DDF5EF;--am:#E8A317;--amt:#FFF3D6}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:radial-gradient(900px 420px at 100% -10%,#FFE8D9,transparent 60%),radial-gradient(700px 420px at -10% 110%,#E0EAFF,transparent 60%),#F4F6FC;background-attachment:fixed;color:var(--ink);font-family:Calibri,"Segoe UI",Arial,sans-serif;font-size:14px;line-height:1.4}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.app{display:grid;grid-template-columns:230px 1fr;min-height:100vh}
+aside{background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border-right:1px solid var(--line);padding:20px 14px;position:sticky;top:env(safe-area-inset-top,0px);height:calc(100vh - env(safe-area-inset-top,0px));overflow:auto}
+.logo{display:flex;align-items:center;gap:10px;font:700 20px Cambria,Georgia,serif;padding:0 8px 22px}
+.logo i{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--or),var(--or2));color:#fff;display:grid;place-items:center;font-style:normal;box-shadow:0 6px 14px rgba(242,107,33,.35)}
+nav button{display:flex;width:100%;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;color:var(--mut);font-weight:600;margin-bottom:4px;text-align:left;transition:.15s}
+nav button:hover{background:var(--bg);color:var(--ink)}
+nav button.on{background:linear-gradient(135deg,var(--ort),#FFF3EA);color:var(--or)}
+nav b{margin-left:auto;background:var(--or);color:#fff;border-radius:10px;font-size:11px;padding:1px 7px}
+.side-note{margin-top:20px;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:12px;font-size:12px;color:var(--mut)}
+.side-note strong{display:block;color:var(--ink)}
+main{padding:22px 26px 34px;min-width:0}
+.top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:18px;position:relative}
+.top h1{font:700 26px Cambria,Georgia,serif;flex:1;min-width:180px}
+.top h1 small{display:block;font:500 13px Calibri,Arial,sans-serif;color:var(--mut)}
+.search{background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px 14px;min-width:230px;font:inherit;color:var(--ink);outline:0}
+.search:focus{border-color:var(--or);box-shadow:0 0 0 3px var(--ort)}
+.ib{width:40px;height:40px;border-radius:12px;background:#fff;border:1px solid var(--line);position:relative}
+.ib:hover,.mini:hover{filter:brightness(.96)}
+.ib i{position:absolute;top:-4px;right:-4px;background:var(--rd);color:#fff;font-size:10px;font-style:normal;border-radius:9px;padding:1px 5px}
+.live{display:flex;align-items:center;gap:7px;background:var(--gnt);color:var(--gn);font-weight:700;border-radius:20px;padding:8px 14px;font-size:12px}
+.live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gn)}
+.live.off{background:var(--line);color:var(--mut)}.live.off::before{background:var(--mut)}
+.user{display:flex;align-items:center;gap:9px}.user span{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--bl),#6D9BFF);color:#fff;display:grid;place-items:center;font-weight:700}
+.user div{font-size:12px;color:var(--mut)}.user strong{display:block;color:var(--ink);font-size:13px}
+#drop{position:absolute;right:0;top:50px;width:300px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 34px rgba(27,37,64,.16);padding:8px;z-index:20}
+#drop div{padding:9px 10px;border-radius:10px;font-size:13px;cursor:pointer}#drop div:hover{background:var(--bg)}#drop small{color:var(--mut)}
+.hero{background:linear-gradient(120deg,var(--or),var(--or2) 60%,#FFC08F);color:#fff;border-radius:20px;padding:22px 26px;margin-bottom:16px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;box-shadow:0 12px 28px rgba(242,107,33,.25)}
+.hero h2{font:700 24px Cambria,Georgia,serif}.hero p{opacity:.95;max-width:480px;margin-top:2px}
+.hero .sp{flex:1}.hero .big{font-size:54px}
+.hero button{background:#fff;color:var(--or);font-weight:700;padding:10px 18px;border-radius:12px;margin-top:10px;box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.grid{display:grid;gap:16px;margin-bottom:16px}.k4{grid-template-columns:repeat(4,1fr)}.g2{grid-template-columns:2fr 1fr}.g3{grid-template-columns:1.5fr 1fr}.g4{grid-template-columns:1.2fr 1fr}.emp{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 4px 14px rgba(154,166,192,.14);min-width:0;transition:.2s}
+.card:hover{box-shadow:0 10px 26px rgba(154,166,192,.25)}
+.card h2{font:700 17px Cambria,Georgia,serif}.sub{color:var(--mut);font-size:12px;margin:2px 0 12px}
+.hd{display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap}.hd>div:first-child{flex:1}
+.seg{display:flex;background:var(--bg);border-radius:10px;padding:3px}.seg button{padding:5px 11px;border-radius:8px;font-size:12px;font-weight:700;color:var(--mut)}.seg button.on{background:#fff;color:var(--or);box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.kpi{cursor:pointer}.kpi:hover{transform:translateY(-3px)}
+.ic{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;font-size:19px;margin-bottom:10px}
+.n{font:700 32px Cambria,Georgia,serif}.l{color:var(--mut);font-size:12px}.d{font-size:12px;font-weight:700;margin-top:6px}.up{color:var(--rd)}.dn{color:var(--gn)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}.chips button{padding:5px 12px;border-radius:20px;background:var(--bg);font-size:12px;font-weight:700;color:var(--mut);border:1px solid var(--line)}.chips button.on{background:var(--or);color:#fff;border-color:var(--or)}
+select{font:inherit;padding:6px 10px;border-radius:10px;border:1px solid var(--line);background:#fff}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:13px;min-width:600px}
+th{text-align:left;color:var(--mut);font-size:11px;letter-spacing:.04em;text-transform:uppercase;padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:11px 10px;border-bottom:1px solid var(--line)}tr[data-sel]{cursor:pointer}tr[data-sel]:hover td{background:#FAFBFE}tr.sel td{background:var(--ort)}small{color:var(--mut);font-size:12px}
+.pill{display:inline-block;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700}.hi{background:var(--rdt);color:var(--rd)}.md{background:var(--amt);color:#A8740A}.lo{background:var(--gnt);color:var(--gn)}
+.st{font-size:12px;font-weight:700}.st.New{color:var(--bl)}.st.Escalated{color:var(--rd)}.st.Reviewed{color:var(--gn)}
+.bar{height:7px;background:var(--line);border-radius:4px;width:70px;display:inline-block;vertical-align:middle;margin-right:8px;overflow:hidden}.bar i{display:block;height:100%;border-radius:4px}
+.mini{padding:5px 11px;border-radius:9px;background:var(--blt);color:var(--bl);font-size:12px;font-weight:700}
+.gauge{display:flex;align-items:center;gap:16px;margin-bottom:12px}.gauge .v{font:700 34px Cambria,Georgia,serif;line-height:1}
+.why{list-style:none;padding:0}.why li{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}.why li:last-child{border:0}.why em{font-style:normal;margin-left:auto;font-weight:700;color:var(--or)}
+.why .i{width:30px;height:30px;border-radius:9px;background:var(--ort);display:grid;place-items:center}
+.btns{display:flex;gap:10px;margin-top:14px}.btn{flex:1;padding:11px;border-radius:12px;font-weight:700;font-size:13px;transition:.15s}.btn:hover{transform:translateY(-1px)}.btn:disabled{opacity:.5;cursor:default;transform:none}
+.p{background:linear-gradient(135deg,var(--or),var(--or2));color:#fff;box-shadow:0 6px 14px rgba(242,107,33,.3)}.s{background:var(--blt);color:var(--bl)}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--mut);margin-top:8px;flex-wrap:wrap}.legend b{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px}
+.base{display:grid;grid-template-columns:90px 1fr 50px;gap:10px;align-items:center;margin-bottom:13px;font-size:12px}
+.base .t{height:9px;background:var(--line);border-radius:5px;position:relative}.base .t i{position:absolute;left:0;top:0;height:100%;border-radius:5px}.base .t u{position:absolute;top:-3px;width:3px;height:15px;background:var(--ink);border-radius:2px;left:30%}.base span:last-child{text-align:right;font-weight:700}
+.av{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:18px;background:linear-gradient(135deg,var(--bl),#6D9BFF)}
+.ec{cursor:pointer}.ec:hover{transform:translateY(-3px)}
+.row{display:flex;align-items:center;gap:12px}.row>div{flex:1}
+.set{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}.set:last-child{border:0}.set>div{flex:1}.set b{display:block}
+.sw{position:relative;width:46px;height:26px;flex:none}.sw input{opacity:0;position:absolute;inset:0;width:100%;height:100%;cursor:pointer;z-index:1}.sw span{position:absolute;inset:0;background:var(--line);border-radius:13px;transition:.2s}.sw span::after{content:"";position:absolute;left:3px;top:3px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:.2s}.sw input:checked+span{background:var(--or)}.sw input:checked+span::after{left:23px}
+input[type=range]{accent-color:var(--or);width:160px}
+.feed div{padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:10px;font-size:13px}.feed div:last-child{border:0}.feed small{white-space:nowrap}
+.ov{position:fixed;inset:0;background:rgba(27,37,64,.4);display:grid;place-items:center;padding:20px;z-index:50}
+.box{background:#fff;border-radius:20px;padding:22px;width:min(520px,100%);max-height:88vh;overflow:auto;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.box textarea{width:100%;height:170px;border:1px solid var(--line);border-radius:12px;padding:10px;font:12px Consolas,monospace;margin:10px 0}
+.x{float:right;width:32px;height:32px;border-radius:10px;background:var(--bg)}
+#toast{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:8px;z-index:60}
+#toast div{background:var(--ink);color:#fff;padding:11px 16px;border-radius:12px;box-shadow:0 8px 22px rgba(0,0,0,.25);font-size:13px}
+.empty{text-align:center;color:var(--mut);padding:30px}
+svg{display:block;max-width:100%;height:auto}.nd{cursor:pointer}
+[hidden]{display:none!important}
+.box.wide{width:min(720px,100%)}.box textarea.nt{height:84px;font:13px Calibri,"Segoe UI",Arial,sans-serif;margin:8px 0}
+.cs-row{cursor:pointer;border-radius:10px;padding-left:6px;padding-right:6px}.cs-row:hover{background:#FAFBFE}.cs-row .pill{flex:none}
+.sec{font:700 15px Cambria,Georgia,serif;margin:18px 0 8px}.tags{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0 0}
+.note{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:8px 11px;margin-top:4px;font-size:13px;white-space:pre-wrap;word-break:break-word}
+.fa{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}.fa select{flex:1;min-width:150px}.fa .btn{flex:none;padding:9px 14px}
+.row>.av{flex:none}.nd{outline:0}.nd circle{transition:r .15s}.nd:focus-visible circle{stroke:#1B2540}.gn{transition:opacity .15s}
+@media(max-width:1000px){.k4{grid-template-columns:1fr 1fr}.g2,.g3,.g4{grid-template-columns:1fr}}
+@media(max-width:760px){.app{grid-template-columns:1fr}aside{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)}nav{display:flex;gap:6px;overflow-x:auto}nav button{white-space:nowrap;width:auto;margin:0}.side-note{display:none}.logo{padding-bottom:12px}main{padding:16px}.top h1{flex:1 1 100%}.search{min-width:0;flex:1 1 100%;order:9}.user div{display:none}}
+@media(max-width:480px){.k4{grid-template-columns:1fr}}
+.lg{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:20px;background:radial-gradient(800px 400px at 90% 0,#FFD9C2,transparent 60%),radial-gradient(700px 400px at 0 100%,#D6E4FF,transparent 60%),#F4F6FC}.lb{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px;width:min(400px,100%);box-shadow:0 20px 50px rgba(27,37,64,.15)}.lb .logo{padding:0 0 6px}.lb h2{font:700 22px Cambria,Georgia,serif;margin:8px 0 2px}.lb input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font:inherit;margin-top:10px;outline:0}.lb input:focus{border-color:var(--or);box-shadow:0 0 0 3px var(--ort)}.lb .btn{width:100%;margin-top:16px}.lb .err{color:var(--rd);font-size:13px;min-height:18px;margin-top:8px}.lb a{color:var(--or);font-weight:700;cursor:pointer}.lb small{display:block;text-align:center;margin-top:10px}
+
+.lb .ok{color:var(--gn);font-size:13px;min-height:0;margin-top:8px}.lb .sub{margin-bottom:4px}.lb .err{min-height:0}
+.fm{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fm1{display:grid;gap:12px}
+.fm label,.fm1 label{font-size:12px;font-weight:700;color:var(--mut);display:block}
+.fm input,.fm select,.fm1 input{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;color:var(--ink);margin-top:4px;background:#fff;outline:0}
+.fm input:focus,.fm select:focus,.fm1 input:focus{border-color:var(--or);box-shadow:0 0 0 3px var(--ort)}
+.fm label.chk{display:flex;align-items:center;gap:8px;align-self:end;padding:11px 0}.fm label.chk input{width:auto;margin:0;accent-color:var(--or)}
+.ge{grid-template-columns:1fr 1.6fr}.btns{flex-wrap:wrap}
+.res{margin-top:16px;border-radius:14px;padding:14px;border:1px solid var(--line)}.res.good{background:var(--gnt);border-color:#BFEBDD;color:#0C7A67;font-weight:700}.res.bad{background:#FFF9F5;border-color:var(--ort)}
+@media(max-width:1000px){.ge{grid-template-columns:1fr}}@media(max-width:560px){.fm{grid-template-columns:1fr}}
+.pipe{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap}.ps{flex:1;min-width:170px;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:12px}.ps i{font-style:normal;font-size:20px}.ps b{display:block;margin:4px 0 0}.ps strong{display:block;color:var(--or);font-size:13px}.ps span{font-size:12px;color:var(--mut)}.pipe u{align-self:center;color:var(--or);font-weight:700;text-decoration:none}
+
+.vt{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px;font:13px Calibri,"Segoe UI",Arial,sans-serif;margin-top:4px;background:#fff;color:var(--ink);outline:0;resize:vertical}.vt:focus{border-color:var(--or);box-shadow:0 0 0 3px var(--ort)}
+.fm .sp2{grid-column:1/-1}.fm.f3{grid-template-columns:repeat(3,1fr)}.fm input[type=file]{padding:8px}
+.vg{display:flex;align-items:center;gap:16px;margin:4px 0 10px}.ck td:first-child{width:34px;text-align:center}
+@media(max-width:1000px){.fm.f3{grid-template-columns:1fr 1fr}}@media(max-width:560px){.fm.f3{grid-template-columns:1fr}}
+</style></head>
+<body>
+<div id="login" class="lg"><div class="lb"><div class="logo"><i>🛡️</i>AI Sentinel</div>
+ <div id="p-login"><h2>Sign in</h2><p class="sub">Insider fraud early warning for banks</p><input id="lu" placeholder="Username" autocomplete="username"><input id="lp" type="password" placeholder="Password" autocomplete="current-password"><div class="ok" id="lok"></div><div class="err" id="le"></div><button class="btn p" id="lgbtn">Sign in</button><small id="lhint" hidden>Running on your 4 CSV datasets with a live event stream. Login: <b>admin</b> / <b>sentinel123</b></small><small>New investigator? <a id="to-gate">Register with access key</a></small></div>
+ <div id="p-gate" hidden><h2>Registration access</h2><p class="sub">Registration is restricted. Enter the access key issued by your administrator.</p><input id="gk" type="password" placeholder="Access key" autocomplete="off"><div class="err" id="ge"></div><button class="btn p" id="gbtn">Verify key</button><small id="gkhint" hidden>Access key: <b>SENTINEL-2026</b></small><small><a id="gk-back">← Back to sign in</a></small></div>
+ <div id="p-reg" hidden><h2>Create account</h2><p class="sub">✓ Access key verified</p><input id="rn" placeholder="Full name"><input id="ru" placeholder="Username" autocomplete="off"><input id="rp" type="password" placeholder="Password (min 6 characters)" autocomplete="new-password"><input id="rp2" type="password" placeholder="Confirm password" autocomplete="new-password"><div class="err" id="re"></div><button class="btn p" id="rbtn">Create account</button><small><a id="rg-back">← Back to sign in</a></small></div>
+</div></div>
+<div class="app">
+<aside>
+ <div class="logo"><i>🛡️</i>AI Sentinel</div>
+ <nav id="nav">
+  <button data-view="dashboard">▦ Dashboard</button><button data-view="alerts">⚠ Live Alerts <b id="nb">0</b></button><button data-view="employees">👥 Employees</button><button data-view="timeline">📈 Risk Timeline</button><button data-view="graph">🕸 Graph Network</button><button data-view="cases">🔎 Investigations</button><button data-view="honeypot">🍯 Honeypot</button><button data-view="msgverify">✉ Bank Message Check</button><button data-view="docverify">📑 Loan Doc Check</button><button data-view="import">📥 Data Import</button><button data-view="entry">✍ Data Entry</button><button data-view="settings">⚙ Settings</button>
+ </nav>
+ <div class="side-note" id="mstat"><strong>Model status</strong>Loading…</div>
+</aside>
+<main>
+ <div class="top">
+  <h1><span id="title"></span><small><span id="today"></span> · Head Office Monitoring</small></h1>
+  <input class="search" id="q" placeholder="🔍 Search employee, department, alert ID or trigger">
+  <button class="live" id="live">Live monitoring</button>
+  <button class="ib" id="bellb" aria-label="Notifications">🔔<i id="bc">0</i></button>
+  <button class="ib" data-act="export" aria-label="Export report">⬇️</button>
+  <div class="user"><span id="uav">FI</span><div><strong id="uname">Fraud Investigator</strong>Compliance Team</div></div><button class="ib" data-act="logout" title="Log out" aria-label="Log out">⏻</button>
+  <div id="drop" hidden></div>
+ </div>
+
+ <section id="v-dashboard">
+  <div class="res bad" id="emptybar" hidden style="margin:0 0 16px"><b>No data loaded yet.</b> Load your employees first, then customers, transactions and activity events. Alerts appear automatically after each import. <button class="btn p" data-view="import" style="margin-left:8px">Open Data Import →</button></div>
+  <div class="hero"><div class="big">🛡️</div><div><h2>Good morning, Investigator</h2><p id="hp"></p><button data-view="alerts">Review high-risk alerts →</button></div></div>
+  <div class="grid k4" id="kpis"></div>
+  <div class="grid g2"><div class="card" id="c1"></div><div class="card" id="donut"></div></div>
+  <div class="grid g3"><div class="card" id="dt"></div><div class="card" id="detail"></div></div>
+  <div class="grid g4"><div class="card" id="mg"></div><div class="card" id="bs"></div></div>
+ </section>
+ <section id="v-alerts" hidden><div class="card"><div class="hd"><div><h2>All Alerts</h2><p class="sub">Click a row to open the explainable alert</p></div><select id="sort"><option value="score">Sort: Risk score</option><option value="new">Sort: Newest</option></select></div><div class="chips" id="chips"></div><div class="tw" id="at"></div></div></section>
+ <section id="v-employees" hidden><div class="grid emp" id="eg"></div></section>
+ <section id="v-timeline" hidden><div class="grid g3"><div class="card" id="c2"></div><div class="card"><h2>Event Feed</h2><p class="sub">Latest monitored events</p><div class="feed" id="feed"></div></div></div></section>
+ <section id="v-graph" hidden><div class="grid g3"><div class="card" id="g1"></div><div class="card" id="gi"></div></div></section>
+ <section id="v-cases" hidden><div class="grid k4" id="ck"></div><div class="card"><div class="hd"><div><h2>Investigations</h2><p class="sub">Escalated alerts become cases. Click a case to open its full file.</p></div></div><div class="chips" id="cchips"></div><div id="cl"></div></div></section>
+ <section id="v-honeypot" hidden>
+ <div class="grid k4" id="hp-k"></div>
+ <div class="card" id="hp-pipe" style="margin-bottom:16px"></div>
+ <div class="grid g3"><div class="card"><h2>Central Log</h2><p class="sub">All monitored database activity · click a decoy hit to open its explainable alert</p><div class="tw" id="hp-log"></div></div><div class="card" id="hp-sess"></div></div>
+ <div class="grid ge"><div class="card" id="hp-dec"></div>
+ <div class="card"><h2>Simulate Decoy Access</h2><p class="sub">Mimics the trigger a honeypot database fires when a decoy object is touched.</p>
+  <div class="fm"><label>Employee<select id="hp-emp"></select></label><label>Decoy object<select id="hp-obj"></select></label>
+  <label>Action<select id="hp-act"><option>SELECT</option><option>EXPORT</option><option>UPDATE</option><option>DELETE</option></select></label>
+  <label>Rows touched<input id="hp-rows" type="number" min="1" value="5000"></label>
+  <label>Time of access<input id="hp-time" type="time" value="02:30"></label>
+  <label class="chk"><input id="hp-dev" type="checkbox" checked> Unknown / new device</label></div>
+  <div class="btns"><button class="btn p" data-act="hp-trip">Trigger decoy access</button><button class="btn s" data-act="hp-ex">Fill attacker example</button></div><div id="hp-res"></div></div></div>
+ <div class="card" style="margin-top:16px"><h2>Database Gateway — Production vs Honeypot</h2><p class="sub">Run a query as an employee. Normal tables are served from the <b>production database</b>. Decoy tables, and every table once a session is isolated, are served from the <b>honeypot database</b>.</p>
+  <div class="fm"><label>Run as employee<select id="gw-emp"></select></label><label>Table<select id="gw-tbl"></select></label>
+  <label>Action<select id="gw-act"><option>SELECT</option><option>EXPORT</option><option>UPDATE</option><option>DELETE</option></select></label>
+  <label>Rows<input id="gw-lim" type="number" min="1" max="500" value="10"></label>
+  <label class="chk"><input id="gw-dev" type="checkbox"> Unknown / new device</label></div>
+  <div class="btns"><button class="btn p" data-act="gw-run">Run query</button></div><div id="gw-res"></div></div>
+</section>
+ <section id="v-import" hidden>
+ <div class="grid k4" id="im-k"></div>
+ <div class="grid ge">
+  <div class="card"><h2>Import Real Data</h2><p class="sub">Load records from a CSV file in the same format as your dataset (header row required). Existing IDs are updated, new IDs are added, then the AI re-scores everyone.</p>
+   <div class="fm"><label>Dataset<select id="im-ds"><option value="employees">Employees</option><option value="customers">Customers</option><option value="transactions">Transactions</option><option value="activity_events">Activity events</option></select></label>
+   <label>CSV file<input id="im-file" type="file" accept=".csv,text/csv"></label></div>
+   <p class="sub" id="im-cols"></p>
+   <textarea id="im-text" placeholder="…or paste CSV here. The first row must be the column names." style="width:100%;min-height:150px;font-family:monospace;font-size:12px;border:1px solid var(--line);border-radius:10px;padding:8px;background:var(--bg);color:inherit"></textarea>
+   <div class="btns"><button class="btn p" data-act="im-go">Import</button><button class="btn s" data-act="im-tpl">Download template</button><button class="btn s" data-act="im-scan">Re-run AI analysis</button></div><div id="im-res"></div></div>
+  <div class="card"><h2>Production Data</h2><p class="sub">Latest 50 rows stored in the database</p><div class="fm"><label>Table<select id="im-view"><option value="employees">Employees</option><option value="customers">Customers</option><option value="transactions">Transactions</option><option value="activity_events">Activity events</option></select></label></div><div class="tw" id="im-tbl"></div></div>
+ </div>
+</section>
+ <section id="v-entry" hidden><div class="grid ge">
+ <div class="card"><h2>Add Employee</h2><p class="sub">Add a staff member to monitor</p>
+  <div class="fm1"><label>Full name<input id="em-name" placeholder="e.g. Rohan Mehta" maxlength="40"></label><label>Department<input id="em-dept" placeholder="e.g. Finance" maxlength="30"></label></div>
+  <div class="btns"><button class="btn p" data-act="addemp">Add employee</button></div>
+  <p class="sub" style="margin-top:14px">To load many employees, customers, transactions or events at once use <b>Data Import</b>.</p></div>
+ <div class="card"><h2>Log Activity Event</h2><p class="sub">Record an activity event. AI Sentinel re-scores the employee instantly and raises or updates an alert.</p>
+  <div class="fm"><label>Employee<select id="ev-emp"></select></label><label>Event type<select id="ev-type"><option>Login</option><option>Logout</option><option>Failed Login</option><option>Password Change</option><option>Permission Change</option><option>USB Connected</option><option>File Access</option><option>File Download</option><option>File Upload</option><option>Data Export</option><option>Network Access</option><option>Application Launch</option></select></label>
+  <label>Date &amp; time<input id="ev-ts" type="datetime-local"></label><label>Application<select id="ev-app"><option>Browser</option><option>CRM</option><option>Code Editor</option><option>Database</option><option>Document Editor</option><option>Email</option><option>Project Management</option><option>Spreadsheet</option></select></label>
+  <label>Device<select id="ev-dev"><option>Android Phone</option><option>Linux Workstation</option><option>MacBook</option><option>Office Desktop</option><option>Windows Laptop</option><option>iPhone</option></select></label><label>Location<select id="ev-loc"><option>Aligarh</option><option>Bengaluru</option><option>Chandigarh</option><option>Dehradun</option><option>Delhi</option><option>Gurugram</option><option>Haridwar</option><option>Hyderabad</option><option>Jaipur</option><option>Lucknow</option><option>Meerut</option><option>Mumbai</option><option>Noida</option><option>Pune</option><option>Roorkee</option></select></label>
+  <label>Severity<select id="ev-sev"><option>Info</option><option selected>Low</option><option>Medium</option><option>High</option><option>Critical</option></select></label><label>Status<select id="ev-st"><option>Success</option><option>Failed</option><option>Blocked</option><option>Review Required</option></select></label>
+  <label>IP address<input id="ev-ip" placeholder="192.168.1.20" maxlength="45"></label></div>
+  <div class="btns"><button class="btn p" data-act="addevent">Analyse &amp; save</button><button class="btn s" data-act="ex-bad">Fill suspicious example</button><button class="btn s" data-act="ex-ok">Fill normal example</button></div>
+  <div id="ev-res"></div></div></div></section>
+ <section id="v-settings" hidden><div class="card" style="max-width:720px"><h2>Settings</h2><p class="sub">Changes apply instantly across the dashboard</p>
+  <div class="set"><div><b>Email notifications</b><small>Send high-risk alerts to the fraud team</small></div><label class="sw"><input type="checkbox" id="s-email" checked><span></span></label></div>
+  <div class="set"><div><b>Auto-escalate</b><small>Escalate new alerts at or above the threshold</small></div><label class="sw"><input type="checkbox" id="s-auto"><span></span></label></div>
+  <div class="set"><div><b>Alert threshold: <span id="tv">80</span></b><small>Shown as the dashed line on risk charts</small></div><input type="range" id="s-thr" min="40" max="95" value="80"></div>
+  <div class="set"><div><b>Privacy mode</b><small>Mask employee names with IDs</small></div><label class="sw"><input type="checkbox" id="s-mask"><span></span></label></div>
+  <div class="btns" style="max-width:340px"><button class="btn p" data-act="save">Save settings</button><button class="btn s" data-act="mailtest">Send test email</button><button class="btn s" data-act="reset">Reset demo data</button></div></div><div class="card" style="max-width:720px;margin-top:16px"><h2>Audit Log</h2><p class="sub">Logins, escalations and setting changes stored in the database</p><div class="feed" id="audit"></div></div></section>
+<section id="v-msgverify" hidden>
+ <div class="grid k4" id="mv-k"></div>
+ <div class="grid ge">
+  <div class="card"><h2>Verify a Bank Message</h2><p class="sub">Paste an SMS, email, WhatsApp message or call script that claims to come from a bank. AI Sentinel checks the sender, the links and the wording.</p>
+   <div class="fm"><label>Channel<select id="mv-ch"><option>SMS</option><option>Email</option><option>WhatsApp</option><option>Phone call script</option></select></label>
+   <label>Bank it claims to be<select id="mv-bk"><option value="-1">Not sure (auto-detect)</option><option value="0">HDFC Bank</option><option value="1">State Bank of India</option><option value="2">ICICI Bank</option><option value="3">Axis Bank</option><option value="4">Punjab National Bank</option><option value="5">Bank of Baroda</option><option value="6">Kotak Mahindra Bank</option><option value="-2">Other bank</option></select></label>
+   <label class="sp2">Sender (SMS header, phone number or email address)<input id="mv-sn" maxlength="120" placeholder="e.g. VM-HDFCBK or alerts@hdfcbank.com"></label>
+   <label class="sp2">Message text<textarea class="vt" id="mv-tx" rows="6" maxlength="2000" placeholder="Paste the full message here…"></textarea></label>
+   <label class="sp2">Email authentication header (optional)<input id="mv-hd" maxlength="300" placeholder="e.g. spf=pass dkim=pass dmarc=pass"></label></div>
+   <div class="btns"><button class="btn p" data-act="mv-check">Verify message</button><button class="btn s" data-act="mv-bad">Fake example</button><button class="btn s" data-act="mv-ok">Genuine example</button></div></div>
+  <div class="card" id="mv-res"><h2>Verdict</h2><p class="sub">The result and the reasons appear here</p><div class="empty">Paste a message and press Verify.</div></div>
+ </div>
+ <div class="grid g4"><div class="card"><h2>Recent checks</h2><p class="sub">Messages verified in this session</p><div class="tw" id="mv-hist"></div></div>
+  <div class="card"><h2>Trusted bank domains</h2><p class="sub">Links and senders on these domains count as official. Add your own below.</p><div class="tags" id="mv-dom" style="margin:0 0 12px"></div><div class="row"><input class="search" id="mv-xd" style="min-width:0" placeholder="e.g. yourbank.co.in" maxlength="60"><button class="mini" data-act="mv-add">Add</button></div></div></div>
+</section>
+<section id="v-docverify" hidden>
+ <div class="grid k4" id="dv-k"></div>
+ <div class="card" style="margin-bottom:16px"><h2>Verify Loan Application Documents</h2><p class="sub">Enter what the applicant submitted. AI Sentinel validates ID formats and checksums, cross-checks names and income figures, and inspects uploaded files for editing traces and re-use. Files are analysed in your browser and are not uploaded anywhere.</p>
+  <div class="fm f3">
+   <label>Applicant name (application form)<input id="dv-nm" maxlength="60"></label><label>Date of birth<input id="dv-dob" type="date"></label><label>Mobile number<input id="dv-mob" maxlength="14"></label>
+   <label>PAN number<input id="dv-pan" maxlength="10" placeholder="ABCPM1234F"></label><label>Name printed on PAN card<input id="dv-pnm" maxlength="60"></label><label>Aadhaar number<input id="dv-aad" maxlength="14" placeholder="12 digits"></label>
+   <label>Name on salary slip<input id="dv-snm" maxlength="60"></label><label>Salary slip month<input id="dv-mon" type="month"></label><label>Bank IFSC (from statement)<input id="dv-ifsc" maxlength="11" placeholder="HDFC0001234"></label>
+   <label>Gross salary on slip (₹)<input id="dv-gr" type="number" min="0"></label><label>Total deductions on slip (₹)<input id="dv-de" type="number" min="0"></label><label>Net salary on slip (₹)<input id="dv-nt" type="number" min="0"></label>
+   <label>Salary credited per bank statement (₹)<input id="dv-cr" type="number" min="0"></label><label>Declared monthly income (₹)<input id="dv-in" type="number" min="0"></label><label>Existing monthly EMIs (₹)<input id="dv-em" type="number" min="0"></label>
+   <label>Loan amount requested (₹)<input id="dv-am" type="number" min="0"></label><label>Tenure (months)<input id="dv-tn" type="number" min="1" max="360"></label>
+   <label class="sp2">Uploaded documents (optional · PDF, JPG or PNG · several allowed)<input id="dv-fl" type="file" multiple accept=".pdf,.jpg,.jpeg,.png,image/*,application/pdf"></label></div>
+  <div class="btns" style="max-width:560px"><button class="btn p" data-act="dv-check">Verify documents</button><button class="btn s" data-act="dv-bad">Forged example</button><button class="btn s" data-act="dv-ok">Genuine example</button></div></div>
+ <div class="card" id="dv-res" style="margin-bottom:16px"><h2>Verdict</h2><p class="sub">The per-document checks appear here</p><div class="empty">Fill in the form and press Verify documents.</div></div>
+ <div class="grid g4"><div class="card"><h2>Recent applications</h2><p class="sub">Used to catch the same PAN, Aadhaar, phone or file across different applicants</p><div class="tw" id="dv-hist"></div></div>
+  <div class="card"><h2>Confirm at the source</h2><p class="sub">Format and checksum checks cannot prove a document exists. Before disbursal, confirm with the issuer.</p><div class="set"><div><b>Aadhaar</b><small><a href="https://uidai.gov.in/" target="_blank" rel="noopener" style="color:var(--or)">uidai.gov.in</a> · verification service</small></div></div><div class="set"><div><b>PAN</b><small><a href="https://www.incometax.gov.in/" target="_blank" rel="noopener" style="color:var(--or)">incometax.gov.in</a> · Verify PAN</small></div></div><div class="set"><div><b>Issued documents</b><small><a href="https://www.digilocker.gov.in/" target="_blank" rel="noopener" style="color:var(--or)">digilocker.gov.in</a> · authentic e-documents</small></div></div></div></div>
+</section>
+</main></div>
+<div id="modal" class="ov" hidden><div class="box" id="mb"></div></div>
+<div id="toast"></div>
+<script>
+const $=s=>document.querySelector(s),sev=s=>s>=70?'High':s>=45?'Medium':'Low',cl={High:'hi',Medium:'md',Low:'lo'},col=s=>s>=70?'var(--rd)':s>=45?'var(--am)':'var(--gn)';
+const EMP={A:['Employee A','Branch Ops'],X:['Employee X','Loans'],M:['Employee M','Treasury'],R:['Employee R','Cash Desk'],K:['Employee K','Support'],B:['Employee B','Forex'],T:['Employee T','Cards'],S:['Employee S','Audit'],P:['Employee P','HR Ops']};
+const SEED=()=>[
+{id:'A-2041',e:'A',trig:'₹50L transfer, VIP access',score:85,st:'New',t:'2:30 AM',r:'🕑|Unusual login at 2:30 AM|20;💸|Large ₹50 Lakh transfer|30;💻|Unknown device|15;⭐|Accessed VIP accounts|20'},
+{id:'A-2038',e:'X',trig:'Repeated account edits',score:78,st:'New',t:'1:10 AM',r:'✏️|Repeated account modifications|35;👥|Accessed 14 unusual customers|25;🕑|Off-hours session|18'},
+{id:'A-2033',e:'B',trig:'Shared payee pattern',score:70,st:'New',t:'12:45 AM',r:'🔗|Shared payee with Employee X|35;💸|Split transactions below limit|25;🕑|Late session|10'},
+{id:'A-2029',e:'M',trig:'Unknown device login',score:61,st:'New',t:'11:20 PM',r:'💻|Unknown device|15;📍|New location|26;🕑|Late login|20'},
+{id:'A-2024',e:'R',trig:'After-hours access',score:54,st:'New',t:'10:05 PM',r:'🕑|After-hours access|24;🔁|Repeated balance lookups|18;📍|Unusual terminal|12'},
+{id:'A-2019',e:'T',trig:'Card limit overrides',score:45,st:'New',t:'9:40 PM',r:'💳|Card limit overrides|30;💻|New device|15'},
+{id:'A-2012',e:'K',trig:'New customer segment',score:32,st:'New',t:'8:15 PM',r:'👤|New customer segment|20;📄|Bulk statement download|12'}];
+let AL=SEED(),S,nid,STATS={};
+const init=()=>{AL=SEED();nid=2050;S={cf:'All',mc:null,view:'dashboard',sel:'A-2041',f:'All',sort:'score',q:'',range:'24h',live:true,gOnly:false,node:'A',cases:[],set:{email:true,auto:false,thr:80,mask:false}}};init();
+const nm=e=>S.set.mask?'EMP-'+(1000+[...e].reduce((a,c)=>a+c.charCodeAt(0),0)):EMP[e][0];
+const inits=e=>S.set.mask?'••':String(nm(e)).split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0].toUpperCase()).join('')||'?';
+const esc=e=>Math.max(12,...AL.filter(a=>a.e==e).map(a=>a.score));
+const toast=t=>{const d=document.createElement('div');d.textContent=t;$('#toast').append(d);setTimeout(()=>d.remove(),2800)};
+const T={dashboard:'Insider Fraud Early Warning',alerts:'Live Alerts',employees:'Employees',timeline:'Risk Timeline',graph:'Graph Network',cases:'Investigations',entry:'Data Entry',settings:'Settings'};
+const D={'24h':[Array(13).fill(0),['','','','Now']],'7d':[Array(7).fill(0),['','','','Today']],'30d':[Array(10).fill(0),['','','','Today']]};
+function chart(H,id){const [v,l]=D[S.range],x=i=>40+i*590/(v.length-1),y=n=>H-30-n*(H-50)/100,p=v.map((n,i)=>x(i)+','+y(n)).join(' ');
+ const lb=l.map((t,i)=>`<text x="${i==3?600:40+i*196}" y="${H-8}">${t}</text>`).join('');
+ return `<svg viewBox="0 0 640 ${H}"><defs><linearGradient id="grad${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F26B21" stop-opacity=".35"/><stop offset="1" stop-color="#F26B21" stop-opacity="0"/></linearGradient></defs>
+ <g stroke="#E6EBF5">${[0,25,50,75,100].map(n=>`<line x1="40" x2="630" y1="${y(n)}" y2="${y(n)}"/>`).join('')}</g><g fill="#5B6784" font-size="11">${[0,50,100].map(n=>`<text x="10" y="${y(n)+4}">${n}</text>`).join('')}${lb}</g>
+ <polygon points="40,${y(0)} ${p} 630,${y(0)}" fill="url(#grad${id})"/><polyline points="${p}" fill="none" stroke="#F26B21" stroke-width="3" stroke-linejoin="round"/>
+ <line x1="40" x2="630" y1="${y(S.set.thr)}" y2="${y(S.set.thr)}" stroke="#D64545" stroke-dasharray="5 4"/><text x="500" y="${y(S.set.thr)-6}" fill="#D64545" font-size="11">Threshold ${S.set.thr}</text>
+ ${v.map((n,i)=>`<circle cx="${x(i)}" cy="${y(n)}" r="${n>=S.set.thr?6:4}" fill="${n>=S.set.thr?'#D64545':'#F26B21'}" stroke="#fff" stroke-width="2"><title>Risk ${n}</title></circle>`).join('')}</svg>`}
+const rng=()=>`<div class="seg">${['24h','7d','30d'].map(r=>`<button data-range="${r}" class="${S.range==r?'on':''}">${r}</button>`).join('')}</div>`;
+const list=()=>{let r=AL.filter(a=>(S.f=='All'||(['High','Medium','Low'].includes(S.f)?sev(a.score)==S.f:a.st==S.f))&&(a.id+nm(a.e)+EMP[a.e][1]+a.trig).toLowerCase().includes(S.q));return S.sort=='score'?r.sort((a,b)=>b.score-a.score):r};
+const row=(a,f)=>`<tr data-sel="${a.id}" class="${a.id==S.sel?'sel':''}"><td>#${a.id}</td><td><b>${nm(a.e)}</b><br><small>${EMP[a.e][1]}</small></td><td>${a.trig}</td><td><span class="bar"><i style="width:${a.score}%;background:${col(a.score)}"></i></span><b>${a.score}</b></td><td><span class="pill ${cl[sev(a.score)]}">${sev(a.score)}</span></td><td><span class="st ${a.st}">${a.st}</span></td>${f?`<td>${a.t}</td><td>${a.st!='Reviewed'?`<button class="mini" data-act="review" data-id="${a.id}">Review</button>`:'✓'}</td>`:''}</tr>`;
+const tbl=(l,f)=>l.length?`<table><tr><th>Alert</th><th>Employee</th><th>Trigger</th><th>Risk</th><th>Level</th><th>Status</th>${f?'<th>Time</th><th></th>':''}</tr>${l.map(a=>row(a,f)).join('')}</table>`:'<div class="empty">No alerts match your filters 🎉</div>';
+const chipsH=()=>['All','High','Medium','Low','New','Escalated','Reviewed'].map(c=>`<button data-f="${c}" class="${S.f==c?'on':''}">${c}</button>`).join('');
+function detail(id){const a=AL.find(x=>x.id==id)||AL[0];if(!a)return'';const r=a.r.split(';').map(x=>x.split('|'));
+ return `<h2>Explainable Alert #${a.id}</h2><p class="sub">${nm(a.e)} · ${EMP[a.e][1]} · ${a.t}</p><div class="gauge"><svg width="96" height="96" viewBox="0 0 100 100"><g transform="rotate(-90 50 50)" fill="none" stroke-width="12"><circle cx="50" cy="50" r="40" pathLength="100" stroke="#E6EBF5"/><circle cx="50" cy="50" r="40" pathLength="100" stroke="${col(a.score)}" stroke-linecap="round" stroke-dasharray="${a.score} 100"/></g><text x="50" y="56" text-anchor="middle" font-size="22" font-weight="700" fill="#1B2540">${a.score}</text></svg><div><span class="pill ${cl[sev(a.score)]}">${sev(a.score).toUpperCase()} RISK</span><br><small>Status: <b class="st ${a.st}">${a.st}</b></small></div></div>
+ <ul class="why">${r.map(x=>`<li><span class="i">${x[0]}</span>${x[1]}<em>+${x[2]}</em></li>`).join('')}</ul>
+ <div class="btns"><button class="btn p" data-act="esc" data-id="${a.id}" ${a.st!='New'?'disabled':''}>${a.st=='Escalated'?'Escalated ✓':'Escalate'}</button><button class="btn s" data-act="review" data-id="${a.id}" ${a.st=='Reviewed'?'disabled':''}>${a.st=='Reviewed'?'Reviewed ✓':'Mark reviewed'}</button></div>`}
+function base(e){const b=(STATS.base||{})[e];if(!b)return '<div class="empty">No activity logged for this employee yet. Add an event in Data Entry.</div>';return b.map(r=>`<div class="base"><span>${r[0]}</span><div class="t"><i style="width:${r[1]}%;background:${r[1]>=70?'var(--rd)':'var(--bl)'}"></i><u></u></div><span>${r[2]}</span></div>`).join('')+'<div class="legend"><span><b style="background:var(--bl)"></b>Normal</span><span><b style="background:var(--rd)"></b>Anomalous</span><span>▏ = learned baseline</span></div>'}
+let GD={nodes:[],links:[],rings:[]};
+function layout(hide){const ring=new Set();GD.links.forEach(l=>{if(l.suspicious){ring.add(l.source);ring.add(l.target)}});
+ let em=GD.nodes.filter(n=>n.kind=='employee'),cu=GD.nodes.filter(n=>n.kind!='employee');
+ if(hide){em=em.filter(n=>ring.has(n.id));cu=cu.filter(n=>ring.has(n.id))}
+ const rk=n=>ring.has(n.id)?0:1;em.sort((a,b)=>rk(a)-rk(b)||b.score-a.score);cu.sort((a,b)=>rk(a)-rk(b)||a.id.localeCompare(b.id));
+ const H=Math.max(260,Math.max(em.length,cu.length)*64+70),pos=(i,n)=>n<2?H/2:50+i*(H-100)/(n-1),P={};
+ em.forEach((n,i)=>P[n.id]=[120,pos(i,em.length),n]);cu.forEach((n,i)=>P[n.id]=[480,pos(i,cu.length),n]);return{P,H}}
+function graph(hide,full){hide=hide||S.gOnly;const{P,H}=layout(hide);
+ if(!Object.keys(P).length)return '<div class="empty">No suspicious network detected 🎉</div>';
+ const colr=n=>n.kind=='customer'?'#14A38B':n.score>=70?'#D64545':n.score>=45?'#E8A317':'#2563EB';
+ const rg=new Set();GD.rings.forEach(r=>r.forEach(x=>rg.add(x)));
+ const foc=!!S.node&&!!P[S.node],nb=new Set([S.node]);GD.links.forEach(l=>{if(l.source==S.node)nb.add(l.target);if(l.target==S.node)nb.add(l.source)});
+ const lbl=k=>P[k][2].kind=='customer'?'Customer '+k.replace(/^C/,''):nm(k);
+ return `<svg viewBox="0 0 600 ${H}" role="img" aria-label="Employee and customer network"><g font-size="11" fill="#5B6784" font-weight="700" text-anchor="middle"><text x="120" y="18">EMPLOYEES</text><text x="480" y="18">CUSTOMERS</text></g>
+ ${GD.links.filter(l=>P[l.source]&&P[l.target]).map(l=>{const on=foc&&(l.source==S.node||l.target==S.node);return `<line class="gn" x1="${P[l.source][0]}" y1="${P[l.source][1]}" x2="${P[l.target][0]}" y2="${P[l.target][1]}" stroke="${l.suspicious?'#D64545':'#B8C1D6'}" stroke-width="${l.suspicious?(on?5:3):(on?3:2)}" ${l.suspicious?'':'stroke-dasharray="5 4"'} opacity="${!foc||on?1:.3}"/>`}).join('')}
+ ${Object.entries(P).map(([k,v])=>{const n=v[2],sel=S.node==k,o=!foc||nb.has(k)?1:.5;return `<g class="nd gn" data-node="${xs(k)}" tabindex="0" role="button" aria-label="${xs(lbl(k))}" opacity="${o}">${rg.has(k)?`<circle cx="${v[0]}" cy="${v[1]}" r="32" fill="none" stroke="#D64545" stroke-width="2" stroke-dasharray="3 4" opacity=".7"/>`:''}<circle cx="${v[0]}" cy="${v[1]}" r="${sel?25:21}" fill="${colr(n)}" stroke="${sel?'#1B2540':'#fff'}" stroke-width="3"/><text x="${v[0]}" y="${v[1]+4}" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">${xs(n.kind=='customer'?'C-'+k.replace(/^C/,''):k)}</text>${full?`<text x="${v[0]}" y="${v[1]+(sel?42:39)}" text-anchor="middle" font-size="10.5" fill="#5B6784" font-weight="${sel?700:500}">${xs(lbl(k))}</text>`:''}<title>${n.kind=='customer'?'Customer '+xs(k):xs(nm(k))+' · risk '+n.score}</title></g>`}).join('')}</svg>`}
+function ginfo(k){const n=GD.nodes.find(x=>x.id==k);if(!n)return '<h2>Network</h2><p class="sub">Nothing selected</p><p>No suspicious network detected.</p>';
+ const nb=GD.links.filter(l=>l.source==k||l.target==k).map(l=>l.source==k?l.target:l.source),ring=GD.rings.find(r=>r.includes(k)),rtag=ring?`<p style="color:var(--rd);font-weight:700;margin-top:8px">Part of a collusion ring of ${ring.length} nodes.</p>`:'';
+ if(n.kind=='customer')return `<h2>Customer ${xs(k.replace(/^C/,''))}</h2><p class="sub">Customer account</p><p>Handled by ${nb.length} flagged employee(s): ${nb.map(e=>xs(nm(e))).join(', ')}.</p>${nb.length>1?'<p style="color:var(--rd);font-weight:700;margin-top:6px">Shared payee — possible collusion.</p>':''}${rtag}`;
+ const a=AL.filter(x=>x.e==k&&x.st!='Reviewed').sort((x,y)=>y.score-x.score)[0],cs=S.cases.find(c=>c.e==k&&c.open);
+ return `<h2>${xs(nm(k))}</h2><p class="sub">${EMP[k]?xs(EMP[k][1]):''} · risk score ${n.score}</p><p>${a?xs(a.trig)+'.':'No open alerts.'} Customers handled: ${nb.map(x=>xs('C-'+x.replace(/^C/,''))).join(', ')||'none'}.</p>${rtag}${a||cs?`<div class="btns">${a?`<button class="btn p" data-sel="${a.id}">Open alert #${a.id}</button>`:''}${cs?`<button class="btn s" data-act="opencase" data-id="${cs.id}">Open case ${cs.id}</button>`:''}</div>`:''}`}
+const ringsH=()=>GD.rings.length?'<p class="sub" style="margin:14px 0 6px">Detected collusion rings (click to focus)</p>'+GD.rings.map(r=>`<button class="pill hi" style="margin:0 6px 6px 0" data-node="${xs(r.find(x=>EMP[x])||r[0])}">${r.map(x=>xs(EMP[x]?x:'C-'+x.replace(/^C/,''))).join(' · ')}</button>`).join(''):'<p class="sub" style="margin-top:14px">No collusion ring detected.</p>';
+const gtoggle=()=>`<button class="mini" data-act="gonly">${S.gOnly?'Show all links':'Suspicious links only'}</button>`;
+function render(){
+ document.querySelectorAll('section').forEach(s=>s.hidden=s.id!='v-'+S.view);fillEmp();
+ document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.view==S.view));
+ $('#title').textContent=T[S.view];const op=AL.filter(a=>a.st!='Reviewed'),hi=op.filter(a=>a.score>=70);
+ $('#nb').textContent=op.length;$('#bc').textContent=AL.filter(a=>a.st=='New').length;
+ $('#hp').textContent=`${hi.length} high-risk alerts need attention. ${AL.filter(a=>a.st=='Escalated').length} cases are escalated.`;
+ $('#kpis').innerHTML=[['⚠️','var(--rdt)',op.length,'Active alerts','▲ live','up','alerts'],['👤','var(--ort)',new Set(hi.map(a=>a.e)).size,'High-risk employees','View employees','up','employees'],['📊','var(--blt)',STATS.events??'—','Events monitored today','Central log · live','','timeline'],['⏱️','var(--gnt)',STATS.resp!=null?STATS.resp+' min':'—','Avg. time to respond','From alert to analyst action','dn','cases']].map(k=>`<div class="card kpi" data-view="${k[6]}"><div class="ic" style="background:${k[1]}">${k[0]}</div><div class="n">${k[2]}</div><div class="l">${k[3]}</div><div class="d ${k[5]}">${k[4]}</div></div>`).join('');
+ const c={High:0,Medium:0,Low:0};op.forEach(a=>c[sev(a.score)]++);let cum=0,tot=op.length||1;
+ $('#c1').innerHTML=`<div class="hd"><div><h2>Risk Timeline</h2><p class="sub">Aggregate anomaly score, last ${S.range}</p></div>${rng()}</div>`+chart(220,1);
+ $('#donut').innerHTML=`<h2>Alert Severity</h2><p class="sub">${op.length} open alerts · click a level to filter</p><svg viewBox="0 0 200 160"><g transform="rotate(-90 100 80)" fill="none" stroke-width="22"><circle cx="100" cy="80" r="52" pathLength="100" stroke="#E6EBF5"/>${[['High','#D64545'],['Medium','#E8A317'],['Low','#14A38B']].map(([k,cc])=>{const p=c[k]/tot*100,o=`<circle cx="100" cy="80" r="52" pathLength="100" stroke="${cc}" stroke-dasharray="${p} ${100-p}" stroke-dashoffset="${-cum}"/>`;cum+=p;return o}).join('')}</g><text x="100" y="88" text-anchor="middle" font-family="Cambria,serif" font-size="28" font-weight="700" fill="#1B2540">${op.length}</text></svg><div class="legend">${[['High','rd'],['Medium','am'],['Low','gn']].map(([k,v])=>`<button data-f="${k}" data-view="alerts"><b style="background:var(--${v})"></b>${k} ${c[k]}</button>`).join('')}</div>`;
+ $('#dt').innerHTML=`<h2>Live Alerts</h2><p class="sub">Top alerts by risk · <a href="#alerts" data-view="alerts" style="color:var(--or)">see all</a></p><div class="chips">${chipsH()}</div><div class="tw">${tbl(list().slice(0,5))}</div>`;
+ $('#detail').innerHTML=detail(S.sel);
+ $('#mg').innerHTML=`<div class="hd"><div><h2>Collusion Graph</h2><p class="sub">Suspicious network only</p></div><button class="mini" data-view="graph">Open full network →</button></div>`+graph(true)+`<small>${GD.rings.length} collusion ring(s) detected</small>`;
+ const sa=AL.find(a=>a.id==S.sel)||AL[0];$('#bs').innerHTML=`<h2>Behaviour vs Baseline</h2><p class="sub">${sa?nm(sa.e):''} today vs learned profile</p>`+(sa?base(sa.e):'');
+ $('#chips').innerHTML=chipsH();$('#sort').value=S.sort;$('#at').innerHTML=tbl(list(),1);
+ const ql=Object.keys(EMP).filter(e=>(nm(e)+EMP[e][1]).toLowerCase().includes(S.q));
+ $('#eg').innerHTML=ql.length?ql.map(e=>{const s=esc(e);return `<div class="card ec" data-emp="${e}"><div class="row"><div class="av">${inits(e)}</div><div><b>${nm(e)}</b><br><small>${EMP[e][1]}</small></div></div><div style="margin:14px 0 6px"><span class="bar" style="width:70%"><i style="width:${s}%;background:${col(s)}"></i></span><b>${s}</b></div><span class="pill ${cl[sev(s)]}">${sev(s)} risk</span> <small>${AL.filter(a=>a.e==e).length} alerts</small></div>`}).join(''):'<div class="empty">No employees found</div>';
+ $('#c2').innerHTML=`<div class="hd"><div><h2>Risk Timeline</h2><p class="sub">Red points are above the alert threshold</p></div>${rng()}</div>`+chart(300,2);
+ $('#feed').innerHTML=AL.slice(0,7).map(a=>`<div><small>${a.t}</small><span><b>${nm(a.e)}</b> · ${a.trig}</span></div>`).join('');
+ $('#g1').innerHTML=`<div class="hd"><div><h2>Relationship Network</h2><p class="sub">${GD.nodes.filter(n=>n.kind=='employee').length} employees · ${GD.nodes.filter(n=>n.kind!='employee').length} customers · ${GD.links.filter(l=>l.suspicious).length} suspicious links · click any node</p></div>${gtoggle()}</div>`+graph(false,true);
+ $('#gi').innerHTML=ginfo(S.node)+ringsH()+'<div class="legend" style="margin-top:12px"><span><b style="background:#D64545"></b>High</span><span><b style="background:#E8A317"></b>Medium</span><span><b style="background:#2563EB"></b>Low</span><span><b style="background:#14A38B"></b>Customer</span><span>◌ Collusion ring</span></div>';
+ casesRender();
+ $('#drop').innerHTML=AL.slice(0,4).map(a=>`<div data-sel="${a.id}"><b>${nm(a.e)}</b> · ${a.score}<br><small>${a.trig} · ${a.t}</small></div>`).join('');
+}
+const go=v=>{S.view=v;if(v=='settings'&&TOKEN)loadAudit();location.hash=v;$('#drop').hidden=true;render();scrollTo(0,0)};
+const modal=(h,w)=>{$('#mb').classList.toggle('wide',!!w);$('#mb').innerHTML='<button class="x" data-close>✕</button>'+h;$('#modal').hidden=false};
+const outPill=o=>o?`<span class="pill ${o=='Confirmed fraud'?'hi':o=='False positive'?'lo':'md'}">${xs(o)}</span>`:'';
+function casesRender(){const opn=S.cases.filter(k=>k.open),cls=S.cases.filter(k=>!k.open);
+ $('#ck').innerHTML=[['🔎','var(--ort)',opn.length,'Open cases'],['✅','var(--gnt)',cls.length,'Closed cases'],['🚨','var(--rdt)',S.cases.filter(k=>k.outcome=='Confirmed fraud').length,'Confirmed fraud'],['👤','var(--blt)',opn.filter(k=>!k.owner).length,'Open & unassigned']].map(k=>`<div class="card"><div class="ic" style="background:${k[1]}">${k[0]}</div><div class="n">${k[2]}</div><div class="l">${k[3]}</div></div>`).join('');
+ $('#cchips').innerHTML=['All','Open','Closed'].map(c=>`<button data-cf="${c}" class="${S.cf==c?'on':''}">${c}</button>`).join('');
+ const fl=S.cases.filter(k=>(S.cf=='All'||(S.cf=='Open')==!!k.open)&&(k.id+' '+nm(k.e)+' '+k.a+' '+(k.owner||'')+' '+(k.outcome||'')).toLowerCase().includes(S.q));
+ $('#cl').innerHTML=fl.length?fl.map(k=>`<div class="set cs-row" data-act="opencase" data-id="${k.id}"><div><b>${k.id} · ${xs(nm(k.e))}</b><small>Alert #${k.a} · opened ${xs(k.t)} · ${k.owner?'Owner: '+xs(k.owner):'Unassigned'} · ${k.notes||0} note(s)</small></div><span class="pill ${cl[sev(k.score||0)]}">Risk ${k.score||0}</span>${outPill(k.outcome)}<span class="pill ${k.open?'hi':'lo'}">${k.open?'Open':'Closed'}</span><button class="mini" data-act="case" data-id="${k.id}">${k.open?'Close case':'Reopen'}</button></div>`).join(''):`<div class="empty">${S.cases.length?'No cases match your filter.':'No cases yet. Escalate an alert to open one.'}</div>`}
+const EVI={opened:'📂',note:'📝',assigned:'👤',closed:'✅',reopened:'♻️',outcome:'🏷️'};
+function caseModal(d){const k=d.case,a=d.alert,rs=a.r.split(';').map(x=>x.split('|')),ring=GD.rings.find(r=>r.includes(k.e));
+ const linked=[...new Set(GD.links.filter(l=>l.suspicious&&d.customers.includes(l.target)&&l.source!=k.e).map(l=>l.source))];
+ const outs=['','Confirmed fraud','False positive','Inconclusive'];
+ return `<div class="row"><div class="av">${inits(k.e)}</div><div><h2>${k.id} · ${xs(nm(k.e))}</h2><small>${xs(d.emp.dept)} · alert #${a.id} · opened ${xs(k.t)}</small></div></div>
+ <div class="tags"><span class="pill ${k.open?'hi':'lo'}">${k.open?'Open':'Closed'}</span><span class="pill ${cl[sev(a.score)]}">${sev(a.score)} risk ${a.score}</span>${outPill(k.outcome)}<span class="pill md">${k.owner?'Owner: '+xs(k.owner):'Unassigned'}</span></div>
+ <h3 class="sec">Evidence — why it was flagged</h3><ul class="why">${rs.map(x=>`<li><span class="i">${x[0]}</span>${xs(x[1])}<em>+${xs(x[2])}</em></li>`).join('')}</ul>
+ <h3 class="sec">Network</h3><p>Customers handled: ${d.customers.map(x=>xs('C-'+x.replace(/^C/,''))).join(', ')||'none recorded'}.</p>
+ ${!GD.nodes.find(n=>n.id==k.e)?'<p class="sub" style="margin-top:6px">Not in the active network — this case is closed. Reopen it to bring the employee back into the graph.</p>':linked.length?`<p style="margin-top:6px">Shares customers with: <b>${linked.map(e=>xs(nm(e))).join(', ')}</b>.</p>`:'<p class="sub" style="margin-top:6px">No shared customers with other flagged employees.</p>'}
+ ${ring?`<p style="color:var(--rd);font-weight:700;margin-top:6px">Part of a collusion ring (${ring.length} nodes).</p><div class="btns"><button class="btn s" data-view="graph" data-close>Show in Graph Network</button></div>`:''}
+ <h3 class="sec">Decision</h3><div class="fa"><button class="btn s" data-act="cassign" data-v="${k.owner?'none':'me'}">${k.owner?'Unassign':'Assign to me'}</button><select id="c-out" aria-label="Outcome">${outs.map(o=>`<option value="${o}" ${o==k.outcome?'selected':''}>${o||'Outcome (optional)'}</option>`).join('')}</select>${k.open?'<button class="btn p" data-act="cclose">Close case</button>':'<button class="btn s" data-act="csave">Save outcome</button><button class="btn p" data-act="creopen">Reopen case</button>'}</div>
+ <h3 class="sec">Investigator notes</h3><textarea class="nt" id="c-note" maxlength="1000" placeholder="Write what you found, who you spoke to, next steps…"></textarea><div class="btns" style="margin-top:0"><button class="btn p" data-act="cnote">Add note</button></div>
+ <h3 class="sec">Case activity</h3><div class="feed">${d.events.map(x=>`<div><small>${xs(x.ts)}</small><span>${EVI[x.kind]||'•'} <b>${xs(x.user)}</b>${x.kind=='note'?`<div class="note">${xs(x.text)}</div>`:' · '+xs(x.text)}</span></div>`).join('')||'<div class="empty">No activity yet</div>'}</div>`}
+const showCase=d=>{S.mc=d.case.id;modal(caseModal(d),1)};
+const openCase=id=>{S.mc=id;return call('/cases/'+id).then(showCase).catch(e=>toast(e.message))};
+const sync=()=>call('/bootstrap').then(d=>{Object.keys(EMP).forEach(k=>delete EMP[k]);Object.assign(EMP,d.emp);AL=d.alerts;S.cases=d.cases;applyGraph(d.graph);if(!AL.find(a=>a.id==S.sel))S.sel=AL[0]?AL[0].id:'';render();loadAudit()}).catch(()=>{});
+const toggleCase=(id,outcome,inModal)=>call('/cases/'+id+'/toggle','POST',outcome==null?{}:{outcome}).then(()=>{toast('Case '+id+' updated');return sync()}).then(()=>{if(inModal)return openCase(id)}).catch(e=>toast(e.message));
+const caseUpdate=(body,msg)=>call('/cases/'+S.mc+'/update','POST',body).then(d=>{showCase(d);toast(msg);sync()}).catch(e=>toast(e.message));
+const CASEACT={
+ opencase:m=>openCase(m.dataset.id),
+ case:m=>{const k=S.cases.find(x=>x.id==m.dataset.id);toggleCase(m.dataset.id,k&&k.open?'':null)},
+ cnote:()=>{const tx=$('#c-note').value.trim();if(!tx){toast('Write a note first');return}call('/cases/'+S.mc+'/notes','POST',{text:tx}).then(d=>{showCase(d);toast('Note added');sync()}).catch(e=>toast(e.message))},
+ cassign:m=>caseUpdate({assign:m.dataset.v},m.dataset.v=='me'?'Case assigned to you':'Case unassigned'),
+ cclose:()=>toggleCase(S.mc,$('#c-out').value,true),
+ csave:()=>caseUpdate({outcome:$('#c-out').value},'Outcome saved'),
+ creopen:()=>toggleCase(S.mc,null,true)};
+function csv(){return 'id,employee,trigger,score,level,status\n'+AL.map(a=>[a.id,nm(a.e),'"'+a.trig+'"',a.score,sev(a.score),a.st].join(',')).join('\n')}
+const api=(id,st)=>call('/alerts/'+id+'/status','POST',{status:st}).then(()=>sync()).catch(e=>{toast(e.message||'Server error');sync()});
+function esca(id){const a=AL.find(x=>x.id==id);a.st='Escalated';api(id,'Escalated');S.cases.unshift({id:'C-'+(100+S.cases.length+1),a:id,e:a.e,t:new Date().toLocaleTimeString([],{hour:'numeric',minute:'2-digit'}),open:1,owner:'',outcome:'',score:a.score,notes:0});toast('Alert #'+id+' escalated — case opened')}
+document.addEventListener('click',ev=>{const t=ev.target,q=s=>t.closest(s);let m;
+ if(!q('#drop')&&!q('#bellb'))$('#drop').hidden=true;
+ if(q('#bellb')){$('#drop').hidden=!$('#drop').hidden;return}
+ if(m=q('[data-close]')||(t.id=='modal'&&t)){$('#modal').hidden=true;if(m.dataset&&m.dataset.view)go(m.dataset.view);return}
+ if((m=q('[data-act]'))&&CASEACT[m.dataset.act]){CASEACT[m.dataset.act](m);return}
+ if(m=q('[data-cf]')){S.cf=m.dataset.cf;render();return}
+ if(m=q('[data-act]')){const a=m.dataset.act,id=m.dataset.id;
+  if(a=='esc')esca(id);
+  else if(a=='review'){AL.find(x=>x.id==id).st='Reviewed';api(id,'Reviewed');toast('Alert #'+id+' marked reviewed')}
+
+  else if(a=='logout'){call('/logout','POST').catch(()=>{});TOKEN=null;try{sessionStorage.removeItem('tk')}catch(e){};showLogin();return}
+  else if(a=='addemp'){call('/employees','POST',{name:$('#em-name').value.trim(),dept:$('#em-dept').value.trim()}).then(r=>{EMP[r.id]=[r.name,r.dept];$('#em-name').value=$('#em-dept').value='';render();$('#ev-emp').value=r.id;loadAudit();toast('Employee '+r.name+' saved to database')}).catch(e=>toast(e.message));return}
+  else if(a=='addevent'){call('/events','POST',{emp:$('#ev-emp').value,event_type:$('#ev-type').value,timestamp:$('#ev-ts').value,application:$('#ev-app').value,device:$('#ev-dev').value,ip:$('#ev-ip').value.trim(),location:$('#ev-loc').value,severity:$('#ev-sev').value,status:$('#ev-st').value}).then(r=>{if(r.alert){const i=AL.findIndex(x=>x.id==r.alert.id);if(i>=0)AL.splice(i,1);AL.unshift(r.alert);if(r.case&&!S.cases.find(c=>c.id==r.case.id))S.cases.unshift(r.case);S.sel=r.alert.id;refreshGraph()}render();showRes(r);loadAudit();loadStats();toast(r.alert?'🔔 '+r.message:r.message)}).catch(e=>toast(e.message));return}
+  else if(a=='ex-bad'||a=='ex-ok'){const bad=a=='ex-bad',d=new Date(),p=n=>String(n).padStart(2,'0'),day=d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate());$('#ev-type').value=bad?'USB Connected':'Login';$('#ev-app').value=bad?'Database':'CRM';$('#ev-dev').value=bad?'MacBook':'Office Desktop';$('#ev-sev').value=bad?'Critical':'Info';$('#ev-st').value=bad?'Blocked':'Success';$('#ev-ts').value=day+(bad?'T02:40':'T10:15');return}
+  else if(a=='gonly')S.gOnly=!S.gOnly;
+  else if(a=='save')call('/settings','PUT',S.set).then(()=>{toast('Settings saved to database');loadAudit()}).catch(e=>toast(e.message));
+  else if(a=='reset'){call('/reset','POST').then(()=>{$('#q').value='';return boot()}).then(()=>toast('Database reset to demo data')).catch(e=>toast(e.message))}
+  else if(a=='export'){modal('<h2>Export report</h2><p class="sub">Open alerts as CSV</p><textarea id="ta" readonly>'+csv()+'</textarea><div class="btns"><button class="btn p" data-act="copy">Copy CSV</button></div>');return}
+  else if(a=='copy'){const x=$('#ta');x.select();try{navigator.clipboard.writeText(x.value).then(()=>toast('CSV copied'),()=>{document.execCommand('copy');toast('CSV copied')})}catch(e){try{document.execCommand('copy');toast('CSV copied')}catch(_){toast('Press Ctrl+C to copy')}}return}
+  if(!$('#modal').hidden&&id)$('#mb').innerHTML='<button class="x" data-close>✕</button>'+detail(id);render();return}
+ if(m=q('[data-view]')){if(m.dataset.f)S.f=m.dataset.f;go(m.dataset.view);ev.preventDefault();return}
+ if(m=q('[data-f]')){S.f=m.dataset.f;render();return}
+ if(m=q('[data-range]')){S.range=m.dataset.range;render();return}
+ if(m=q('[data-node]')){S.node=m.dataset.node;render();return}
+ if(m=q('[data-emp]')){const e=m.dataset.emp;modal(`<div class="row"><div class="av">${inits(e)}</div><div><h2>${nm(e)}</h2><small>${EMP[e][1]} · risk ${esc(e)}</small></div></div><h2 style="margin:16px 0 8px;font-size:15px">Behaviour vs baseline</h2>${base(e)}<h2 style="margin:10px 0;font-size:15px">Alerts</h2>${AL.filter(a=>a.e==e).map(a=>`<div class="set"><div><b>#${a.id}</b><small>${a.trig}</small></div><span class="pill ${cl[sev(a.score)]}">${a.score}</span></div>`).join('')||'<small>No alerts for this employee.</small>'}`);return}
+ if(m=q('[data-sel]')){S.sel=m.dataset.sel;$('#drop').hidden=true;if(S.view=='dashboard'){render();$('#detail').scrollIntoView({behavior:'smooth',block:'nearest'})}else{render();modal(detail(S.sel))}}
+});
+$('#q').addEventListener('input',e=>{S.q=e.target.value.toLowerCase();if(!['alerts','employees','cases'].includes(S.view))S.view='alerts';render()});
+$('#sort').addEventListener('change',e=>{S.sort=e.target.value;render()});
+$('#live').addEventListener('click',e=>{S.live=!S.live;e.target.classList.toggle('off',!S.live);e.target.textContent=S.live?'Live monitoring':'Paused';toast(S.live?'Live monitoring resumed':'Live monitoring paused')});
+$('#s-email').onchange=e=>{S.set.email=e.target.checked;toast('Email notifications '+(e.target.checked?'on':'off'))};
+$('#s-auto').onchange=e=>{S.set.auto=e.target.checked;toast('Auto-escalate '+(e.target.checked?'on':'off'))};
+$('#s-mask').onchange=e=>{S.set.mask=e.target.checked;render()};
+$('#s-thr').oninput=e=>{S.set.thr=+e.target.value;$('#tv').textContent=e.target.value;render()};
+let TOKEN=null,reg=false;try{TOKEN=sessionStorage.getItem('tk')}catch(e){}
+const xs=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const showLogin=()=>{$('#login').hidden=false;panel('login')};
+const call=(p,m='GET',b)=>fetch('/api'+p,{method:m,headers:Object.assign({'Content-Type':'application/json'},TOKEN?{Authorization:'Bearer '+TOKEN}:{}),body:b?JSON.stringify(b):undefined}).then(async r=>{if(r.status==401){showLogin();throw new Error('Please sign in')}if(!r.ok){const d=await r.json().catch(()=>({}));throw new Error(typeof d.detail=='string'?d.detail:'Request failed')}return r.json()});
+function applyGraph(g){GD=g;if(!GD.nodes.find(n=>n.id==S.node)){const e=GD.nodes.filter(n=>n.kind=='employee').sort((a,b)=>b.score-a.score)[0];S.node=e?e.id:null}}
+const refreshGraph=()=>call('/graph').then(g=>{applyGraph(g);render()}).catch(()=>{});
+const loadAudit=()=>call('/audit').then(r=>{$('#audit').innerHTML=r.map(x=>`<div><small>${xs(x.ts)}</small><span><b>${xs(x.user)}</b> · ${xs(x.action)} ${xs(x.detail)}</span></div>`).join('')||'<div class="empty">No activity yet</div>'}).catch(()=>{});
+async function boot(keep){const d=await call('/bootstrap');Object.keys(EMP).forEach(k=>delete EMP[k]);Object.assign(EMP,d.emp);AL=d.alerts;S.cases=d.cases;Object.assign(S.set,d.settings);
+ $('#s-email').checked=S.set.email;$('#s-auto').checked=S.set.auto;$('#s-mask').checked=S.set.mask;$('#s-thr').value=S.set.thr;$('#tv').textContent=S.set.thr;
+ $('#uname').textContent=d.user.name;$('#uav').textContent=d.user.name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
+ applyGraph(d.graph);S.sel=AL[0]?AL[0].id:'';$('#login').hidden=true;window.SVBOOT&&window.SVBOOT();const h=location.hash.slice(1);if(!keep)S.view=T[h]?h:'dashboard';render();loadAudit()}
+const panel=n=>{['login','gate','reg'].forEach(p=>$('#p-'+p).hidden=p!=n);['le','ge','re','lok'].forEach(i=>$('#'+i).textContent='')};
+let REGKEY='';
+const post=(p,b)=>fetch('/api'+p,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)}).then(async r=>{const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(typeof j.detail=='string'?j.detail:'Please check your details');return j});
+$('#lgbtn').onclick=async()=>{$('#le').textContent='';try{const d=await post('/login',{username:$('#lu').value.trim(),password:$('#lp').value});TOKEN=d.token;try{sessionStorage.setItem('tk',TOKEN)}catch(e){};$('#lp').value='';await boot()}catch(e){$('#le').textContent=e.message}};
+$('#to-gate').onclick=()=>{panel('gate');$('#gk').value='';$('#gk').focus()};
+$('#gbtn').onclick=async()=>{$('#ge').textContent='';try{const k=$('#gk').value.trim();await post('/register/verify',{key:k});REGKEY=k;$('#gk').value='';panel('reg')}catch(e){$('#ge').textContent=e.message}};
+$('#rbtn').onclick=async()=>{const p=$('#rp').value,u=$('#ru').value.trim();$('#re').textContent='';if(p!=$('#rp2').value){$('#re').textContent='Passwords do not match';return}
+ try{await post('/register',{key:REGKEY,name:$('#rn').value.trim(),username:u,password:p});['rn','ru','rp','rp2'].forEach(i=>$('#'+i).value='');REGKEY='';panel('login');$('#lu').value=u;$('#lok').textContent='Account created. Please sign in.'}catch(e){$('#re').textContent=e.message}};
+['gk-back','rg-back'].forEach(i=>$('#'+i).onclick=()=>{REGKEY='';$('#rp').value=$('#rp2').value='';panel('login')});
+[['lu','lgbtn'],['lp','lgbtn'],['gk','gbtn'],['rn','rbtn'],['ru','rbtn'],['rp','rbtn'],['rp2','rbtn']].forEach(([i,b])=>$('#'+i).addEventListener('keydown',e=>{if(e.key=='Enter')$('#'+b).click()}));
+function fillEmp(){const s=$('#ev-emp');if(!s)return;const v=s.value,k=Object.keys(EMP);if(k.length==s.options.length&&v&&[...s.options].every(o=>EMP[o.value]))return;s.innerHTML=k.map(e=>`<option value="${e}">${e} · ${nm(e)} · ${EMP[e][1]}</option>`).join('');if(v&&EMP[v])s.value=v}
+function showRes(r){$('#ev-res').innerHTML=r.alert?`<div class="res bad"><b>${xs(r.message)} — risk ${r.score}</b>${detail(r.alert.id)}</div>`:`<div class="res good">✓ ${xs(r.message)}</div>`}
+setInterval(()=>{if(!S.live||!TOKEN||!$('#login').hidden)return;const old=new Set(AL.map(a=>a.id));call('/bootstrap').then(d=>{d.alerts.filter(a=>!old.has(a.id)).forEach(a=>toast('🔔 New alert #'+a.id+' · '+d.emp[a.e][0]+' · '+a.score));Object.keys(EMP).forEach(k=>delete EMP[k]);Object.assign(EMP,d.emp);AL=d.alerts;S.cases=d.cases;applyGraph(d.graph);render()}).catch(()=>{})},8000);
+document.addEventListener('keydown',e=>{if(e.key=='Escape')$('#modal').hidden=true;if((e.key=='Enter'||e.key==' ')&&e.target.classList&&e.target.classList.contains('nd')){e.preventDefault();e.target.dispatchEvent(new MouseEvent('click',{bubbles:true}))}});
+(()=>{const d=new Date();$('#today').textContent=d.toLocaleDateString('en-US',{weekday:'long'})+', '+d.getDate()+' '+d.toLocaleDateString('en-US',{month:'short'})+' '+d.getFullYear()})();
+fetch('/api/health').then(r=>r.json()).then(h=>{if(h&&h.defaults)['lhint','gkhint'].forEach(i=>{const x=$('#'+i);if(x)x.hidden=false})}).catch(()=>{});
+if(TOKEN)boot().catch(showLogin);else showLogin();
+</script>
+<script>
+/* ===== Database Honeypot / Deception - Layer 2: Detection & Response ===== */
+T.honeypot='Database Honeypot';
+let HP={},HPold=1;
+const HPST={Active:'st New',Isolated:'st Escalated',Terminated:'st Escalated',Released:'st Reviewed'},stars=n=>'★'.repeat(n)+'☆'.repeat(5-n),hpHr=t=>{const a=(t||'02:30').split(':');return +a[0]+(+a[1]||0)/60};
+const loadHP=()=>call('/honeypot').then(d=>{HP=d;hpRender()}).catch(e=>{if(e.message!='Please sign in')$('#hp-k').innerHTML='<div class="card empty" style="grid-column:1/-1">Honeypot API is not available on this backend.</div>'});
+const hpFill=(el,h)=>{if(el.dataset.h===h)return;const v=el.value;el.dataset.h=h;el.innerHTML=h;if(v)el.value=v};
+function hpRender(){const{decoys:D,log:L,sess:Z,stats:s}=HP;if(!s)return;
+ $('#hp-k').innerHTML=[['🍯','var(--ort)',D.length,'Decoys armed','Fake tables & canary records',''],['🪤','var(--rdt)',s.hits,'Decoy hits','Any touch is anomalous','up'],['🔒','var(--blt)',s.isolated,'Sessions isolated','Served sandbox data',''],['⏱️','var(--gnt)',s.avg_ms?(s.avg_ms>=1000?(s.avg_ms/1000).toFixed(1)+' s':s.avg_ms+' ms'):'—','Avg. auto-isolation time','Hit → session sandboxed','dn']].map(k=>`<div class="card"><div class="ic" style="background:${k[1]}">${k[0]}</div><div class="n">${k[2]}</div><div class="l">${k[3]}</div><div class="d ${k[5]}">${k[4]}</div></div>`).join('');
+ $('#hp-pipe').innerHTML=`<div class="hd"><div><h2>Layer 2 — Detection &amp; Response</h2><p class="sub">Every decoy touch flows through the same four stages</p></div><div style="display:flex;align-items:center;gap:10px"><small>Auto-isolate at risk ≥ ${S.set.thr}</small><label class="sw"><input type="checkbox" id="hp-auto" ${HP.auto?'checked':''}><span></span></label></div></div><div class="pipe">`+[['📜','1 · Central logs',s.events+' events collected','DB audit, app gateway and decoy triggers in one stream'],['🤖','2 · AI/ML risk scoring',s.hits+' decoy hits scored','Action, volume, hour, device, repeats, employee baseline'],['🔔','3 · Alerts',s.hits+' alerts raised','Explainable; auto-escalated at the threshold'],['🔒','4 · Session isolation',s.isolated+' sessions sandboxed','Moved onto decoy data, credentials flagged']].map((p,i)=>(i?'<u>→</u>':'')+`<div class="ps"><i>${p[0]}</i><b>${p[1]}</b><strong>${p[2]}</strong><span>${p[3]}</span></div>`).join('')+'</div>';
+ $('#hp-log').innerHTML=`<table><tr><th>Time</th><th>Employee</th><th>Source</th><th>Object</th><th>Action</th><th>Rows</th><th>Risk</th><th>Result</th></tr>${L.map(l=>{const al=l.alert&&AL.find(a=>a.id==l.alert);return `<tr ${al?`data-sel="${xs(l.alert)}"`:''}><td>${xs(l.ts)}</td><td><b>${xs(nm(l.emp))}</b></td><td><small>${xs(l.src)}</small></td><td>${l.dec?'🍯 ':''}${xs(l.obj)}</td><td>${xs(l.act)}</td><td>${l.rows.toLocaleString()}</td><td><span class="bar"><i style="width:${l.score}%;background:${col(l.score)}"></i></span><b>${l.score}</b></td><td>${l.iso?'<span class="pill hi">🔒 Isolated</span>':l.dec?'<span class="pill md">Alerted</span>':l.alert?'<span class="pill lo">Under review</span>':'<small>Normal</small>'}</td></tr>`}).join('')}</table>`;
+ const btn=(a,id,t,x)=>`<button class="mini" ${x||''} data-act="${a}" data-id="${id}">${t}</button>`;
+ $('#hp-sess').innerHTML='<h2>Sessions</h2><p class="sub">Isolated sessions only see decoy data while every query is recorded.</p>'+(Z.map(z=>`<div class="set"><div><b>${xs(z.id)} · ${xs(nm(z.emp))}</b><small>${xs(z.ip)} · ${xs(z.dev)} · since ${xs(z.start)} · ${z.hits} hit(s)${z.sbq?' · '+z.sbq+' sandbox queries':''}</small></div><span class="${HPST[z.state]}">${z.state}</span>${z.state=='Active'?btn('hp-iso',z.id,'Isolate'):''}${z.state=='Isolated'?btn('hp-rel',z.id,'Release'):''}${z.state=='Active'||z.state=='Isolated'?btn('hp-kill',z.id,'Terminate','style="background:var(--rdt);color:var(--rd)"'):''}</div>`).join('')||'<div class="empty">No flagged sessions</div>');
+ $('#hp-dec').innerHTML='<h2>Decoy Inventory</h2><p class="sub">Never used by real workflows, so any access is suspicious</p>'+D.map(d=>`<div class="set"><div><b>${xs(d.name)}</b><small>${xs(d.kind)} · sensitivity <span style="color:var(--or)">${stars(d.sens)}</span></small></div><span class="pill ${d.hits?'hi':'lo'}">${d.hits} hit${d.hits==1?'':'s'}</span></div>`).join('');
+ hpFill($('#hp-obj'),D.map(d=>`<option value="${d.id}">${xs(d.name)}</option>`).join(''));
+ hpFill($('#hp-emp'),Object.keys(EMP).map(e=>`<option value="${e}">${e} · ${xs(nm(e))} · ${xs(EMP[e][1])}</option>`).join(''))}
+const hpTrip=()=>call('/honeypot/trip','POST',{emp:$('#hp-emp').value,decoy:$('#hp-obj').value,action:$('#hp-act').value,rows:+$('#hp-rows').value||1,hour:hpHr($('#hp-time').value),new_device:$('#hp-dev').checked}).then(r=>{$('#hp-res').innerHTML=`<div class="res bad"><b>${xs(r.message)} — risk ${r.score}</b><ul class="why">${r.alert.r.split(';').map(x=>x.split('|')).map(x=>`<li><span class="i">${x[0]}</span>${xs(x[1])}<em>+${xs(x[2])}</em></li>`).join('')}</ul></div>`;toast('🪤 Decoy hit · risk '+r.score+(r.isolated?' · session isolated':''));sync();loadHP()}).catch(e=>toast(e.message));
+const hpSess=(id,a,w)=>call('/honeypot/sessions/'+id+'/'+a,'POST').then(()=>{toast('Session '+id+' '+w);loadHP();loadAudit()}).catch(e=>{toast(e.message);loadHP()});
+Object.assign(CASEACT,{'hp-trip':hpTrip,'hp-iso':m=>hpSess(m.dataset.id,'isolate','isolated'),'hp-rel':m=>hpSess(m.dataset.id,'release','released'),'hp-kill':m=>hpSess(m.dataset.id,'terminate','terminated'),'hp-ex':()=>{$('#hp-obj').value='D1';$('#hp-act').value='EXPORT';$('#hp-rows').value=5000;$('#hp-time').value='02:30';$('#hp-dev').checked=true}});
+document.addEventListener('change',e=>{if(e.target.id=='hp-auto')call('/honeypot/policy','POST',{auto:e.target.checked}).then(r=>{HP.auto=r.auto;toast('Auto-isolation '+(r.auto?'on':'off'));loadAudit()}).catch(x=>toast(x.message))});
+const gwFill=()=>{hpFill($('#gw-emp'),Object.keys(EMP).map(e=>`<option value="${e}">${e} · ${xs(nm(e))}</option>`).join(''));hpFill($('#gw-tbl'),['customers','transactions'].map(t=>`<option>${t}</option>`).join('')+(HP.decoys||[]).map(d=>`<option>${xs(d.name)}</option>`).join(''))};
+const hpr=hpRender;hpRender=function(){hpr();gwFill()};
+CASEACT['gw-run']=()=>call('/db/query','POST',{emp:$('#gw-emp').value,table:$('#gw-tbl').value,action:$('#gw-act').value,limit:+$('#gw-lim').value||10,new_device:$('#gw-dev').checked}).then(r=>{const c=r.rows[0]?Object.keys(r.rows[0]):[];$('#gw-res').innerHTML=`<div class="res ${r.served=='production'?'good':'bad'}"><b>${xs(r.message)}</b></div><div class="tw"><table><tr>${c.map(k=>`<th>${xs(k)}</th>`).join('')}</tr>${r.rows.slice(0,25).map(x=>`<tr>${c.map(k=>`<td>${xs(x[k])}</td>`).join('')}</tr>`).join('')}</table></div><small>Showing ${Math.min(25,r.rows.length)} of ${r.rows.length} rows · served from ${r.served} database</small>`;toast(r.served=='production'?'Served from production DB':'🍯 Served from honeypot DB');sync();loadHP()}).catch(e=>{$('#gw-res').innerHTML=`<div class="res bad"><b>${xs(e.message)}</b></div>`;loadHP()});
+const MSTAT=()=>{const x=STATS.model;if(x&&$('#mstat'))$('#mstat').innerHTML='<strong>Model status</strong>'+xs(x.l1)+'<br>'+xs(x.l2)};
+const loadStats=()=>{STATS.t=Date.now();call('/stats').then(d=>{d.t=Date.now();STATS=d;Object.keys(d.timeline||{}).forEach(k=>D[k]=d.timeline[k]);render();MSTAT()}).catch(()=>{})};
+const greet=()=>{const eb=document.getElementById('emptybar');if(eb)eb.hidden=!!Object.keys(EMP).length;const rb=document.querySelector('[data-act=reset]');if(rb)rb.hidden=STATS.demo===false;const g=new Date().getHours(),h=document.querySelector('.hero h2');if(h)h.textContent=(g<12?'Good morning':g<17?'Good afternoon':'Good evening')+', Investigator'};
+CASEACT.mailtest=()=>call('/email/test','POST').then(r=>{toast(r.message);loadAudit()}).catch(e=>toast(e.message));
+T.import='Data Import';
+const IMC={employees:['EmployeeID','EmployeeName','Department','Role','Email','AttendanceStatus','CheckInTime','CheckOutTime','HoursWorked','ProductivityScore','SecurityRisk','AlertsCount','LastActivityApp','LastActivityTime','EmployeeStatus'],customers:['CustomerID','CustomerName','Email','Phone','City','State','CustomerSegment','SignupDate','CustomerStatus','TotalOrders','LifetimeValue'],transactions:['TransactionID','CustomerID','EmployeeID','TransactionDate','Amount','Currency','PaymentMethod','TransactionType','TransactionStatus','RiskScore','Flagged'],activity_events:['EventID','EmployeeID','EventTimestamp','EventType','Application','Device','IPAddress','Location','Severity','EventStatus','Description','RequiresReview']};
+const IMN={employees:'EmployeeID (required), EmployeeName, Department, Role, Email, SecurityRisk, AlertsCount …',customers:'CustomerID (required), CustomerName, Email, Phone, City, State, CustomerSegment, LifetimeValue …',transactions:'TransactionID (required), CustomerID, EmployeeID, TransactionDate, Amount, RiskScore, Flagged …',activity_events:'EventID (required), EmployeeID, EventTimestamp, EventType, Severity, EventStatus …'};
+let IMold=1;
+const parseCsv=t=>{const rows=[];let r=[],c='',q=false;for(let i=0;i<t.length;i++){const ch=t[i];if(q){if(ch=='"'&&t[i+1]=='"'){c+='"';i++}else if(ch=='"')q=false;else c+=ch}else if(ch=='"')q=true;else if(ch==','){r.push(c);c=''}else if(ch=='\n'||ch=='\r'){if(ch=='\r'&&t[i+1]=='\n')i++;r.push(c);c='';if(r.some(x=>x.trim()))rows.push(r);r=[]}else c+=ch}r.push(c);if(r.some(x=>x.trim()))rows.push(r);if(rows.length<2)return[];const h=rows[0].map(x=>x.trim().toLowerCase().replace(/\s+/g,'_'));return rows.slice(1).map(a=>Object.fromEntries(h.map((k,i)=>[k,(a[i]||'').trim()])))};
+const impCols=()=>{$('#im-cols').textContent='Columns: '+IMN[$('#im-ds').value]};
+const impView=()=>call('/data/'+$('#im-view').value).then(d=>{const c=d.rows[0]?Object.keys(d.rows[0]):[];$('#im-tbl').innerHTML=d.rows.length?`<table><tr>${c.map(k=>`<th>${xs(k)}</th>`).join('')}</tr>${d.rows.map(x=>`<tr>${c.map(k=>`<td>${xs(x[k])}</td>`).join('')}</tr>`).join('')}</table>`:'<div class="empty">No rows yet. Import a CSV on the left.</div>'}).catch(e=>toast(e.message));
+const impLoad=()=>{impCols();call('/data/summary').then(d=>{$('#im-k').innerHTML=[['👥','var(--ort)',d.employees,'Employees','Monitored staff'],['🏦','var(--blt)',d.customers,'Customers','In production DB'],['💳','var(--gnt)',d.transactions,'Transactions','In production DB'],['📈','var(--rdt)',d.activity_events,'Activity events','Scored by the AI model']].map(k=>`<div class="card"><div class="ic" style="background:${k[1]}">${k[0]}</div><div class="n">${k[2]}</div><div class="l">${k[3]}</div><div class="d">${k[4]}</div></div>`).join('');impView()}).catch(e=>toast(e.message))};
+document.addEventListener('change',e=>{if(e.target.id=='im-ds')impCols();if(e.target.id=='im-view')impView();if(e.target.id=='im-file'&&e.target.files[0])e.target.files[0].text().then(t=>{$('#im-text').value=t})});
+CASEACT['im-go']=()=>{const ds=$('#im-ds').value,rows=parseCsv($('#im-text').value);if(!rows.length)return toast('Paste or choose a CSV with a header row and at least one data row');call('/data/'+ds,'POST',{rows}).then(r=>{$('#im-res').innerHTML=`<div class="res ${r.errors.length||r.warning?'bad':'good'}"><b>Imported ${r.loaded} of ${rows.length} row(s)${r.alerts?' · '+r.alerts+' alert(s) raised':''}</b>${r.warning?'<div style="font-weight:400;margin-top:6px">⚠ '+xs(r.warning)+'</div>':''}${r.errors.length?'<ul class="why">'+r.errors.slice(0,12).map(x=>`<li>${xs(x)}</li>`).join('')+'</ul>':''}</div>`;sync();loadStats();impLoad()}).catch(e=>{$('#im-res').innerHTML=`<div class="res bad"><b>${xs(e.message)}</b></div>`})};
+CASEACT['im-tpl']=()=>{const ds=$('#im-ds').value,a=document.createElement('a');a.href=URL.createObjectURL(new Blob([IMC[ds].join(',')+'\n'],{type:'text/csv'}));a.download=ds+'_template.csv';a.click()};
+CASEACT['im-scan']=()=>call('/data/rescan','POST').then(r=>{toast('AI analysis finished · '+r.alerts+' alert(s) updated');sync();loadStats();impLoad()}).catch(e=>toast(e.message));
+const r0=render;render=function(){r0();if(TOKEN&&(!STATS.t||Date.now()-STATS.t>8000))loadStats();greet();if(S.view=='import'){if(IMold&&TOKEN){IMold=0;impLoad()}}else IMold=1;if(S.view!='honeypot'){HPold=1;return}if(HPold&&TOKEN){HPold=0;loadHP()}hpRender()};
+setInterval(()=>{if(S.view=='honeypot'&&TOKEN&&$('#login').hidden)loadHP()},5000);
+</script>
+<script>
+/* ===== Bank Message Verifier + Loan Document Verifier ===== */
+T.msgverify='Bank Message Verification';T.docverify='Loan Document Verification';
+(()=>{
+const g=i=>document.getElementById(i),val=i=>g(i).value.trim(),num=i=>{const x=g(i).value.trim();return x===''?null:+x};
+const rup=n=>'₹'+Math.round(n).toLocaleString('en-IN'),now=()=>new Date().toLocaleString([],{day:'2-digit',month:'short',hour:'numeric',minute:'2-digit'});
+const lev=(a,b)=>{const m=a.length,n=b.length;if(!m)return n;if(!n)return m;let p=Array.from({length:n+1},(_,j)=>j);for(let i=1;i<=m;i++){const c=[i];for(let j=1;j<=n;j++)c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]==b[j-1]?0:1));p=c}return p[n]};
+const sim=(a,b)=>{const f=s=>s.toLowerCase().replace(/[^a-z ]/g,' ').split(/\s+/).filter(Boolean).sort().join(' ');a=f(a);b=f(b);return a&&b?Math.round(100*(1-lev(a,b)/Math.max(a.length,b.length))):0};
+const cc=s=>s>=60?'var(--rd)':s>=30?'var(--am)':'var(--gn)',sum=e=>e.reduce((s,x)=>s+x[2],0);
+const gauge=(s,c)=>`<svg width="96" height="96" viewBox="0 0 100 100"><g transform="rotate(-90 50 50)" fill="none" stroke-width="12"><circle cx="50" cy="50" r="40" pathLength="100" stroke="#E6EBF5"/><circle cx="50" cy="50" r="40" pathLength="100" stroke="${c}" stroke-linecap="round" stroke-dasharray="${s} 100"/></g><text x="50" y="56" text-anchor="middle" font-size="22" font-weight="700" fill="#1B2540">${s}</text></svg>`;
+const kpi=a=>a.map(k=>`<div class="card"><div class="ic" style="background:${k[1]}">${k[0]}</div><div class="n">${k[2]}</div><div class="l">${k[3]}</div><div class="d">${k[4]}</div></div>`).join('');
+const acts=a=>'<ul class="why">'+a.map(t=>`<li><span class="i">➤</span>${xs(t)}</li>`).join('')+'</ul>';
+const set=o=>Object.entries(o).forEach(([k,v])=>g(k).value=v);
+
+/* ---------- Bank message verification ---------- */
+const BANKS=[['HDFC Bank',['hdfcbank.com','hdfcbank.net'],['HDFC'],/hdfc/i,'hdfc'],['State Bank of India',['sbi.co.in','onlinesbi.sbi','sbicard.com'],['SBI','STATE'],/\bsbi\b|state bank/i,'sbi'],['ICICI Bank',['icicibank.com'],['ICICI'],/icici/i,'icici'],['Axis Bank',['axisbank.com'],['AXIS'],/\baxis\b/i,'axisb'],['Punjab National Bank',['pnbindia.in'],['PNB','PUNJAB'],/\bpnb\b|punjab national/i,'pnb'],['Bank of Baroda',['bankofbaroda.in','bankofbaroda.co.in'],['BOB','BARODA'],/baroda|\bbob\b/i,'baroda'],['Kotak Mahindra Bank',['kotak.com'],['KOTAK'],/kotak/i,'kotak']];
+const GOV=['rbi.org.in','npci.org.in','cybercrime.gov.in'],XT=[],FREE=/(^|\.)(gmail|yahoo|outlook|hotmail|rediffmail|proton(mail)?|aol|ymail)\./,SHORT=/^(bit\.ly|tinyurl\.com|t\.co|goo\.gl|rb\.gy|cutt\.ly|is\.gd|ow\.ly|shorturl\.at|tiny\.cc|t\.ly|rebrand\.ly)$/,BADTLD=/\.(xyz|top|click|link|icu|work|live|online|site|cc|buzz|rest|support|info|cfd|sbs)$/;
+const allT=()=>BANKS.flatMap(b=>b[1]).concat(GOV,XT),trusted=h=>allT().some(t=>h==t||h.endsWith('.'+t));
+const reg=h=>{const p=h.replace(/\.$/,'').split('.');return /(co|com|org|net|gov|ac|nic)\.in$|(co|com)\.uk$/.test(h)&&p.length>=3?p.slice(-3).join('.'):p.slice(-2).join('.')};
+const norm=s=>s.toLowerCase().replace(/0/g,'o').replace(/1/g,'l').replace(/rn/g,'m').replace(/[-_]/g,'');
+function look(h){const core=norm(reg(h).split('.')[0]),flat=h.replace(/[-_.]/g,'');
+ for(const b of BANKS)for(const t of b[1]){const tc=norm(t.split('.')[0]);if(core==tc||(tc.length>=5&&lev(core,tc)<=2))return b[0]}
+ for(const b of BANKS)if(flat.includes(b[4]))return b[0];return''}
+function dom(h,label,add){if(trusted(h))add('✅',label+' '+h+' is an official bank domain',-10);else{const im=look(h);if(im)add('🎭',label+' '+h+' imitates '+im+' but is not its official domain',40);else if(FREE.test('.'+h+'.'))add('📧',label+' is a free email service ('+h+'). Banks do not write from these',30);else add('🌐',label+' '+h+' is not a known bank domain',22)}}
+function mvAnalyse(ch,bsel,sender,text,hdr){
+ const rs=[],add=(i,t,p)=>rs.push([i,t,p]);let bk=bsel>=0&&bsel<BANKS.length?BANKS[bsel]:null;if(!bk&&bsel==-1)bk=BANKS.find(b=>b[3].test(sender+' '+text))||null;
+ const sn=sender.trim();
+ if(!sn)add('❔','No sender given, so the sender could not be checked',8);
+ else if(sn.includes('@'))dom(sn.split('@').pop().toLowerCase().replace(/[>\s]/g,''),'Sender domain',add);
+ else if(/^(\+?91[\s-]?|0)?[6-9]\d{4}[\s-]?\d{5}$/.test(sn))add('📱','Sent from an ordinary mobile number. Banks use registered sender IDs, not personal numbers',25);
+ else if(/^[A-Za-z]{2}-[A-Za-z0-9]{3,12}$/.test(sn)){const hd=sn.split('-')[1].toUpperCase();if(/KYC|VERIFY|OFFER|LOAN|REWARD|PRIZE/.test(hd))add('🆔','Sender ID '+sn.toUpperCase()+' carries an extra word. Real bank headers are fixed, e.g. HDFCBK',22);else if(bk&&hd!='BANK'&&!bk[2].some(t=>hd.includes(t)))add('🆔','Sender ID '+sn.toUpperCase()+' does not contain the name of '+bk[0],18);else add('✅','Sender ID '+sn.toUpperCase()+' follows the registered bank header format',-8)}
+ else add('🆔','Sender is not in the registered "XX-HEADER" format used for bank SMS',15);
+ if(hdr){const m=[...hdr.matchAll(/\b(spf|dkim|dmarc)=(\w+)/gi)];if(m.length){const bad=m.filter(x=>!/^pass$/i.test(x[2]));bad.length?add('🔐','Email authentication failed: '+bad.map(x=>x[1].toLowerCase()+'='+x[2].toLowerCase()).join(', '),30):add('✅','SPF / DKIM / DMARC checks passed',-6)}}
+ const U=(text.replace(/\S+@\S+/g,' ').match(/(?:https?:\/\/|www\.)[^\s<>"')]+|\b[a-z0-9-]+(?:\.[a-z0-9-]+)*\.(?:com|in|co|net|org|xyz|top|click|link|info|online|site|icu|work|live|app|me|cc|ly|sbi)(?:\/[^\s<>"')]*)?/gi)||[]).slice(0,5);
+ const one=u=>{let h,e=[];try{const x=new URL(/^https?:/i.test(u)?u:'http://'+u);h=x.hostname.toLowerCase();if(/^http:/i.test(u))e.push(['🔓','Link uses plain http (no encryption): '+h,8])}catch(_){return[]}
+  if(/^\d+\.\d+\.\d+\.\d+$/.test(h))e.push(['🧭','Link goes to a raw IP address ('+h+')',35]);else if(SHORT.test(h))e.push(['🔗','Shortened link hides the real destination ('+h+')',28]);else dom(h,'Link domain',(i,t,p)=>e.push([i,t,p]));
+  if(/xn--/.test(h))e.push(['🔤','Link uses look-alike (punycode) characters',25]);else if(BADTLD.test(h)&&!trusted(h))e.push(['🚩','Link ends in .'+h.split('.').pop()+', a TLD often abused for phishing',12]);return e};
+ const L=U.map(one).filter(e=>e.length).sort((a,b)=>sum(b)-sum(a));if(L.length){L[0].forEach(x=>rs.push(x));if(L.length>1&&sum(L[1])>0)add('🔗',(L.length-1)+' more link(s) in the message also look unusual',5)}
+ const safe=/(do not|don'?t|never)\s+(?:ever\s+)?(?:share|disclose|reveal|give)/i.test(text),c=text.replace(/(do not|don'?t|never)\s+(?:ever\s+)?(?:share|disclose|reveal|give)[^.\n]*[.\n]?/gi,' ');
+ [[/\b(otp|one[- ]time password|pin|cvv|cvc|password|passcode|card number|expiry date|net ?banking|aadhaar|aadhar|pan)\b/i,/\b(share|send|enter|provide|confirm|submit|reply|tell|give|verify|update|login|log in)\b/i,'🔑','Asks you to share or enter sensitive details (OTP, PIN, CVV, password or ID)',35],
+  [/\b(immediately|urgent(ly)?|within \d+ ?(hours?|hrs?|mins?|minutes?|days?)|today only|last (chance|warning)|final notice|act now|asap|expires? (today|soon))\b/i,null,'⏰','Urgency and pressure wording',15],
+  [/\b(block(ed)?|suspend(ed)?|deactivat(ed|e)|freez(e|ing)|frozen|legal action|penalty|seized)\b/i,null,'⚠️','Threatens to block the account or impose a penalty',18],
+  [/\bkyc\b/i,/\b(update|expire[sd]?|expiry|pending|verify|incomplete|suspend)/i,'🪪','KYC-update scare tactic, a very common phishing lure',15],
+  [/\b(won|winner|lottery|prize|reward points?|cashback|gift|refund|congratulations|redeem)\b/i,null,'🎁','Reward or refund bait',18],
+  [/\b(anydesk|teamviewer|quicksupport|rustdesk|ammyy|screen ?share|remote access|\.apk|apk file)\b/i,null,'🖥️','Asks you to install a remote-access app or APK file',40],
+  [/(processing fee|registration fee|verification fee|pay (rs|₹)|send money|transfer (rs|₹)|upi (request|collect)|scan (this )?qr)/i,null,'💸','Asks you to pay or transfer money to "verify" or "release" something',30],
+  [/\b(call|contact|dial|whatsapp)\b/i,/(\+?91[\s-]?)?[6-9]\d{4}[\s-]?\d{5}\b/,'📞','Asks you to call a mobile number instead of the bank\'s official helpline',20],
+  [/^\s*dear\s+(customer|user|sir|madam|valued|account holder)/i,null,'👤','Generic greeting instead of your name',5]
+ ].forEach(r=>{if(r[0].test(c)&&(!r[1]||r[1].test(c)))add(r[2],r[3],r[4])});
+ const lt=text.replace(/[^A-Za-z]/g,'');if((lt.length>30&&lt.replace(/[^A-Z]/g,'').length/lt.length>.55)||/!{2,}/.test(text))add('🔤','Shouting capitals or repeated exclamation marks',8);
+ if(safe)add('✅','Contains the standard "never share OTP / PIN" warning',-8);
+ if(/(a\/c|acct?|account|card)[^.]{0,14}(x{2,}|\*{2,}|ending|no\.?)\s*\w{0,2}\d{3,4}/i.test(text)&&!U.length&&!rs.some(r=>r[2]>=15))add('✅','Reads like a standard transaction alert: masked account number and no link',-10);
+ let s=Math.max(0,Math.min(100,sum(rs)));if(rs.some(r=>r[0]=='🎭')&&rs.some(r=>r[0]=='🔑'))s=Math.max(s,85);
+ return{s,rs,bk:bk&&bk[0]}}
+const VM=s=>s>=60?['hi','Likely fake / phishing']:s>=30?['md','Suspicious, verify first']:['lo','Looks genuine'];
+const MACT={hi:['Do not click any link, call any number in the message or share an OTP, PIN or password.','Block the sender and report it: in India use cybercrime.gov.in or call 1930.','Contact the bank only through the number on the back of the card or the official app.','If details were already shared, call the bank at once to block cards and UPI and reset credentials.'],md:['Do not act on this message yet.','Open the official bank app or call the number on the card to confirm it.','Report it to the bank if it turns out to be fake.'],lo:['No strong fraud signals were found, but this check is heuristic.','Even so, never share an OTP or PIN, and confirm unexpected requests in the official app.']};
+let MH=[],MC=0;
+const mvDraw=()=>{const f=MH.filter(x=>x.s>=60).length,m=MH.filter(x=>x.s>=30&&x.s<60).length;
+ g('mv-k').innerHTML=kpi([['✉️','var(--blt)',MH.length,'Messages checked','This session'],['🚨','var(--rdt)',f,'Likely fake','Block and report'],['🤔','var(--amt)',m,'Suspicious','Verify through official channel'],['✅','var(--gnt)',MH.length-f-m,'Looks genuine','No strong fraud signals']]);
+ g('mv-hist').innerHTML=MH.length?`<table><tr><th>ID</th><th>Time</th><th>Channel</th><th>Sender</th><th>Message</th><th>Risk</th><th>Verdict</th></tr>${MH.map(x=>`<tr><td>${x.id}</td><td>${xs(x.t)}</td><td>${xs(x.ch)}</td><td>${xs(x.sn||'—')}</td><td><small>${xs(x.tx.slice(0,50))}${x.tx.length>50?'…':''}</small></td><td><b>${x.s}</b></td><td><span class="pill ${VM(x.s)[0]}">${VM(x.s)[1]}</span></td></tr>`).join('')}</table>`:'<div class="empty">No messages checked yet.</div>';
+ g('mv-dom').innerHTML=allT().map(d=>`<span class="pill lo">${xs(d)}</span>`).join('')};
+Object.assign(CASEACT,{
+ 'mv-check':()=>{const ch=g('mv-ch').value,tx=val('mv-tx'),sn=val('mv-sn');if(tx.length<8){toast('Paste the message text first');return}
+  const a=mvAnalyse(ch,+g('mv-bk').value,sn,tx,val('mv-hd')),v=VM(a.s);MH.unshift({id:'M-'+(1001+MC++),t:now(),ch,sn,tx,s:a.s});if(MH.length>20)MH.length=20;
+  g('mv-res').innerHTML=`<h2>Verdict</h2><p class="sub">${xs(ch)} · ${xs(sn||'no sender')}${a.bk?' · claims to be '+xs(a.bk):''}</p><div class="vg">${gauge(a.s,cc(a.s))}<div><span class="pill ${v[0]}">${v[1]}</span><div class="sub" style="margin:6px 0 0">Fraud risk ${a.s}/100 · trust ${100-a.s}/100</div></div></div><ul class="why">${a.rs.map(x=>`<li><span class="i">${x[0]}</span>${xs(x[1])}<em style="color:${x[2]<0?'var(--gn)':'var(--or)'}">${x[2]>0?'+':''}${x[2]}</em></li>`).join('')||'<li>No risk signals found</li>'}</ul><h3 class="sec">What to do</h3>${acts(MACT[v[0]])}<p class="sub" style="margin-top:10px">This is a rule-based screen of the sender, links and wording. It cannot confirm a message with the bank, so confirm through the official app or the number on the card.</p>`;
+  mvDraw();window.MVHOOK&&window.MVHOOK({ch,sn,tx,hd:val('mv-hd'),a});toast(a.s>=60?'🚨 Likely fake message':a.s>=30?'⚠️ Suspicious message':'✅ Looks genuine')},
+ 'mv-bad':()=>{set({'mv-ch':'SMS','mv-bk':'0','mv-sn':'9811122334','mv-tx':'Dear Customer, your HDFC Bank account will be BLOCKED today. Update your KYC immediately: http://hdfc-kyc-update.xyz/login and share OTP to confirm. Call 9811122334 for help.','mv-hd':''})},
+ 'mv-ok':()=>{set({'mv-ch':'SMS','mv-bk':'0','mv-sn':'VM-HDFCBK','mv-tx':'Rs.2,500.00 debited from A/c XX1234 on 28-Oct-26 to VPA shop@upi. Avl Bal Rs.45,210.55. Not you? Call the number on your card. Do not share OTP/PIN with anyone.','mv-hd':''})},
+ 'mv-add':()=>{const d=val('mv-xd').toLowerCase().replace(/^https?:\/\//,'').replace(/\/.*$/,'');if(!/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(d)){toast('Enter a valid domain, e.g. yourbank.co.in');return}if(!allT().includes(d))XT.push(d);g('mv-xd').value='';mvDraw();toast(d+' added to trusted domains')}});
+
+/* ---------- Loan document verification ---------- */
+const DT=[[0,1,2,3,4,5,6,7,8,9],[1,2,3,4,0,6,7,8,9,5],[2,3,4,0,1,7,8,9,5,6],[3,4,0,1,2,8,9,5,6,7],[4,0,1,2,3,9,5,6,7,8],[5,9,8,7,6,0,4,3,2,1],[6,5,9,8,7,1,0,4,3,2],[7,6,5,9,8,2,1,0,4,3],[8,7,6,5,9,3,2,1,0,4],[9,8,7,6,5,4,3,2,1,0]],PT=[[0,1,2,3,4,5,6,7,8,9],[1,5,7,6,2,8,3,0,9,4],[5,8,0,3,7,9,6,1,4,2],[8,9,1,6,0,4,3,5,2,7],[9,4,5,3,1,2,6,8,7,0],[4,2,8,6,5,7,3,9,0,1],[2,7,9,3,8,0,6,4,1,5],[7,0,4,6,9,1,3,2,5,8]],INV=[0,4,3,2,1,5,6,7,8,9];
+const vOK=s=>{let c=0;[...s].reverse().forEach((d,i)=>c=DT[c][PT[i%8][+d]]);return c==0},vGen=s=>{let c=0;[...s].reverse().forEach((d,i)=>c=DT[c][PT[(i+1)%8][+d]]);return s+INV[c]};
+const age=d=>{const n=new Date(),b=new Date(d);let a=n.getFullYear()-b.getFullYear();if(n<new Date(n.getFullYear(),b.getMonth(),b.getDate()))a--;return a};
+const HEAVY=/(Photoshop|GIMP|Canva|Illustrator|CorelDRAW|PicsArt|Snapseed|Lightroom|iLovePDF|Smallpdf|Sejda|PDFescape|PDF24|Online2PDF|pdfFiller|PhantomPDF|Nitro)/i,OFFICE=/(Microsoft Word|Microsoft Excel|WPS|LibreOffice|OpenOffice)/i;
+const pdt=s=>Date.UTC(+s.slice(0,4),+s.slice(4,6)-1,+s.slice(6,8),+s.slice(8,10),+s.slice(10,12),+s.slice(12,14));
+async function fileScan(f){const it=[],r={name:f.name,size:f.size,hash:'',it};
+ if(f.size>15e6){it.push([1,'File is larger than 15 MB and was not scanned',8]);return r}
+ const buf=await f.arrayBuffer(),u=new Uint8Array(buf);
+ try{r.hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',buf))].map(b=>b.toString(16).padStart(2,'0')).join('')}catch(e){let h=2166136261;for(const b of u)h=Math.imul(h^b,16777619);r.hash='f'+(h>>>0).toString(16)+u.length}
+ const head=String.fromCharCode(...u.slice(0,8)),kind=head.startsWith('%PDF')?'pdf':(u[0]==255&&u[1]==216)?'jpg':(u[0]==137&&head.slice(1,4)=='PNG')?'png':'?',ext=f.name.split('.').pop().toLowerCase(),em={pdf:'pdf',jpg:'jpg',jpeg:'jpg',png:'png'};
+ if(kind=='?')it.push([1,'Not a recognisable PDF, JPG or PNG file',10]);else if(em[ext]&&em[ext]!=kind)it.push([2,'File extension says .'+ext+' but the content is '+kind.toUpperCase()+'. The file was renamed',30]);
+ const tx=new TextDecoder('latin1').decode(u),ed=tx.match(HEAVY),of=tx.match(OFFICE);
+ if(ed)it.push([2,'Contains traces of an editing tool ('+ed[1]+'). Genuine bank or payroll documents are system-generated',35]);else if(of)it.push([1,'Created with an office tool ('+of[1]+') rather than a payroll or banking system',18]);
+ if(kind=='pdf'){const cd=tx.match(/\/CreationDate\s*\(D:(\d{14})/),md=tx.match(/\/ModDate\s*\(D:(\d{14})/);if(cd&&md&&pdt(md[1])-pdt(cd[1])>6e4)it.push([1,'PDF was modified after it was created ('+md[1].slice(0,4)+'-'+md[1].slice(4,6)+'-'+md[1].slice(6,8)+')',15]);if((tx.match(/%%EOF/g)||[]).length>1)it.push([1,'PDF holds several saved revisions, so content may have been edited after generation',12])}
+ if(!it.length)it.push([0,'No editing traces or format problems found',0]);return r}
+const VD=s=>s>=60?['hi','High risk of forgery or misrepresentation']:s>=30?['md','Manual review needed']:['lo','Documents look consistent'];
+const DACT={hi:['Hold the application and do not disburse.','Verify PAN and Aadhaar at the source (links below) and call the applicant on a number you sourced independently.','Ask for originals or DigiLocker-issued documents and fetch the bank statement directly from the bank or through Account Aggregator.','Refer the file to the fraud / compliance team and open a case in Investigations.'],md:['Resolve each flagged check with the applicant before approving.','Confirm PAN and Aadhaar at the source (links below).'],lo:['The documents are internally consistent.','Still complete the mandatory source verification (UIDAI, income tax PAN check, DigiLocker) before disbursal.']};
+let LV=[],LC=0;
+const dvDraw=()=>{const h=LV.filter(x=>x.s>=60).length,m=LV.filter(x=>x.s>=30&&x.s<60).length;
+ g('dv-k').innerHTML=kpi([['📑','var(--blt)',LV.length,'Applications checked','This session'],['🚨','var(--rdt)',h,'High risk','Hold and escalate'],['🔎','var(--amt)',m,'Manual review','Resolve flagged checks'],['✅','var(--gnt)',LV.length-h-m,'Consistent','Still confirm at source']]);
+ g('dv-hist').innerHTML=LV.length?`<table><tr><th>ID</th><th>Applicant</th><th>Time</th><th>Files</th><th>Risk</th><th>Verdict</th></tr>${LV.map(x=>`<tr><td>${x.id}</td><td><b>${xs(x.nm)}</b></td><td>${xs(x.t)}</td><td>${x.nf}</td><td><b>${x.s}</b></td><td><span class="pill ${VD(x.s)[0]}">${VD(x.s)[1]}</span></td></tr>`).join('')}</table>`:'<div class="empty">No applications checked yet.</div>'};
+CASEACT['dv-check']=async()=>{
+ const nm=val('dv-nm'),pan=val('dv-pan').toUpperCase().replace(/\s/g,''),aad=val('dv-aad').replace(/[\s-]/g,''),pnm=val('dv-pnm'),snm=val('dv-snm'),dob=val('dv-dob'),mob=val('dv-mob').replace(/[\s-]/g,'').replace(/^(\+?91|0)(?=\d{10}$)/,''),ifsc=val('dv-ifsc').toUpperCase(),mon=val('dv-mon'),gross=num('dv-gr'),ded=num('dv-de'),net=num('dv-nt'),cr=num('dv-cr'),inc=num('dv-in'),emi0=num('dv-em')||0,amt=num('dv-am'),ten=num('dv-tn'),files=[...g('dv-fl').files];
+ if(!nm||!(pan||aad||files.length||net!=null)){toast('Enter the applicant name and at least one document detail');return}
+ g('dv-res').innerHTML='<h2>Verdict</h2><div class="empty">Checking documents…</div>';
+ const rows=[],add=(d,o,t,p)=>rows.push([d,o,t,o?p:0]),nmChk=(d,other,who)=>{if(!other)return;const s=sim(nm,other);s>=85?add(d,0,'Name matches the application ('+s+'% similar)'):s>=60?add(d,1,who+' "'+other+'" only partly matches "'+nm+'" ('+s+'%)',15):add(d,2,who+' "'+other+'" does not match the applicant "'+nm+'" ('+s+'%)',30)};
+ if(pan){if(!/^[A-Z]{5}\d{4}[A-Z]$/.test(pan))add('PAN card',2,'PAN "'+pan+'" is not in the valid format (5 letters, 4 digits, 1 letter)',35);else{add('PAN card',0,'PAN format is valid');if(!'PCHFATBLJG'.includes(pan[3]))add('PAN card',2,'Fourth character "'+pan[3]+'" is not a valid holder type',30);else if(pan[3]!='P')add('PAN card',1,'PAN belongs to a non-individual holder type ('+pan[3]+') but the applicant is a person',15);else if(pnm){const sn=pnm.trim().split(/\s+/).pop()[0].toUpperCase();pan[4]==sn?add('PAN card',0,'Fifth character matches the surname initial ('+sn+')'):add('PAN card',1,'Fifth character "'+pan[4]+'" does not match the surname initial "'+sn+'" on the card',20)}}nmChk('PAN card',pnm,'Name on PAN')}
+ if(aad){if(/^(\d)\1{11}$/.test(aad)||!/^\d{12}$/.test(aad))add('Aadhaar',2,'Aadhaar must be 12 digits and not a repeated digit',35);else if(!/^[2-9]/.test(aad))add('Aadhaar',2,'Aadhaar cannot start with 0 or 1',35);else if(!vOK(aad))add('Aadhaar',2,'Aadhaar checksum (Verhoeff) failed, so this is not a real Aadhaar number',40);else add('Aadhaar',0,'12 digits with a valid checksum (existence must still be confirmed with UIDAI or DigiLocker)')}
+ if(dob){const a=age(dob);if(isNaN(a)||a>100||a<0)add('Applicant',2,'Date of birth is not plausible',30);else if(a<18)add('Applicant',2,'Applicant is '+a+' years old, under 18',40);else if(ten&&a+ten/12>70)add('Applicant',1,'Loan would run beyond age 70 (age '+a+' + '+ten+' months)',10);else add('Applicant',0,'Age '+a+' is within the lending range')}
+ if(mob){/^[6-9]\d{9}$/.test(mob)?(/^(\d)\1{9}$|0123456789|9876543210/.test(mob)?add('Applicant',1,'Mobile number looks like a dummy number',12):add('Applicant',0,'Mobile number format is valid')):add('Applicant',1,'Mobile number is not a valid 10-digit Indian number',12)}
+ if(snm||net!=null||gross!=null)nmChk('Salary slip',snm,'Name on salary slip');
+ if(gross!=null&&ded!=null&&net!=null){const d=Math.abs(gross-ded-net);d<=10?add('Salary slip',0,'Gross − deductions equals net pay'):add('Salary slip',2,'Gross '+rup(gross)+' − deductions '+rup(ded)+' = '+rup(gross-ded)+' but net shows '+rup(net)+' (off by '+rup(d)+')',35)}
+ if(mon){const n=new Date(),k=(n.getFullYear()*12+n.getMonth())-(+mon.slice(0,4)*12+ +mon.slice(5,7)-1);k<0?add('Salary slip',2,'Salary slip month is in the future',30):k>3?add('Salary slip',1,'Salary slip is '+k+' months old (expected within the last 3)',10):add('Salary slip',0,'Salary slip month is recent')}
+ if(inc!=null&&gross!=null){inc>gross*1.15?add('Salary slip',2,'Declared income '+rup(inc)+' is '+Math.round((inc/gross-1)*100)+'% above the slip gross '+rup(gross),25):add('Salary slip',0,'Declared income is consistent with the slip')}
+ if(net!=null&&cr!=null&&net>0){const d=Math.abs(net-cr)/net;d<=.05?add('Bank statement',0,'Salary credit matches the slip net pay'):d<=.15?add('Bank statement',1,'Salary credit '+rup(cr)+' differs from slip net '+rup(net)+' by '+Math.round(d*100)+'%',12):add('Bank statement',2,'Salary credit '+rup(cr)+' differs from slip net '+rup(net)+' by '+Math.round(d*100)+'%',30)}
+ if(ifsc)/^[A-Z]{4}0[A-Z0-9]{6}$/.test(ifsc)?add('Bank statement',0,'IFSC format is valid'):add('Bank statement',2,'IFSC "'+ifsc+'" is not in the valid format',20);
+ const base=net||inc;if(amt&&ten&&base){const r=.11/12,e=amt*r*Math.pow(1+r,ten)/(Math.pow(1+r,ten)-1),f=(e+emi0)/base;f>.6?add('Affordability',1,'Obligations would be '+Math.round(f*100)+'% of income (new EMI about '+rup(e)+' at an assumed 11% p.a.)',15):add('Affordability',0,'Obligations would be '+Math.round(f*100)+'% of income (new EMI about '+rup(e)+' at an assumed 11% p.a.)');if(inc&&amt>inc*60)add('Affordability',1,'Loan is more than 60 times the declared monthly income',12)}
+ const sc=[];for(const f of files){try{sc.push(await fileScan(f))}catch(e){sc.push({name:f.name,size:f.size,hash:'',it:[[1,'File could not be read',8]]})}}
+ const hs=new Set(),dupIn=new Set();sc.forEach(r=>{if(r.hash){if(hs.has(r.hash))dupIn.add(r.name);hs.add(r.hash)}});
+ sc.forEach(r=>{const lab='File: '+r.name.slice(0,28);r.it.forEach(x=>add(lab,x[0],x[1],x[2]));if(dupIn.has(r.name))add(lab,1,'The same file was uploaded more than once as different documents',15);LV.forEach(o=>{if(r.hash&&o.hashes.has(r.hash))sim(o.nm,nm)<70?add(lab,2,'The identical file was submitted by a different applicant ('+o.id+', '+o.nm+')',35):add(lab,1,'Identical file already used in '+o.id+' for the same applicant',8)})});
+ LV.forEach(o=>{if(sim(o.nm,nm)>=70)return;if(pan&&o.pan==pan)add('Cross-check',2,'PAN '+pan+' was used by another applicant ('+o.id+', '+o.nm+')',40);if(aad&&o.aad==aad)add('Cross-check',2,'Aadhaar was used by another applicant ('+o.id+', '+o.nm+')',40);if(mob&&o.mob==mob)add('Cross-check',1,'Mobile '+mob+' was given by another applicant ('+o.id+', '+o.nm+')',15)});
+ const s=Math.min(100,rows.reduce((a,r)=>a+r[3],0)),v=VD(s),id='LN-'+(5001+LC++),grp={};rows.forEach(r=>grp[r[0]]=Math.max(grp[r[0]]||0,r[1]));
+ LV.unshift({id,nm,pan,aad,mob,hashes:hs,s,t:now(),nf:files.length});if(LV.length>30)LV.length=30;
+ g('dv-res').innerHTML=`<h2>Verdict · ${id}</h2><p class="sub">${xs(nm)} · ${rows.filter(r=>!r[1]).length} of ${rows.length} checks passed · ${files.length} file(s) scanned</p><div class="vg">${gauge(s,cc(s))}<div><span class="pill ${v[0]}">${v[1]}</span><div class="sub" style="margin:6px 0 0">Document risk ${s}/100</div></div></div><div class="tags" style="margin:0 0 12px">${Object.entries(grp).map(([k,o])=>`<span class="pill ${['lo','md','hi'][o]}">${['✓','!','✕'][o]} ${xs(k)}</span>`).join('')}</div><div class="tw ck"><table><tr><th></th><th>Document</th><th>Check result</th><th>Risk</th></tr>${rows.map(r=>`<tr><td>${['✅','⚠️','❌'][r[1]]}</td><td><b>${xs(r[0])}</b></td><td>${xs(r[2])}</td><td>${r[3]?'<b style="color:var(--or)">+'+r[3]+'</b>':'<small>0</small>'}</td></tr>`).join('')}</table></div><h3 class="sec">What to do</h3>${acts(DACT[v[0]])}<p class="sub" style="margin-top:10px">These are format, checksum, consistency and file-forensics checks. They can catch many forgeries but cannot prove a document is authentic, so confirm with the issuer.</p>`;
+ dvDraw();window.DVHOOK&&window.DVHOOK({nm,pnm,snm,gross,ded,net,cr,inc,emi0,amt,ten,ifsc,s,rows});toast(s>=60?'🚨 High-risk documents':s>=30?'⚠️ Manual review needed':'✅ Documents look consistent')};
+const mon=k=>{const d=new Date();d.setDate(1);d.setMonth(d.getMonth()-k);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')};
+Object.assign(CASEACT,{
+ 'dv-ok':()=>set({'dv-nm':'Rohan Mehta','dv-dob':'1991-04-12','dv-mob':'9810276455','dv-pan':'ABCPM1234F','dv-pnm':'Rohan Mehta','dv-aad':vGen('23456789012'),'dv-snm':'Rohan Mehta','dv-mon':mon(1),'dv-ifsc':'HDFC0001234','dv-gr':85000,'dv-de':12500,'dv-nt':72500,'dv-cr':72500,'dv-in':85000,'dv-em':8000,'dv-am':800000,'dv-tn':60}),
+ 'dv-bad':()=>{const a=vGen('23456789012');set({'dv-nm':'Rohan Mehta','dv-dob':'1990-01-15','dv-mob':'9999999999','dv-pan':'ABCQM12345','dv-pnm':'Rohit Mehra','dv-aad':a.slice(0,11)+(+a[11]+1)%10,'dv-snm':'Rohan Mehta','dv-mon':mon(6),'dv-ifsc':'HDFC1234','dv-gr':85000,'dv-de':12500,'dv-nt':78000,'dv-cr':52000,'dv-in':250000,'dv-em':20000,'dv-am':3500000,'dv-tn':120})}});
+mvDraw();dvDraw();
+window.SV={trusted,mvAnalyse,sim,gauge,kpi,VM,VD,set,rup,bi:n=>BANKS.findIndex(b=>b[0]==n)};
+})();
+</script>
+<script>
+/* ===== Merged databases + trained AI models (message and loan verification) ===== */
+(()=>{
+const SV=window.SV,g=i=>document.getElementById(i),rup=SV.rup;
+const rng=a=>()=>{a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296},sig=z=>1/(1+Math.exp(-z));
+function fitLR(X,y){const n=X.length,d=X[0].length,mu=Array(d).fill(0),sd=Array(d).fill(0),w=Array(d).fill(0);let b=0;
+ X.forEach(x=>x.forEach((v,j)=>mu[j]+=v/n));X.forEach(x=>x.forEach((v,j)=>sd[j]+=(v-mu[j])**2/n));for(let j=0;j<d;j++)sd[j]=Math.sqrt(sd[j])||1;
+ const Z=X.map(x=>x.map((v,j)=>(v-mu[j])/sd[j]));
+ for(let e=0;e<400;e++){const gw=Array(d).fill(0);let gb=0;for(let i=0;i<n;i++){const zi=Z[i];let z=b;for(let j=0;j<d;j++)z+=w[j]*zi[j];const er=sig(z)-y[i];gb+=er;for(let j=0;j<d;j++)gw[j]+=er*zi[j]}for(let j=0;j<d;j++)w[j]-=.3*(gw[j]/n+.01*w[j]);b-=.3*gb/n}
+ return{w,b,mu,sd}}
+const zs=(m,x)=>x.map((v,j)=>(v-m.mu[j])/m.sd[j]),prob=(m,x)=>sig(zs(m,x).reduce((s,z,j)=>s+m.w[j]*z,m.b));
+const STOP=new Set('the your you and for with are that this has have will from now not can all any our who but its was were been into onto than then they them their there here what when which while about just also more most some such only over under very'.split(' '));
+const tok=t=>(t.toLowerCase().replace(/https?:\/\/\S+/g,' ').match(/[a-z]{3,}/g)||[]).filter(w=>!STOP.has(w));
+/* ----- message features ----- */
+const MFN=['Sender is a mobile number','Sender is unknown / unrecognised','Sender uses a registered SMS header','Sender header carries an extra word (KYC, VERIFY…)','Sender is an official bank email','Sender is an unknown email domain','Email authentication checks failed','No email authentication data','Message contains a link','Link is on an official bank domain','Link is on an unofficial domain','Asks for an OTP','Asks for a PIN','Asks for a payment or fee','Urgent wording','Threatens blocking or suspension','KYC wording','Reward or approval bait','Says "never share OTP / PIN"','Points to the official app or card number'];
+function mfeat(r,voc){const sn=(r.sn||'').trim(),text=r.tx||'',hd=r.hd||'',isE=sn.includes('@'),isM=/^(\+?91[\s-]?|0)?[6-9]\d{4}[\s-]?\d{5}$/.test(sn),isH=/^[A-Za-z]{2}-[A-Za-z0-9]{3,12}$/.test(sn),dm=isE?sn.split('@').pop().toLowerCase().replace(/[>\s]/g,''):'';
+ const am=[...hd.matchAll(/\b(spf|dkim|dmarc)=(\w+)/gi)],bad=am.filter(x=>!/^pass$/i.test(x[2])).length,
+ us=(text.match(/(?:https?:\/\/|www\.)[^\s<>"')]+/gi)||[]).map(u=>{try{return new URL(/^https?:/i.test(u)?u:'http://'+u).hostname.toLowerCase()}catch(e){return''}}).filter(Boolean),
+ c=text.replace(/(do not|don'?t|never)\s+(?:ever\s+)?(?:share|disclose|reveal|give)[^.\n]*[.\n]?/gi,' ');
+ const f=[isM,!isM&&!isH&&!isE,isH,isH&&/(KYC|VERIFY|OFFER|LOAN|REWARD|PRIZE)/i.test(sn.split('-')[1]),isE&&SV.trusted(dm),isE&&!SV.trusted(dm),bad/3,!am.length,us.length>0,us.some(SV.trusted),us.some(h=>!SV.trusted(h)),/\b(otp|one[- ]time)/i.test(c),/\bpin\b/i.test(c),/(processing|registration|verification) fee|pay (a |the )?(fee|rs|₹)|send money/i.test(c),/\b(urgent|immediately|act now|today)\b/i.test(c),/\b(block(ed)?|suspend(ed)?|expire[sd]?|deactivat)/i.test(c),/\bkyc\b/i.test(c),/(congratulations|approved|\bwon\b|reward|prize|cashback|refund)/i.test(c),/(never|do not|don'?t)\s+(ever\s+)?(share|disclose)/i.test(text),/official (bank |banking )?app|number (printed )?on (the back of )?your card/i.test(text)].map(Number);
+ const t=new Set(tok(text));return f.concat(voc.map(w=>t.has(w)?1:0))}
+/* ----- loan features (PAN, Aadhaar and mobile are left out on purpose: the dummy values in the CSV leak the label) ----- */
+const LFN=['Name on PAN differs from the applicant','Name on salary slip differs from the applicant','Any name mismatch','Salary credit differs from slip net pay','Declared income exceeds slip gross','Declared income exceeds slip net','Loan is large compared with income','Total obligations are high for the income','Bank IFSC code is invalid','Same document file was re-used','Slip arithmetic does not add up','Loan is above 60 times monthly income'];
+function lfeat(r){const nz=v=>v!=null&&!isNaN(v)&&v>0,base=nz(r.net)?r.net:nz(r.inc)?r.inc:null,sp=r.pnm?SV.sim(r.nm,r.pnm)/100:1,ss=r.snm?SV.sim(r.nm,r.snm)/100:1,
+ dev=nz(r.net)&&nz(r.cr)?Math.min(.5,Math.abs(r.cr-r.net)/r.net):0,dg=nz(r.inc)&&nz(r.gross)?Math.max(-.5,Math.min(1,r.inc/r.gross-1)):0,dn=nz(r.inc)&&nz(r.net)?Math.max(-.5,Math.min(1,r.inc/r.net-1)):0,
+ lr=nz(r.amt)&&nz(r.inc)?Math.log10(r.amt/r.inc):1.2;let fo=.4;if(nz(r.amt)&&r.ten>0&&base){const i=.11/12,e=r.amt*i*Math.pow(1+i,r.ten)/(Math.pow(1+i,r.ten)-1);fo=Math.min(2,(e+(r.emi0||0))/base)}
+ return[1-sp,1-ss,(sp<.85||ss<.85)?1:0,dev,dg,dn,lr,fo,r.ifsc&&!/^[A-Z]{4}0[A-Z0-9]{6}$/.test(r.ifsc.toUpperCase())?1:0,r.reuse?1:0,nz(r.gross)&&nz(r.net)&&Math.abs(r.gross-(r.ded||0)-r.net)>10?1:0,nz(r.amt)&&nz(r.inc)&&r.amt>60*r.inc?1:0].map(Number)}
+/* ----- CSV mapping ----- */
+const mapM=r=>{const l=(r.label||'').toLowerCase();if(!r.messagetext||!/^(susp|gen)/.test(l))return null;return{id:r.checkid||'',ts:r.timestamp||'',ch:r.channel||'',bank:r.claimedbank||'',sn:r.sender||'',tx:r.messagetext,hd:r.emailauthenticationheader||'',url:r.urldomain||'',y:/^susp/.test(l)?1:0,risk:+r.riskscore_0_100||0,why:r.reason||''}};
+const mapL=r=>{const l=(r.label||'').toLowerCase(),n=v=>v===undefined||v===''?null:+v;if(!r.applicantname||!/^(review|cons)/.test(l))return null;return{id:r.applicationid||'',ts:r.applicationdate||'',nm:r.applicantname,pnm:r.panname||'',snm:r.salaryslipname||'',gross:n(r.grosssalary_inr),ded:n(r.totaldeductions_inr),net:n(r.netsalary_inr),cr:n(r.salarycredited_inr),inc:n(r.declaredmonthlyincome_inr),emi0:+r.existingmonthlyemis_inr||0,amt:n(r.loanamountrequested_inr),ten:+r.tenuremonths||0,ifsc:r.bankifsc||'',reuse:/^y/i.test(r.documentfilereuseflag||'')?1:0,y:/^review/.test(l)?1:0,risk:+r.riskscore_0_100||0,why:r.reviewreason||''}};
+const CFG={
+ mv:{title:'Message database',view:'msgverify',map:mapM,pos:'Suspicious',neg:'Genuine',fn:MFN,vocab:1,feat:(r,s)=>mfeat(r,s.voc),cols:[['ID',r=>r.id],['Channel',r=>r.ch],['Bank',r=>r.bank],['Sender',r=>r.sn],['Message',r=>r.tx.slice(0,64)+(r.tx.length>64?'…':'')]],hdr:'CheckID, Timestamp, Channel, ClaimedBank, Sender, MessageText, EmailAuthenticationHeader, URLDomain, Label (Genuine-like or Suspicious), RiskScore_0_100, Reason',note:'The 400 messages follow only about 20 wording templates, so held-out accuracy is far higher than real messages would give.'},
+ dv:{title:'Loan application database',view:'docverify',map:mapL,pos:'Review required',neg:'Consistent',fn:LFN,vocab:0,feat:r=>lfeat(r),cols:[['ID',r=>r.id],['Applicant',r=>r.nm],['PAN name',r=>r.pnm],['Slip name',r=>r.snm],['Net pay',r=>rup(r.net||0)],['Loan',r=>rup(r.amt||0)],['IFSC',r=>r.ifsc]],hdr:'ApplicationID, ApplicationDate, ApplicantName, PANName, SalarySlipName, BankIFSC, GrossSalary_INR, TotalDeductions_INR, NetSalary_INR, SalaryCredited_INR, DeclaredMonthlyIncome_INR, ExistingMonthlyEMIs_INR, LoanAmountRequested_INR, TenureMonths, DocumentFileReuseFlag, Label (Consistent or Review Required), RiskScore_0_100, ReviewReason',note:'PAN, Aadhaar and mobile values in this file are placeholders, so the model ignores them and learns from names, income, loan size, IFSC and file re-use.'}};
+const ST={mv:{},dv:{}},PS=10,cc=s=>s>=60?'var(--rd)':s>=30?'var(--am)':'var(--gn)',pc=v=>Math.round(v*100)+'%';
+function fit(p){const s=ST[p],c=CFG[p],R=s.rows;if(R.length<20||new Set(R.map(r=>r.y)).size<2){s.m=null;return}
+ const r=rng(7),ix=R.map((_,i)=>i);for(let i=ix.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[ix[i],ix[j]]=[ix[j],ix[i]]}
+ const nt=Math.round(R.length*.2),te=new Set(ix.slice(0,nt)),tr=ix.slice(nt);
+ if(c.vocab){const df={};tr.forEach(i=>new Set(tok(R[i].tx)).forEach(w=>df[w]=(df[w]||0)+1));s.voc=Object.keys(df).filter(w=>df[w]>=10).sort((a,b)=>df[b]-df[a]).slice(0,40)}else s.voc=[];
+ s.names=c.fn.concat(s.voc.map(w=>'Wording: "'+w+'"'));const F=R.map(x=>c.feat(x,s));s.m=fitLR(tr.map(i=>F[i]),tr.map(i=>R[i].y));s.pr=F.map(x=>prob(s.m,x));s.te=te;
+ const t={tp:0,fp:0,fn:0,tn:0};te.forEach(i=>{const q=s.pr[i]>=.5,y=R[i].y==1;q&&y?t.tp++:q?t.fp++:y?t.fn++:t.tn++});const n=te.size,P=t.tp/Math.max(1,t.tp+t.fp),Rc=t.tp/Math.max(1,t.tp+t.fn);
+ s.mt={...t,n,nt:tr.length,acc:(t.tp+t.tn)/Math.max(1,n),P,Rc,f1:2*P*Rc/Math.max(1e-9,P+Rc)}}
+const why=(p,x)=>{const s=ST[p],z=zs(s.m,x),a=z.map((v,j)=>[s.names[j],s.m.w[j]*v]);return a.filter(q=>q[1]>.25).sort((u,v)=>v[1]-u[1]).slice(0,4).concat(a.filter(q=>q[1]<-.25).sort((u,v)=>u[1]-v[1]).slice(0,2))};
+const whyH=l=>l.length?'<ul class="why">'+l.map(q=>`<li><span class="i">${q[1]>0?'📈':'✅'}</span>${xs(q[0])}<em style="color:${q[1]>0?'var(--or)':'var(--gn)'}">${q[1]>0?'+':'−'}${Math.abs(q[1]).toFixed(1)}</em></li>`).join('')+'</ul>':'<p class="sub">No strong signals either way.</p>';
+const view=p=>{const s=ST[p],q=s.q.toLowerCase();return s.rows.map((_,i)=>i).filter(i=>{const r=s.rows[i],w=(s.pr[i]>=.5)!=(r.y==1);return(s.flt=='all'||(s.flt=='pos'&&r.y)||(s.flt=='neg'&&!r.y)||(s.flt=='wrong'&&w))&&(!q||JSON.stringify(r).toLowerCase().includes(q))})};
+const mdl=(p,i)=>{const s=ST[p],c=CFG[p],q=s.pr[i],pos=q>=.5,r=s.rows[i];return`<span class="pill ${pos?'hi':'lo'}">${pos?c.pos:c.neg} ${pc(pos?q:1-q)}</span> ${pos==(r.y==1)?'✓':'✗'}${s.te.has(i)?' <small>test</small>':''}`};
+function drawTable(p){const s=ST[p],c=CFG[p],v=view(p),pg=Math.max(0,Math.min(s.page,Math.ceil(v.length/PS)-1));s.page=pg;
+ g(p+'-ch').innerHTML=[['all','All'],['neg',c.neg],['pos',c.pos],['wrong','Model wrong']].map(a=>`<button data-act="${p}-flt" data-v="${a[0]}" class="${s.flt==a[0]?'on':''}">${a[1]}</button>`).join('');
+ g(p+'-tb').innerHTML=v.length?`<table><tr>${c.cols.map(k=>`<th>${k[0]}</th>`).join('')}<th>Dataset label</th><th>AI model</th><th></th></tr>${v.slice(pg*PS,pg*PS+PS).map(i=>{const r=s.rows[i];return`<tr>${c.cols.map(k=>`<td>${xs(k[1](r))}</td>`).join('')}<td><span class="pill ${r.y?'hi':'lo'}">${r.y?c.pos:c.neg}</span></td><td>${mdl(p,i)}</td><td><button class="mini" data-act="${p}-view" data-i="${i}">Inspect</button></td></tr>`}).join('')}</table>`:'<div class="empty">No records match.</div>';
+ g(p+'-pg').textContent=v.length?'Records '+(pg*PS+1)+'–'+Math.min(v.length,pg*PS+PS)+' of '+v.length:'0 records'}
+function draw(p){const s=ST[p],c=CFG[p],R=s.rows;if(!s.m){g(p+'-dk').innerHTML='';g(p+'-ml').innerHTML='<h2>AI model</h2><div class="empty">Need at least 20 labelled rows with both classes to train.</div>';g(p+'-tb').innerHTML='';return}
+ const m=s.mt,ng=R.filter(r=>!r.y).length;
+ g(p+'-dk').innerHTML=SV.kpi([['🗄️','var(--blt)',R.length,'Records in database','Merged into this view'],['✅','var(--gnt)',ng,c.neg,'Labelled in the dataset'],['🚨','var(--rdt)',R.length-ng,c.pos,'Labelled in the dataset'],['🎯','var(--ort)',pc(m.acc),'Model accuracy','On '+m.n+' held-out records']]);
+ const w=s.m.w.map((v,j)=>[s.names[j],v]).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1])).slice(0,8);
+ g(p+'-ml').innerHTML=`<h2>AI model</h2><p class="sub">Logistic regression trained on ${m.nt} records, tested on ${m.n} records it never saw</p><div class="legend" style="margin:0 0 10px"><span><b style="background:var(--or)"></b>Precision ${pc(m.P)}</span><span><b style="background:var(--bl)"></b>Recall ${pc(m.Rc)}</span><span><b style="background:var(--gn)"></b>F1 ${pc(m.f1)}</span></div><table style="min-width:0"><tr><th></th><th>Predicted ${c.neg}</th><th>Predicted ${c.pos}</th></tr><tr><td>Actually ${c.neg}</td><td><b>${m.tn}</b></td><td>${m.fp}</td></tr><tr><td>Actually ${c.pos}</td><td>${m.fn}</td><td><b>${m.tp}</b></td></tr></table><h3 class="sec">Strongest signals it learned</h3><ul class="why">${w.map(q=>`<li><span class="i">${q[1]>0?'📈':'✅'}</span>${xs(q[0])}<em style="color:${q[1]>0?'var(--or)':'var(--gn)'}">${q[1]>0?'raises':'lowers'} risk</em></li>`).join('')}</ul><p class="sub" style="margin-top:10px">${c.note}</p>`;
+ drawTable(p)}
+function panel(p){const c=CFG[p];g('v-'+c.view).insertAdjacentHTML('beforeend',`<h3 class="sec" style="margin-top:24px">Database &amp; AI model</h3><div class="grid k4" id="${p}-dk"></div>
+ <div class="grid g4"><div class="card" id="${p}-ml"></div><div class="card"><h2>Add records &amp; retrain</h2><p class="sub">Upload or paste a CSV with these columns. The rows are added and the model is retrained.</p><p class="sub"><small>${c.hdr}</small></p><div class="fm1"><label>CSV file<input id="${p}-imf" type="file" accept=".csv,text/csv"></label></div><textarea class="vt" id="${p}-imt" rows="4" placeholder="…or paste CSV here (first row = column names)"></textarea><div class="btns"><button class="btn p" data-act="${p}-imp">Import &amp; retrain</button><button class="btn s" data-act="${p}-dl">Download scored CSV</button><button class="btn s" data-act="${p}-rst">Reset database</button></div><div id="${p}-imr"></div></div></div>
+ <div class="card"><div class="hd"><div><h2>${c.title}</h2><p class="sub">Every record with its dataset label and the AI model's prediction. Click Inspect to see why.</p></div><input class="search" id="${p}-q" style="min-width:200px" placeholder="🔍 Search records"></div><div class="chips" id="${p}-ch"></div><div class="tw" id="${p}-tb"></div><div class="row" style="margin-top:10px"><button class="mini" data-act="${p}-prev">‹ Prev</button><small id="${p}-pg" style="flex:1;text-align:center"></small><button class="mini" data-act="${p}-next">Next ›</button></div></div>`);
+ g(p+'-imf').addEventListener('change',e=>{const f=e.target.files[0];if(f)f.text().then(t=>g(p+'-imt').value=t)});
+ g(p+'-q').addEventListener('input',e=>{ST[p].q=e.target.value;ST[p].page=0;drawTable(p)})}
+function init(p){const s=ST[p],c=CFG[p];return call('/sv/'+p+'/records').then(d=>{Object.assign(s,{rows:d.rows.map(c.map).filter(Boolean),page:0,flt:'all',q:''});fit(p);draw(p)}).catch(e=>toast(e.message))}
+function inspect(p,i){const s=ST[p],c=CFG[p],r=s.rows[i],x=c.feat(r,s),q=s.pr[i],pos=q>=.5,ok=pos==(r.y==1);let ex='';
+ if(p=='mv'){const a=SV.mvAnalyse(r.ch,SV.bi(r.bank),r.sn,r.tx,r.hd);ex=`<h3 class="sec">Rule-based screen</h3><p>Risk ${a.s}/100 (${SV.VM(a.s)[1]})</p>`}
+ const f=p=='mv'?[['Record',r.id+' · '+r.ts],['Channel / bank',r.ch+' · '+r.bank],['Sender',r.sn],['Message',r.tx],['Email authentication',r.hd],['Link domain',r.url||'none']]:[['Record',r.id+' · '+r.ts],['Applicant / PAN / slip',r.nm+' / '+r.pnm+' / '+r.snm],['Gross · deductions · net',rup(r.gross||0)+' · '+rup(r.ded||0)+' · '+rup(r.net||0)],['Credited · declared income',rup(r.cr||0)+' · '+rup(r.inc||0)],['Loan · tenure · EMIs',rup(r.amt||0)+' · '+r.ten+' months · '+rup(r.emi0)],['IFSC · file re-use',r.ifsc+' · '+(r.reuse?'Yes':'No')]];
+ modal(`<h2>${xs(r.id)}</h2><p class="sub">${xs(c.title)}</p>${f.map(a=>`<div class="set"><div><small>${a[0]}</small><b style="font-weight:600">${xs(a[1])}</b></div></div>`).join('')}<div class="tags"><span class="pill ${r.y?'hi':'lo'}">Dataset: ${r.y?c.pos:c.neg} (${r.risk})</span><span class="pill ${pos?'hi':'lo'}">AI model: ${pos?c.pos:c.neg} ${pc(pos?q:1-q)}</span><span class="pill ${ok?'lo':'md'}">${ok?'Prediction matches the label':'Prediction differs from the label'}</span></div><p class="sub" style="margin-top:8px">Dataset reason: ${xs(r.why)}</p><h3 class="sec">Why the model decided this</h3>${whyH(why(p,x))}${ex}${p=='mv'?`<div class="btns"><button class="btn p" data-act="mv-load" data-i="${i}">Run in the checker form</button></div>`:''}`,1)}
+const dl=p=>{const s=ST[p],c=CFG[p],t='ID,Dataset label,Dataset risk,Model probability,Model prediction,Matches label\n'+s.rows.map((r,i)=>[r.id,r.y?c.pos:c.neg,r.risk,s.pr[i].toFixed(3),s.pr[i]>=.5?c.pos:c.neg,(s.pr[i]>=.5)==(r.y==1)?'Yes':'No'].join(',')).join('\n'),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/csv'}));a.download=p+'_scored.csv';a.click()};
+['mv','dv'].forEach(p=>{panel(p);const s=ST[p],c=CFG[p];Object.assign(CASEACT,{
+ [p+'-flt']:m=>{s.flt=m.dataset.v;s.page=0;drawTable(p)},[p+'-prev']:()=>{s.page=Math.max(0,s.page-1);drawTable(p)},[p+'-next']:()=>{s.page++;drawTable(p)},[p+'-view']:m=>inspect(p,+m.dataset.i),[p+'-dl']:()=>dl(p),
+ [p+'-rst']:()=>{call('/sv/'+p+'/reset','POST').then(()=>init(p)).then(()=>{g(p+'-imr').innerHTML='';toast('Database reset to the original dataset records')}).catch(e=>toast(e.message))},
+ [p+'-imp']:()=>{const rs=parseCsv(g(p+'-imt').value);if(!rs.length){toast('Paste or choose a CSV first');return}call('/sv/'+p+'/import','POST',{rows:rs}).then(r=>{g(p+'-imr').innerHTML=`<div class="res ${r.added==rs.length?'good':'bad'}"><b>Saved ${r.added} of ${rs.length} row(s) to the database and retrained${r.added<rs.length?' - '+(rs.length-r.added)+' skipped (missing text/name or a Label that is not '+c.neg+' / '+c.pos+')':''}</b></div>`;g(p+'-imt').value='';return init(p)}).then(()=>toast('Model retrained on '+s.rows.length+' records')).catch(e=>toast(e.message))}})});
+CASEACT['mv-load']=m=>{const r=ST.mv.rows[+m.dataset.i];SV.set({'mv-ch':r.ch||'SMS','mv-bk':String(SV.bi(r.bank)),'mv-sn':r.sn,'mv-tx':r.tx,'mv-hd':/spf|dkim|dmarc/i.test(r.hd)?r.hd:''});$('#modal').hidden=true;CASEACT['mv-check']();scrollTo(0,0)};
+/* ----- live prediction inside the two checkers ----- */
+const block=(p,x,rule,rl,vf)=>{const s=ST[p],c=CFG[p],q=prob(s.m,x),mr=Math.round(q*100),cb=Math.round((rule+mr)/2),v=vf(cb),pos=q>=.5;
+ return`<h3 class="sec">🤖 AI model prediction</h3><p class="sub">Trained on the ${s.rows.length}-record ${c.title.toLowerCase()} · ${pc(s.mt.acc)} accurate on held-out records</p><div class="vg">${SV.gauge(mr,cc(mr))}<div><span class="pill ${pos?'hi':'lo'}">${pos?'Predicted: '+c.pos:'Predicted: '+c.neg}</span><div class="sub" style="margin:6px 0 0">Model probability ${mr}% · rule screen ${rule}/100</div></div></div>${whyH(why(p,x))}<div class="res ${cb>=60?'bad':cb>=30?'bad':'good'}"><b>Combined verdict: ${v[1]} (risk ${cb}/100)</b></div>`};
+window.MVHOOK=o=>{if(ST.mv.m)g('mv-res').insertAdjacentHTML('beforeend',block('mv',mfeat({sn:o.sn,tx:o.tx,hd:o.hd},ST.mv.voc),o.a.s,0,SV.VM))};
+window.DVHOOK=o=>{if(ST.dv.m)g('dv-res').insertAdjacentHTML('beforeend',block('dv',lfeat({nm:o.nm,pnm:o.pnm,snm:o.snm,gross:o.gross,ded:o.ded,net:o.net,cr:o.cr,inc:o.inc,emi0:o.emi0,amt:o.amt,ten:o.ten,ifsc:o.ifsc,reuse:o.rows.some(r=>/identical file|same file/i.test(r[2]))?1:0}),o.s,0,SV.VD))};
+{const m0=window.MVHOOK,d0=window.DVHOOK;
+window.MVHOOK=o=>{call('/sv/mv/history','POST',{channel:g('mv-ch').value,sender:o.sn,text:o.tx,header:o.hd,score:o.a.s,reasons:o.a.rs}).catch(()=>{});m0(o)};
+window.DVHOOK=o=>{call('/sv/dv/history','POST',{applicant:o.nm,score:o.s,checks:o.rows}).catch(()=>{});d0(o)}}
+window.SVBOOT=()=>['mv','dv'].forEach(init);
+window.SVM=ST;
+})();
+</script>
+</body></html>

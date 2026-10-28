@@ -1,0 +1,401 @@
+EventID,EmployeeID,EventTimestamp,EventType,Application,Device,IPAddress,Location,Severity,EventStatus,Description,RequiresReview
+EVT00001,EMP0047,2026-10-14 20:15:00,Logout,Spreadsheet,Linux Workstation,192.168.65.198,Hyderabad,Medium,Review Required,Logout event recorded; status review required,Yes
+EVT00002,EMP0035,2026-10-20 16:20:00,File Download,Spreadsheet,Android Phone,192.168.20.215,Meerut,High,Review Required,File Download event recorded; status review required,Yes
+EVT00003,EMP0139,2026-10-08 17:20:00,Network Access,Code Editor,Windows Laptop,192.168.23.42,Haridwar,High,Success,Network Access event recorded; status success,Yes
+EVT00004,EMP0102,2026-10-15 17:15:00,File Upload,Spreadsheet,Linux Workstation,192.168.67.227,Delhi,Critical,Success,File Upload event recorded; status success,Yes
+EVT00005,EMP0210,2026-10-13 23:45:00,File Access,Spreadsheet,iPhone,192.168.3.187,Gurugram,Low,Success,File Access event recorded; status success,No
+EVT00006,EMP0312,2026-10-06 01:00:00,File Download,Browser,Android Phone,192.168.4.24,Haridwar,High,Review Required,File Download event recorded; status review required,Yes
+EVT00007,EMP0278,2026-10-22 21:20:00,File Upload,Project Management,Windows Laptop,192.168.160.112,Haridwar,High,Success,File Upload event recorded; status success,Yes
+EVT00008,EMP0392,2026-10-04 23:15:00,Data Export,Project Management,Android Phone,192.168.81.254,Delhi,Low,Success,Data Export event recorded; status success,No
+EVT00009,EMP0316,2026-10-26 09:00:00,File Download,CRM,iPhone,192.168.141.59,Meerut,Medium,Review Required,File Download event recorded; status review required,Yes
+EVT00010,EMP0010,2026-10-09 05:30:00,File Upload,Project Management,MacBook,192.168.57.185,Noida,Low,Blocked,File Upload event recorded; status blocked,Yes
+EVT00011,EMP0055,2026-10-25 21:15:00,Application Launch,Code Editor,MacBook,192.168.50.221,Delhi,High,Review Required,Application Launch event recorded; status review required,Yes
+EVT00012,EMP0238,2026-10-28 10:15:00,Login,Document Editor,Android Phone,192.168.122.86,Haridwar,Low,Success,Login event recorded; status success,No
+EVT00013,EMP0355,2026-10-04 11:10:00,USB Connected,Email,MacBook,192.168.196.86,Jaipur,Low,Success,USB Connected event recorded; status success,No
+EVT00014,EMP0081,2026-10-23 21:15:00,USB Connected,Database,Linux Workstation,192.168.140.44,Aligarh,Medium,Review Required,USB Connected event recorded; status review required,Yes
+EVT00015,EMP0319,2026-10-01 02:10:00,USB Connected,Spreadsheet,Android Phone,192.168.47.167,Aligarh,Low,Success,USB Connected event recorded; status success,No
+EVT00016,EMP0073,2026-10-14 02:00:00,Failed Login,Code Editor,Linux Workstation,192.168.31.114,Gurugram,High,Blocked,Failed Login event recorded; status blocked,Yes
+EVT00017,EMP0001,2026-10-19 17:00:00,Network Access,Browser,iPhone,192.168.226.103,Delhi,High,Success,Network Access event recorded; status success,Yes
+EVT00018,EMP0286,2026-10-03 10:00:00,Application Launch,Browser,MacBook,192.168.215.104,Pune,Low,Success,Application Launch event recorded; status success,No
+EVT00019,EMP0175,2026-10-04 00:15:00,File Download,Spreadsheet,Windows Laptop,192.168.190.79,Chandigarh,High,Review Required,File Download event recorded; status review required,Yes
+EVT00020,EMP0085,2026-10-15 23:10:00,Data Export,Email,iPhone,192.168.30.11,Jaipur,Critical,Success,Data Export event recorded; status success,Yes
+EVT00021,EMP0332,2026-10-22 22:15:00,File Upload,CRM,Linux Workstation,192.168.195.212,Dehradun,High,Review Required,File Upload event recorded; status review required,Yes
+EVT00022,EMP0004,2026-10-21 19:45:00,File Download,Database,Android Phone,192.168.8.8,Dehradun,Low,Review Required,File Download event recorded; status review required,Yes
+EVT00023,EMP0067,2026-10-16 13:10:00,File Upload,CRM,Windows Laptop,192.168.40.114,Delhi,Low,Failed,File Upload event recorded; status failed,Yes
+EVT00024,EMP0017,2026-10-12 11:30:00,Permission Change,CRM,Office Desktop,192.168.49.224,Meerut,Critical,Review Required,Permission Change event recorded; status review required,Yes
+EVT00025,EMP0071,2026-10-06 23:45:00,Logout,Spreadsheet,Android Phone,192.168.23.24,Meerut,Low,Success,Logout event recorded; status success,No
+EVT00026,EMP0322,2026-10-15 08:30:00,Password Change,Code Editor,Linux Workstation,192.168.252.215,Lucknow,Low,Success,Password Change event recorded; status success,No
+EVT00027,EMP0128,2026-10-07 16:20:00,File Upload,Spreadsheet,Android Phone,192.168.222.46,Delhi,Low,Success,File Upload event recorded; status success,No
+EVT00028,EMP0329,2026-10-10 01:20:00,File Access,Email,Linux Workstation,192.168.40.187,Mumbai,High,Success,File Access event recorded; status success,Yes
+EVT00029,EMP0325,2026-10-08 14:15:00,Network Access,Code Editor,Office Desktop,192.168.185.181,Roorkee,High,Success,Network Access event recorded; status success,Yes
+EVT00030,EMP0090,2026-10-02 12:15:00,Logout,Document Editor,MacBook,192.168.33.180,Hyderabad,Low,Success,Logout event recorded; status success,No
+EVT00031,EMP0084,2026-10-20 19:00:00,Application Launch,Spreadsheet,Office Desktop,192.168.253.170,Gurugram,Medium,Success,Application Launch event recorded; status success,No
+EVT00032,EMP0155,2026-10-25 08:30:00,Password Change,Spreadsheet,iPhone,192.168.54.93,Meerut,Low,Failed,Password Change event recorded; status failed,Yes
+EVT00033,EMP0078,2026-10-15 22:00:00,Failed Login,Database,Office Desktop,192.168.244.244,Noida,Low,Success,Failed Login event recorded; status success,No
+EVT00034,EMP0302,2026-10-22 07:10:00,USB Connected,Project Management,Android Phone,192.168.204.191,Aligarh,Critical,Success,USB Connected event recorded; status success,Yes
+EVT00035,EMP0269,2026-10-26 06:10:00,Permission Change,Document Editor,MacBook,192.168.13.182,Roorkee,Low,Success,Permission Change event recorded; status success,No
+EVT00036,EMP0042,2026-10-24 12:15:00,File Access,Database,iPhone,192.168.227.212,Chandigarh,Low,Review Required,File Access event recorded; status review required,Yes
+EVT00037,EMP0093,2026-10-16 13:15:00,Data Export,CRM,Android Phone,192.168.81.47,Mumbai,Critical,Success,Data Export event recorded; status success,Yes
+EVT00038,EMP0385,2026-10-17 02:00:00,File Access,Document Editor,MacBook,192.168.85.140,Meerut,Info,Success,File Access event recorded; status success,No
+EVT00039,EMP0027,2026-10-26 19:20:00,Network Access,Browser,iPhone,192.168.137.241,Dehradun,High,Success,Network Access event recorded; status success,Yes
+EVT00040,EMP0207,2026-10-10 03:45:00,Password Change,Database,Office Desktop,192.168.169.251,Lucknow,Low,Success,Password Change event recorded; status success,No
+EVT00041,EMP0259,2026-10-09 18:10:00,Login,Document Editor,Windows Laptop,192.168.202.51,Mumbai,Medium,Success,Login event recorded; status success,No
+EVT00042,EMP0279,2026-10-24 04:20:00,File Upload,Project Management,iPhone,192.168.92.196,Meerut,High,Success,File Upload event recorded; status success,Yes
+EVT00043,EMP0363,2026-10-18 00:20:00,Login,Email,Android Phone,192.168.103.196,Lucknow,Info,Blocked,Login event recorded; status blocked,Yes
+EVT00044,EMP0394,2026-10-13 12:30:00,Data Export,Project Management,MacBook,192.168.184.79,Meerut,Critical,Blocked,Data Export event recorded; status blocked,Yes
+EVT00045,EMP0031,2026-10-09 11:20:00,Password Change,Browser,Windows Laptop,192.168.144.119,Chandigarh,Critical,Failed,Password Change event recorded; status failed,Yes
+EVT00046,EMP0174,2026-10-02 20:15:00,USB Connected,CRM,Linux Workstation,192.168.234.176,Roorkee,High,Review Required,USB Connected event recorded; status review required,Yes
+EVT00047,EMP0258,2026-10-10 07:00:00,Data Export,Project Management,Windows Laptop,192.168.175.207,Jaipur,Medium,Success,Data Export event recorded; status success,No
+EVT00048,EMP0315,2026-10-16 10:30:00,Permission Change,Email,iPhone,192.168.217.11,Lucknow,Info,Review Required,Permission Change event recorded; status review required,Yes
+EVT00049,EMP0326,2026-10-07 04:30:00,Network Access,Document Editor,Office Desktop,192.168.218.65,Jaipur,Medium,Success,Network Access event recorded; status success,No
+EVT00050,EMP0338,2026-10-25 08:15:00,Failed Login,Browser,Windows Laptop,192.168.188.162,Dehradun,Info,Success,Failed Login event recorded; status success,No
+EVT00051,EMP0312,2026-10-08 05:15:00,File Access,Spreadsheet,Office Desktop,192.168.84.239,Haridwar,Info,Failed,File Access event recorded; status failed,Yes
+EVT00052,EMP0114,2026-10-12 20:30:00,Data Export,Project Management,Android Phone,192.168.148.47,Haridwar,Medium,Blocked,Data Export event recorded; status blocked,Yes
+EVT00053,EMP0069,2026-10-01 23:45:00,Password Change,CRM,MacBook,192.168.1.188,Pune,Info,Success,Password Change event recorded; status success,No
+EVT00054,EMP0362,2026-10-14 03:45:00,File Download,CRM,Android Phone,192.168.58.81,Noida,Info,Success,File Download event recorded; status success,No
+EVT00055,EMP0199,2026-10-16 01:20:00,File Upload,Spreadsheet,MacBook,192.168.215.97,Meerut,High,Success,File Upload event recorded; status success,Yes
+EVT00056,EMP0383,2026-10-06 08:00:00,USB Connected,Database,MacBook,192.168.151.139,Haridwar,Critical,Failed,USB Connected event recorded; status failed,Yes
+EVT00057,EMP0186,2026-10-22 16:00:00,Network Access,Spreadsheet,iPhone,192.168.77.228,Chandigarh,Low,Failed,Network Access event recorded; status failed,Yes
+EVT00058,EMP0378,2026-10-01 21:20:00,File Upload,CRM,Android Phone,192.168.26.130,Noida,Low,Blocked,File Upload event recorded; status blocked,Yes
+EVT00059,EMP0074,2026-10-14 09:20:00,Data Export,Document Editor,Linux Workstation,192.168.105.197,Lucknow,Medium,Success,Data Export event recorded; status success,No
+EVT00060,EMP0330,2026-10-05 14:30:00,Failed Login,Spreadsheet,Windows Laptop,192.168.47.237,Hyderabad,Low,Failed,Failed Login event recorded; status failed,Yes
+EVT00061,EMP0341,2026-10-21 14:15:00,USB Connected,CRM,Office Desktop,192.168.254.1,Meerut,Critical,Review Required,USB Connected event recorded; status review required,Yes
+EVT00062,EMP0228,2026-10-13 03:00:00,Failed Login,Document Editor,Office Desktop,192.168.212.88,Pune,Medium,Success,Failed Login event recorded; status success,No
+EVT00063,EMP0006,2026-10-12 07:30:00,Logout,CRM,Linux Workstation,192.168.176.20,Hyderabad,Low,Success,Logout event recorded; status success,No
+EVT00064,EMP0041,2026-10-11 17:00:00,Application Launch,Browser,Office Desktop,192.168.239.184,Roorkee,Info,Failed,Application Launch event recorded; status failed,Yes
+EVT00065,EMP0239,2026-10-08 13:45:00,Network Access,Database,Linux Workstation,192.168.41.213,Delhi,High,Review Required,Network Access event recorded; status review required,Yes
+EVT00066,EMP0295,2026-10-21 21:30:00,File Download,Email,iPhone,192.168.242.107,Hyderabad,Info,Review Required,File Download event recorded; status review required,Yes
+EVT00067,EMP0244,2026-10-21 07:10:00,File Download,CRM,Windows Laptop,192.168.249.96,Gurugram,Low,Success,File Download event recorded; status success,No
+EVT00068,EMP0037,2026-10-10 19:10:00,File Download,Document Editor,Office Desktop,192.168.60.71,Haridwar,Info,Failed,File Download event recorded; status failed,Yes
+EVT00069,EMP0347,2026-10-25 01:10:00,USB Connected,CRM,Windows Laptop,192.168.193.119,Bengaluru,Medium,Review Required,USB Connected event recorded; status review required,Yes
+EVT00070,EMP0283,2026-10-05 16:10:00,Failed Login,Browser,iPhone,192.168.34.142,Bengaluru,Low,Review Required,Failed Login event recorded; status review required,Yes
+EVT00071,EMP0184,2026-10-28 15:15:00,Network Access,Project Management,Android Phone,192.168.6.212,Delhi,Medium,Blocked,Network Access event recorded; status blocked,Yes
+EVT00072,EMP0294,2026-10-27 18:10:00,File Upload,Email,Windows Laptop,192.168.200.162,Roorkee,Medium,Success,File Upload event recorded; status success,No
+EVT00073,EMP0079,2026-10-06 15:10:00,Password Change,Project Management,Android Phone,192.168.178.224,Aligarh,Low,Blocked,Password Change event recorded; status blocked,Yes
+EVT00074,EMP0351,2026-10-11 10:20:00,Failed Login,Database,Linux Workstation,192.168.75.207,Lucknow,Critical,Blocked,Failed Login event recorded; status blocked,Yes
+EVT00075,EMP0294,2026-10-25 22:10:00,Network Access,Code Editor,iPhone,192.168.104.161,Gurugram,High,Review Required,Network Access event recorded; status review required,Yes
+EVT00076,EMP0044,2026-10-02 00:15:00,Password Change,Project Management,iPhone,192.168.194.136,Hyderabad,Low,Success,Password Change event recorded; status success,No
+EVT00077,EMP0016,2026-10-22 10:45:00,Failed Login,Email,Windows Laptop,192.168.190.80,Noida,Low,Success,Failed Login event recorded; status success,No
+EVT00078,EMP0129,2026-10-08 01:45:00,Login,Spreadsheet,Windows Laptop,192.168.110.221,Roorkee,High,Blocked,Login event recorded; status blocked,Yes
+EVT00079,EMP0049,2026-10-24 10:30:00,File Upload,Code Editor,Android Phone,192.168.25.38,Lucknow,Medium,Success,File Upload event recorded; status success,No
+EVT00080,EMP0320,2026-10-26 07:45:00,Logout,Code Editor,Office Desktop,192.168.71.125,Lucknow,Low,Failed,Logout event recorded; status failed,Yes
+EVT00081,EMP0123,2026-10-22 00:15:00,USB Connected,Code Editor,Windows Laptop,192.168.147.248,Mumbai,Critical,Blocked,USB Connected event recorded; status blocked,Yes
+EVT00082,EMP0399,2026-10-03 00:45:00,File Upload,Code Editor,MacBook,192.168.21.128,Bengaluru,Medium,Success,File Upload event recorded; status success,No
+EVT00083,EMP0082,2026-10-05 07:15:00,Logout,CRM,Windows Laptop,192.168.146.155,Dehradun,Medium,Success,Logout event recorded; status success,No
+EVT00084,EMP0087,2026-10-18 23:45:00,File Upload,Project Management,MacBook,192.168.33.91,Lucknow,Low,Success,File Upload event recorded; status success,No
+EVT00085,EMP0193,2026-10-22 20:00:00,USB Connected,CRM,iPhone,192.168.84.144,Dehradun,Low,Review Required,USB Connected event recorded; status review required,Yes
+EVT00086,EMP0236,2026-10-01 14:30:00,File Upload,Browser,MacBook,192.168.89.121,Noida,Critical,Success,File Upload event recorded; status success,Yes
+EVT00087,EMP0255,2026-10-14 16:15:00,USB Connected,Spreadsheet,iPhone,192.168.69.41,Hyderabad,Low,Success,USB Connected event recorded; status success,No
+EVT00088,EMP0085,2026-10-22 13:20:00,File Download,Database,Linux Workstation,192.168.29.15,Dehradun,Medium,Success,File Download event recorded; status success,No
+EVT00089,EMP0282,2026-10-21 19:30:00,File Access,Project Management,Android Phone,192.168.104.254,Pune,High,Success,File Access event recorded; status success,Yes
+EVT00090,EMP0076,2026-10-14 09:30:00,USB Connected,CRM,Android Phone,192.168.94.170,Lucknow,Low,Success,USB Connected event recorded; status success,No
+EVT00091,EMP0195,2026-10-01 03:45:00,Failed Login,Browser,Office Desktop,192.168.210.135,Mumbai,Critical,Success,Failed Login event recorded; status success,Yes
+EVT00092,EMP0322,2026-10-12 01:20:00,Password Change,CRM,Android Phone,192.168.205.122,Bengaluru,High,Success,Password Change event recorded; status success,Yes
+EVT00093,EMP0085,2026-10-24 07:10:00,Permission Change,Browser,MacBook,192.168.221.99,Bengaluru,Low,Review Required,Permission Change event recorded; status review required,Yes
+EVT00094,EMP0398,2026-10-13 01:15:00,USB Connected,Document Editor,Linux Workstation,192.168.71.217,Noida,Low,Review Required,USB Connected event recorded; status review required,Yes
+EVT00095,EMP0229,2026-10-01 06:15:00,File Access,Database,Linux Workstation,192.168.31.1,Jaipur,Low,Blocked,File Access event recorded; status blocked,Yes
+EVT00096,EMP0289,2026-10-02 21:10:00,Login,Database,iPhone,192.168.22.80,Noida,Medium,Blocked,Login event recorded; status blocked,Yes
+EVT00097,EMP0145,2026-10-23 15:30:00,Password Change,Project Management,Android Phone,192.168.65.32,Roorkee,Medium,Failed,Password Change event recorded; status failed,Yes
+EVT00098,EMP0062,2026-10-26 09:15:00,Network Access,CRM,Office Desktop,192.168.166.196,Jaipur,Info,Review Required,Network Access event recorded; status review required,Yes
+EVT00099,EMP0294,2026-10-14 16:45:00,Password Change,Project Management,Linux Workstation,192.168.35.64,Bengaluru,Low,Success,Password Change event recorded; status success,No
+EVT00100,EMP0143,2026-10-09 08:10:00,File Upload,Database,Linux Workstation,192.168.208.221,Roorkee,High,Success,File Upload event recorded; status success,Yes
+EVT00101,EMP0272,2026-10-26 12:15:00,Login,Document Editor,Android Phone,192.168.39.245,Dehradun,Low,Review Required,Login event recorded; status review required,Yes
+EVT00102,EMP0173,2026-10-08 10:00:00,Network Access,Spreadsheet,Linux Workstation,192.168.191.86,Mumbai,Info,Blocked,Network Access event recorded; status blocked,Yes
+EVT00103,EMP0373,2026-10-05 20:10:00,File Access,CRM,iPhone,192.168.47.169,Dehradun,Medium,Success,File Access event recorded; status success,No
+EVT00104,EMP0018,2026-10-04 20:20:00,Permission Change,Database,Windows Laptop,192.168.88.4,Delhi,Critical,Failed,Permission Change event recorded; status failed,Yes
+EVT00105,EMP0238,2026-10-18 22:15:00,Failed Login,CRM,iPhone,192.168.141.62,Hyderabad,Critical,Success,Failed Login event recorded; status success,Yes
+EVT00106,EMP0255,2026-10-03 03:10:00,File Access,Email,Office Desktop,192.168.133.199,Gurugram,High,Success,File Access event recorded; status success,Yes
+EVT00107,EMP0019,2026-10-02 14:45:00,Permission Change,Browser,iPhone,192.168.145.169,Jaipur,Low,Failed,Permission Change event recorded; status failed,Yes
+EVT00108,EMP0028,2026-10-02 12:00:00,Login,Project Management,Windows Laptop,192.168.249.3,Noida,Low,Success,Login event recorded; status success,No
+EVT00109,EMP0008,2026-10-14 13:20:00,Logout,Email,MacBook,192.168.43.121,Noida,Low,Blocked,Logout event recorded; status blocked,Yes
+EVT00110,EMP0165,2026-10-08 20:00:00,Logout,Database,Linux Workstation,192.168.23.32,Roorkee,Info,Success,Logout event recorded; status success,No
+EVT00111,EMP0196,2026-10-04 20:20:00,Permission Change,CRM,iPhone,192.168.228.95,Mumbai,Medium,Success,Permission Change event recorded; status success,No
+EVT00112,EMP0159,2026-10-24 00:15:00,Permission Change,CRM,MacBook,192.168.90.115,Pune,Info,Blocked,Permission Change event recorded; status blocked,Yes
+EVT00113,EMP0373,2026-10-24 13:15:00,Failed Login,Email,Windows Laptop,192.168.105.165,Hyderabad,Medium,Success,Failed Login event recorded; status success,No
+EVT00114,EMP0210,2026-10-28 20:15:00,File Download,Email,iPhone,192.168.43.199,Dehradun,Info,Success,File Download event recorded; status success,No
+EVT00115,EMP0129,2026-10-13 11:30:00,File Upload,Document Editor,MacBook,192.168.217.127,Mumbai,Low,Blocked,File Upload event recorded; status blocked,Yes
+EVT00116,EMP0214,2026-10-26 04:15:00,Password Change,Email,Office Desktop,192.168.116.198,Roorkee,High,Blocked,Password Change event recorded; status blocked,Yes
+EVT00117,EMP0038,2026-10-24 00:15:00,USB Connected,Code Editor,MacBook,192.168.107.202,Aligarh,Low,Success,USB Connected event recorded; status success,No
+EVT00118,EMP0084,2026-10-20 14:45:00,File Download,CRM,MacBook,192.168.248.131,Gurugram,Low,Failed,File Download event recorded; status failed,Yes
+EVT00119,EMP0131,2026-10-05 04:15:00,Permission Change,CRM,Windows Laptop,192.168.55.133,Dehradun,Low,Review Required,Permission Change event recorded; status review required,Yes
+EVT00120,EMP0215,2026-10-14 21:10:00,Application Launch,Project Management,Android Phone,192.168.68.217,Hyderabad,Low,Failed,Application Launch event recorded; status failed,Yes
+EVT00121,EMP0196,2026-10-07 13:45:00,File Download,Spreadsheet,iPhone,192.168.221.29,Jaipur,Critical,Blocked,File Download event recorded; status blocked,Yes
+EVT00122,EMP0195,2026-10-11 17:15:00,Permission Change,Code Editor,Office Desktop,192.168.120.27,Lucknow,Critical,Success,Permission Change event recorded; status success,Yes
+EVT00123,EMP0052,2026-10-20 15:10:00,File Download,Database,Office Desktop,192.168.173.208,Gurugram,High,Blocked,File Download event recorded; status blocked,Yes
+EVT00124,EMP0370,2026-10-05 16:00:00,Data Export,CRM,Windows Laptop,192.168.177.8,Meerut,Medium,Blocked,Data Export event recorded; status blocked,Yes
+EVT00125,EMP0061,2026-10-24 04:20:00,File Upload,Project Management,MacBook,192.168.156.217,Chandigarh,Info,Failed,File Upload event recorded; status failed,Yes
+EVT00126,EMP0167,2026-10-15 07:00:00,File Upload,CRM,Linux Workstation,192.168.249.49,Lucknow,Critical,Success,File Upload event recorded; status success,Yes
+EVT00127,EMP0152,2026-10-28 15:00:00,USB Connected,Project Management,Windows Laptop,192.168.106.209,Jaipur,Info,Failed,USB Connected event recorded; status failed,Yes
+EVT00128,EMP0207,2026-10-08 19:15:00,Failed Login,Database,iPhone,192.168.44.5,Meerut,Medium,Failed,Failed Login event recorded; status failed,Yes
+EVT00129,EMP0188,2026-10-06 17:00:00,Network Access,Browser,Windows Laptop,192.168.66.195,Noida,High,Success,Network Access event recorded; status success,Yes
+EVT00130,EMP0355,2026-10-19 09:20:00,Network Access,Document Editor,Windows Laptop,192.168.144.157,Dehradun,Critical,Success,Network Access event recorded; status success,Yes
+EVT00131,EMP0362,2026-10-18 11:00:00,Logout,Database,MacBook,192.168.174.44,Bengaluru,High,Failed,Logout event recorded; status failed,Yes
+EVT00132,EMP0159,2026-10-23 16:00:00,Application Launch,Project Management,MacBook,192.168.62.142,Bengaluru,Low,Blocked,Application Launch event recorded; status blocked,Yes
+EVT00133,EMP0083,2026-10-06 08:30:00,Login,Browser,iPhone,192.168.168.77,Haridwar,Critical,Review Required,Login event recorded; status review required,Yes
+EVT00134,EMP0234,2026-10-24 07:15:00,Permission Change,Document Editor,Android Phone,192.168.41.166,Aligarh,Critical,Failed,Permission Change event recorded; status failed,Yes
+EVT00135,EMP0073,2026-10-18 15:30:00,Logout,Email,Office Desktop,192.168.68.62,Haridwar,Info,Blocked,Logout event recorded; status blocked,Yes
+EVT00136,EMP0366,2026-10-09 05:15:00,File Upload,Database,Office Desktop,192.168.98.245,Mumbai,Low,Success,File Upload event recorded; status success,No
+EVT00137,EMP0202,2026-10-09 08:00:00,File Download,Code Editor,Android Phone,192.168.244.147,Haridwar,Info,Success,File Download event recorded; status success,No
+EVT00138,EMP0384,2026-10-16 03:10:00,File Upload,Code Editor,Android Phone,192.168.182.118,Gurugram,Low,Success,File Upload event recorded; status success,No
+EVT00139,EMP0114,2026-10-18 18:30:00,USB Connected,Database,iPhone,192.168.178.234,Gurugram,Info,Success,USB Connected event recorded; status success,No
+EVT00140,EMP0009,2026-10-28 05:45:00,Network Access,Browser,Office Desktop,192.168.151.186,Haridwar,Info,Success,Network Access event recorded; status success,No
+EVT00141,EMP0229,2026-10-01 13:20:00,Application Launch,Document Editor,Android Phone,192.168.250.189,Jaipur,High,Success,Application Launch event recorded; status success,Yes
+EVT00142,EMP0256,2026-10-23 19:00:00,USB Connected,Code Editor,Android Phone,192.168.158.223,Mumbai,Info,Review Required,USB Connected event recorded; status review required,Yes
+EVT00143,EMP0177,2026-10-15 00:20:00,File Download,Spreadsheet,MacBook,192.168.150.66,Jaipur,Critical,Blocked,File Download event recorded; status blocked,Yes
+EVT00144,EMP0012,2026-10-25 16:30:00,Login,Project Management,Office Desktop,192.168.243.49,Chandigarh,High,Success,Login event recorded; status success,Yes
+EVT00145,EMP0063,2026-10-05 09:15:00,Login,Code Editor,MacBook,192.168.77.64,Meerut,High,Review Required,Login event recorded; status review required,Yes
+EVT00146,EMP0282,2026-10-23 10:30:00,Password Change,Document Editor,Windows Laptop,192.168.94.30,Jaipur,High,Blocked,Password Change event recorded; status blocked,Yes
+EVT00147,EMP0023,2026-10-14 20:15:00,Logout,Spreadsheet,Office Desktop,192.168.36.251,Delhi,Low,Success,Logout event recorded; status success,No
+EVT00148,EMP0041,2026-10-27 02:45:00,Failed Login,Project Management,iPhone,192.168.174.72,Meerut,Medium,Success,Failed Login event recorded; status success,No
+EVT00149,EMP0170,2026-10-24 15:10:00,Data Export,Spreadsheet,Office Desktop,192.168.39.5,Lucknow,Critical,Review Required,Data Export event recorded; status review required,Yes
+EVT00150,EMP0342,2026-10-03 18:00:00,Failed Login,Document Editor,iPhone,192.168.254.18,Bengaluru,Low,Success,Failed Login event recorded; status success,No
+EVT00151,EMP0120,2026-10-03 14:15:00,Logout,Code Editor,Office Desktop,192.168.126.67,Chandigarh,Low,Success,Logout event recorded; status success,No
+EVT00152,EMP0354,2026-10-11 18:30:00,Permission Change,Database,Android Phone,192.168.0.156,Lucknow,High,Blocked,Permission Change event recorded; status blocked,Yes
+EVT00153,EMP0146,2026-10-24 21:20:00,Data Export,Project Management,Windows Laptop,192.168.197.117,Mumbai,Info,Blocked,Data Export event recorded; status blocked,Yes
+EVT00154,EMP0243,2026-10-01 21:00:00,File Access,Browser,MacBook,192.168.141.142,Jaipur,Info,Blocked,File Access event recorded; status blocked,Yes
+EVT00155,EMP0372,2026-10-16 23:30:00,Network Access,Database,Android Phone,192.168.231.34,Bengaluru,High,Failed,Network Access event recorded; status failed,Yes
+EVT00156,EMP0399,2026-10-27 12:45:00,File Download,Document Editor,Linux Workstation,192.168.163.36,Jaipur,Info,Success,File Download event recorded; status success,No
+EVT00157,EMP0187,2026-10-19 16:15:00,Network Access,Database,Windows Laptop,192.168.157.20,Delhi,Low,Success,Network Access event recorded; status success,No
+EVT00158,EMP0069,2026-10-15 18:10:00,Application Launch,Browser,Windows Laptop,192.168.244.246,Mumbai,Medium,Success,Application Launch event recorded; status success,No
+EVT00159,EMP0335,2026-10-12 11:45:00,Password Change,Database,Office Desktop,192.168.182.189,Hyderabad,High,Success,Password Change event recorded; status success,Yes
+EVT00160,EMP0073,2026-10-17 14:45:00,Permission Change,Code Editor,MacBook,192.168.202.18,Hyderabad,Critical,Review Required,Permission Change event recorded; status review required,Yes
+EVT00161,EMP0042,2026-10-17 23:10:00,File Access,Email,iPhone,192.168.210.119,Hyderabad,Low,Review Required,File Access event recorded; status review required,Yes
+EVT00162,EMP0209,2026-10-24 16:00:00,Permission Change,Database,Windows Laptop,192.168.11.6,Haridwar,Critical,Failed,Permission Change event recorded; status failed,Yes
+EVT00163,EMP0298,2026-10-27 02:45:00,Network Access,Browser,Android Phone,192.168.237.129,Aligarh,Low,Failed,Network Access event recorded; status failed,Yes
+EVT00164,EMP0085,2026-10-16 12:20:00,Network Access,Database,Windows Laptop,192.168.123.20,Pune,Medium,Success,Network Access event recorded; status success,No
+EVT00165,EMP0351,2026-10-05 04:00:00,Data Export,Code Editor,Office Desktop,192.168.12.4,Aligarh,Low,Success,Data Export event recorded; status success,No
+EVT00166,EMP0211,2026-10-08 19:20:00,Network Access,Spreadsheet,Android Phone,192.168.21.160,Noida,Low,Success,Network Access event recorded; status success,No
+EVT00167,EMP0387,2026-10-03 18:10:00,Network Access,Browser,Windows Laptop,192.168.23.238,Gurugram,Medium,Failed,Network Access event recorded; status failed,Yes
+EVT00168,EMP0348,2026-10-15 22:20:00,Data Export,Project Management,iPhone,192.168.160.156,Jaipur,Info,Success,Data Export event recorded; status success,No
+EVT00169,EMP0207,2026-10-22 05:15:00,Permission Change,Spreadsheet,Office Desktop,192.168.214.158,Jaipur,Low,Success,Permission Change event recorded; status success,No
+EVT00170,EMP0211,2026-10-20 06:15:00,Data Export,Database,iPhone,192.168.209.83,Jaipur,Medium,Failed,Data Export event recorded; status failed,Yes
+EVT00171,EMP0397,2026-10-27 02:30:00,File Download,Email,Linux Workstation,192.168.199.78,Mumbai,Medium,Blocked,File Download event recorded; status blocked,Yes
+EVT00172,EMP0047,2026-10-09 19:20:00,Password Change,CRM,Android Phone,192.168.209.46,Haridwar,Low,Success,Password Change event recorded; status success,No
+EVT00173,EMP0093,2026-10-08 19:30:00,Logout,Spreadsheet,Linux Workstation,192.168.33.53,Delhi,Info,Success,Logout event recorded; status success,No
+EVT00174,EMP0303,2026-10-05 07:00:00,Login,CRM,Android Phone,192.168.235.96,Hyderabad,Low,Success,Login event recorded; status success,No
+EVT00175,EMP0342,2026-10-25 11:00:00,Permission Change,Email,iPhone,192.168.194.182,Haridwar,Critical,Success,Permission Change event recorded; status success,Yes
+EVT00176,EMP0061,2026-10-11 20:10:00,Data Export,Database,iPhone,192.168.119.101,Gurugram,Info,Success,Data Export event recorded; status success,No
+EVT00177,EMP0181,2026-10-05 11:20:00,Password Change,Database,MacBook,192.168.97.44,Jaipur,High,Review Required,Password Change event recorded; status review required,Yes
+EVT00178,EMP0101,2026-10-05 20:15:00,Permission Change,Database,iPhone,192.168.137.126,Lucknow,Medium,Success,Permission Change event recorded; status success,No
+EVT00179,EMP0305,2026-10-16 11:00:00,File Upload,Code Editor,MacBook,192.168.8.191,Bengaluru,Critical,Success,File Upload event recorded; status success,Yes
+EVT00180,EMP0096,2026-10-17 02:45:00,Password Change,Spreadsheet,Windows Laptop,192.168.138.174,Roorkee,Medium,Success,Password Change event recorded; status success,No
+EVT00181,EMP0107,2026-10-09 06:30:00,USB Connected,Code Editor,Linux Workstation,192.168.236.227,Noida,Low,Review Required,USB Connected event recorded; status review required,Yes
+EVT00182,EMP0107,2026-10-10 14:20:00,File Upload,Project Management,MacBook,192.168.200.90,Hyderabad,Medium,Failed,File Upload event recorded; status failed,Yes
+EVT00183,EMP0287,2026-10-22 04:20:00,File Upload,Spreadsheet,Office Desktop,192.168.44.99,Lucknow,Low,Success,File Upload event recorded; status success,No
+EVT00184,EMP0315,2026-10-12 22:10:00,Login,Spreadsheet,MacBook,192.168.249.166,Lucknow,Info,Success,Login event recorded; status success,No
+EVT00185,EMP0205,2026-10-14 06:45:00,Application Launch,Email,Linux Workstation,192.168.166.32,Dehradun,Medium,Success,Application Launch event recorded; status success,No
+EVT00186,EMP0032,2026-10-18 23:20:00,Permission Change,Email,Office Desktop,192.168.159.122,Lucknow,Low,Blocked,Permission Change event recorded; status blocked,Yes
+EVT00187,EMP0159,2026-10-27 22:00:00,File Download,Database,Windows Laptop,192.168.191.244,Meerut,High,Success,File Download event recorded; status success,Yes
+EVT00188,EMP0154,2026-10-02 20:45:00,Application Launch,Spreadsheet,Office Desktop,192.168.28.231,Noida,High,Failed,Application Launch event recorded; status failed,Yes
+EVT00189,EMP0087,2026-10-24 17:15:00,Password Change,Code Editor,iPhone,192.168.158.131,Delhi,Low,Success,Password Change event recorded; status success,No
+EVT00190,EMP0061,2026-10-06 18:45:00,File Access,Email,iPhone,192.168.181.196,Meerut,High,Success,File Access event recorded; status success,Yes
+EVT00191,EMP0320,2026-10-03 03:45:00,Logout,Project Management,Linux Workstation,192.168.45.50,Noida,High,Review Required,Logout event recorded; status review required,Yes
+EVT00192,EMP0202,2026-10-25 19:45:00,Permission Change,Spreadsheet,Android Phone,192.168.204.222,Mumbai,Medium,Failed,Permission Change event recorded; status failed,Yes
+EVT00193,EMP0089,2026-10-24 02:10:00,Logout,Email,iPhone,192.168.15.74,Meerut,High,Success,Logout event recorded; status success,Yes
+EVT00194,EMP0186,2026-10-06 14:30:00,Permission Change,Email,Office Desktop,192.168.81.141,Pune,Low,Success,Permission Change event recorded; status success,No
+EVT00195,EMP0357,2026-10-03 07:00:00,Failed Login,Code Editor,Office Desktop,192.168.238.109,Noida,Low,Blocked,Failed Login event recorded; status blocked,Yes
+EVT00196,EMP0379,2026-10-03 20:15:00,Logout,Browser,iPhone,192.168.206.149,Chandigarh,Info,Blocked,Logout event recorded; status blocked,Yes
+EVT00197,EMP0254,2026-10-18 16:20:00,File Access,CRM,iPhone,192.168.161.109,Gurugram,Low,Failed,File Access event recorded; status failed,Yes
+EVT00198,EMP0262,2026-10-04 05:30:00,File Download,Email,MacBook,192.168.61.192,Noida,Medium,Success,File Download event recorded; status success,No
+EVT00199,EMP0212,2026-10-08 19:45:00,File Download,Project Management,Windows Laptop,192.168.55.106,Mumbai,Low,Success,File Download event recorded; status success,No
+EVT00200,EMP0299,2026-10-24 23:45:00,USB Connected,Document Editor,Office Desktop,192.168.207.61,Gurugram,Medium,Success,USB Connected event recorded; status success,No
+EVT00201,EMP0355,2026-10-03 07:15:00,File Access,Browser,MacBook,192.168.45.181,Pune,Info,Success,File Access event recorded; status success,No
+EVT00202,EMP0324,2026-10-28 23:10:00,Network Access,CRM,MacBook,192.168.154.28,Chandigarh,Medium,Blocked,Network Access event recorded; status blocked,Yes
+EVT00203,EMP0055,2026-10-10 20:15:00,Network Access,Browser,iPhone,192.168.90.173,Gurugram,Critical,Blocked,Network Access event recorded; status blocked,Yes
+EVT00204,EMP0186,2026-10-05 09:15:00,File Upload,Project Management,iPhone,192.168.252.52,Noida,Critical,Success,File Upload event recorded; status success,Yes
+EVT00205,EMP0206,2026-10-21 21:10:00,File Download,Database,Office Desktop,192.168.100.63,Aligarh,Critical,Success,File Download event recorded; status success,Yes
+EVT00206,EMP0009,2026-10-14 03:20:00,Failed Login,CRM,Android Phone,192.168.115.192,Lucknow,Medium,Review Required,Failed Login event recorded; status review required,Yes
+EVT00207,EMP0380,2026-10-21 16:45:00,Password Change,CRM,MacBook,192.168.164.88,Bengaluru,High,Success,Password Change event recorded; status success,Yes
+EVT00208,EMP0103,2026-10-01 05:20:00,Failed Login,Database,Windows Laptop,192.168.186.13,Noida,Medium,Success,Failed Login event recorded; status success,No
+EVT00209,EMP0054,2026-10-17 22:45:00,Application Launch,Email,Office Desktop,192.168.199.201,Gurugram,Critical,Success,Application Launch event recorded; status success,Yes
+EVT00210,EMP0232,2026-10-09 15:00:00,Password Change,Database,Linux Workstation,192.168.162.104,Aligarh,High,Success,Password Change event recorded; status success,Yes
+EVT00211,EMP0162,2026-10-11 17:45:00,Network Access,Code Editor,Office Desktop,192.168.137.116,Mumbai,Critical,Failed,Network Access event recorded; status failed,Yes
+EVT00212,EMP0350,2026-10-26 12:45:00,File Download,Document Editor,iPhone,192.168.150.107,Lucknow,Low,Success,File Download event recorded; status success,No
+EVT00213,EMP0152,2026-10-07 14:10:00,File Download,CRM,MacBook,192.168.185.163,Mumbai,Critical,Blocked,File Download event recorded; status blocked,Yes
+EVT00214,EMP0247,2026-10-17 16:20:00,Network Access,Code Editor,MacBook,192.168.152.27,Roorkee,Low,Blocked,Network Access event recorded; status blocked,Yes
+EVT00215,EMP0368,2026-10-21 15:45:00,Data Export,Email,MacBook,192.168.101.49,Mumbai,Low,Failed,Data Export event recorded; status failed,Yes
+EVT00216,EMP0029,2026-10-02 18:15:00,Data Export,Email,iPhone,192.168.51.78,Noida,Low,Success,Data Export event recorded; status success,No
+EVT00217,EMP0135,2026-10-24 18:15:00,Permission Change,Document Editor,iPhone,192.168.177.211,Gurugram,Low,Success,Permission Change event recorded; status success,No
+EVT00218,EMP0186,2026-10-06 15:00:00,Application Launch,CRM,MacBook,192.168.41.100,Dehradun,Critical,Failed,Application Launch event recorded; status failed,Yes
+EVT00219,EMP0036,2026-10-03 17:10:00,File Download,Project Management,Office Desktop,192.168.196.128,Hyderabad,Info,Review Required,File Download event recorded; status review required,Yes
+EVT00220,EMP0108,2026-10-26 04:20:00,USB Connected,Spreadsheet,Windows Laptop,192.168.235.71,Hyderabad,Critical,Review Required,USB Connected event recorded; status review required,Yes
+EVT00221,EMP0316,2026-10-03 10:15:00,USB Connected,Email,Android Phone,192.168.127.201,Roorkee,Critical,Review Required,USB Connected event recorded; status review required,Yes
+EVT00222,EMP0226,2026-10-22 20:45:00,Application Launch,Project Management,Windows Laptop,192.168.98.29,Noida,Low,Review Required,Application Launch event recorded; status review required,Yes
+EVT00223,EMP0171,2026-10-22 00:10:00,Failed Login,Email,Windows Laptop,192.168.231.109,Gurugram,Info,Success,Failed Login event recorded; status success,No
+EVT00224,EMP0315,2026-10-01 05:20:00,Application Launch,Spreadsheet,Linux Workstation,192.168.17.76,Dehradun,Info,Failed,Application Launch event recorded; status failed,Yes
+EVT00225,EMP0237,2026-10-15 20:45:00,Application Launch,Database,Windows Laptop,192.168.145.159,Noida,High,Success,Application Launch event recorded; status success,Yes
+EVT00226,EMP0030,2026-10-08 17:10:00,Password Change,Spreadsheet,Linux Workstation,192.168.23.43,Noida,Medium,Review Required,Password Change event recorded; status review required,Yes
+EVT00227,EMP0251,2026-10-17 20:20:00,Logout,Code Editor,Linux Workstation,192.168.0.187,Lucknow,High,Success,Logout event recorded; status success,Yes
+EVT00228,EMP0122,2026-10-12 11:15:00,Permission Change,Project Management,iPhone,192.168.123.31,Aligarh,Low,Success,Permission Change event recorded; status success,No
+EVT00229,EMP0129,2026-10-10 01:20:00,Password Change,Document Editor,Office Desktop,192.168.81.119,Bengaluru,Critical,Failed,Password Change event recorded; status failed,Yes
+EVT00230,EMP0099,2026-10-01 21:00:00,File Access,Document Editor,MacBook,192.168.93.224,Haridwar,Low,Failed,File Access event recorded; status failed,Yes
+EVT00231,EMP0278,2026-10-18 19:20:00,Data Export,Browser,iPhone,192.168.225.80,Aligarh,Medium,Success,Data Export event recorded; status success,No
+EVT00232,EMP0347,2026-10-25 08:20:00,File Upload,CRM,Linux Workstation,192.168.103.129,Pune,Critical,Blocked,File Upload event recorded; status blocked,Yes
+EVT00233,EMP0048,2026-10-09 20:30:00,File Access,Spreadsheet,MacBook,192.168.201.1,Roorkee,Low,Failed,File Access event recorded; status failed,Yes
+EVT00234,EMP0270,2026-10-20 14:15:00,Permission Change,Spreadsheet,Android Phone,192.168.129.239,Roorkee,Info,Failed,Permission Change event recorded; status failed,Yes
+EVT00235,EMP0247,2026-10-11 08:10:00,Login,Email,Windows Laptop,192.168.79.180,Bengaluru,Low,Success,Login event recorded; status success,No
+EVT00236,EMP0068,2026-10-22 00:20:00,Application Launch,Document Editor,Android Phone,192.168.155.204,Pune,Info,Success,Application Launch event recorded; status success,No
+EVT00237,EMP0162,2026-10-15 02:30:00,Application Launch,Spreadsheet,Linux Workstation,192.168.14.188,Meerut,Critical,Review Required,Application Launch event recorded; status review required,Yes
+EVT00238,EMP0317,2026-10-23 06:45:00,File Upload,Database,Office Desktop,192.168.115.12,Hyderabad,Info,Review Required,File Upload event recorded; status review required,Yes
+EVT00239,EMP0212,2026-10-27 09:10:00,File Upload,Project Management,Linux Workstation,192.168.245.170,Hyderabad,Low,Blocked,File Upload event recorded; status blocked,Yes
+EVT00240,EMP0272,2026-10-09 14:10:00,USB Connected,Database,Android Phone,192.168.233.118,Gurugram,Low,Failed,USB Connected event recorded; status failed,Yes
+EVT00241,EMP0145,2026-10-19 02:15:00,Logout,Spreadsheet,Linux Workstation,192.168.43.67,Gurugram,High,Success,Logout event recorded; status success,Yes
+EVT00242,EMP0206,2026-10-27 15:00:00,Failed Login,CRM,Office Desktop,192.168.98.25,Pune,Low,Failed,Failed Login event recorded; status failed,Yes
+EVT00243,EMP0022,2026-10-02 19:00:00,Password Change,Document Editor,iPhone,192.168.14.95,Mumbai,Medium,Review Required,Password Change event recorded; status review required,Yes
+EVT00244,EMP0082,2026-10-08 14:10:00,Logout,Database,MacBook,192.168.54.134,Lucknow,Critical,Blocked,Logout event recorded; status blocked,Yes
+EVT00245,EMP0393,2026-10-28 15:20:00,Data Export,Document Editor,Linux Workstation,192.168.153.89,Meerut,Medium,Success,Data Export event recorded; status success,No
+EVT00246,EMP0014,2026-10-15 00:45:00,Data Export,Document Editor,Android Phone,192.168.242.60,Roorkee,Critical,Failed,Data Export event recorded; status failed,Yes
+EVT00247,EMP0192,2026-10-11 10:00:00,Login,Document Editor,Linux Workstation,192.168.2.201,Delhi,Medium,Success,Login event recorded; status success,No
+EVT00248,EMP0302,2026-10-11 00:45:00,File Download,Browser,Android Phone,192.168.155.178,Chandigarh,Low,Success,File Download event recorded; status success,No
+EVT00249,EMP0192,2026-10-06 07:00:00,Application Launch,Database,iPhone,192.168.200.199,Dehradun,High,Success,Application Launch event recorded; status success,Yes
+EVT00250,EMP0271,2026-10-06 11:45:00,File Download,Database,Android Phone,192.168.136.214,Lucknow,Medium,Blocked,File Download event recorded; status blocked,Yes
+EVT00251,EMP0298,2026-10-27 04:00:00,File Download,Document Editor,Android Phone,192.168.139.246,Roorkee,High,Review Required,File Download event recorded; status review required,Yes
+EVT00252,EMP0115,2026-10-28 17:00:00,Network Access,CRM,Android Phone,192.168.41.60,Dehradun,Critical,Review Required,Network Access event recorded; status review required,Yes
+EVT00253,EMP0104,2026-10-13 22:15:00,Application Launch,Database,Office Desktop,192.168.16.53,Chandigarh,Critical,Success,Application Launch event recorded; status success,Yes
+EVT00254,EMP0200,2026-10-09 12:00:00,Permission Change,Document Editor,iPhone,192.168.186.6,Bengaluru,Info,Success,Permission Change event recorded; status success,No
+EVT00255,EMP0185,2026-10-23 15:45:00,Failed Login,Spreadsheet,Windows Laptop,192.168.184.90,Gurugram,Low,Review Required,Failed Login event recorded; status review required,Yes
+EVT00256,EMP0262,2026-10-06 20:10:00,Data Export,CRM,iPhone,192.168.183.42,Meerut,Critical,Success,Data Export event recorded; status success,Yes
+EVT00257,EMP0303,2026-10-17 07:00:00,Failed Login,CRM,iPhone,192.168.60.13,Mumbai,Low,Failed,Failed Login event recorded; status failed,Yes
+EVT00258,EMP0161,2026-10-05 01:00:00,File Upload,Project Management,iPhone,192.168.3.243,Delhi,Medium,Success,File Upload event recorded; status success,No
+EVT00259,EMP0206,2026-10-02 05:15:00,Logout,Email,Android Phone,192.168.139.144,Gurugram,Info,Review Required,Logout event recorded; status review required,Yes
+EVT00260,EMP0150,2026-10-07 03:20:00,File Access,Database,iPhone,192.168.227.173,Lucknow,Critical,Review Required,File Access event recorded; status review required,Yes
+EVT00261,EMP0137,2026-10-19 23:10:00,Data Export,Database,Windows Laptop,192.168.20.34,Pune,Low,Success,Data Export event recorded; status success,No
+EVT00262,EMP0326,2026-10-09 19:20:00,Logout,Spreadsheet,MacBook,192.168.76.17,Roorkee,Low,Review Required,Logout event recorded; status review required,Yes
+EVT00263,EMP0058,2026-10-21 22:30:00,File Access,Browser,Linux Workstation,192.168.161.36,Chandigarh,Medium,Failed,File Access event recorded; status failed,Yes
+EVT00264,EMP0074,2026-10-10 14:45:00,Failed Login,Email,MacBook,192.168.138.235,Dehradun,Info,Review Required,Failed Login event recorded; status review required,Yes
+EVT00265,EMP0002,2026-10-10 18:00:00,File Download,Database,Windows Laptop,192.168.43.2,Delhi,Info,Success,File Download event recorded; status success,No
+EVT00266,EMP0345,2026-10-13 01:20:00,Login,Spreadsheet,MacBook,192.168.107.57,Meerut,Medium,Review Required,Login event recorded; status review required,Yes
+EVT00267,EMP0106,2026-10-15 02:45:00,Data Export,Spreadsheet,Android Phone,192.168.101.56,Hyderabad,Info,Blocked,Data Export event recorded; status blocked,Yes
+EVT00268,EMP0358,2026-10-07 21:30:00,Network Access,CRM,Android Phone,192.168.137.131,Delhi,Low,Blocked,Network Access event recorded; status blocked,Yes
+EVT00269,EMP0348,2026-10-06 03:45:00,Password Change,Code Editor,Office Desktop,192.168.113.27,Pune,Low,Success,Password Change event recorded; status success,No
+EVT00270,EMP0381,2026-10-09 13:30:00,Network Access,Email,MacBook,192.168.92.57,Pune,Info,Review Required,Network Access event recorded; status review required,Yes
+EVT00271,EMP0189,2026-10-09 10:00:00,Failed Login,Spreadsheet,MacBook,192.168.201.128,Pune,Low,Blocked,Failed Login event recorded; status blocked,Yes
+EVT00272,EMP0309,2026-10-21 11:20:00,File Access,Email,Android Phone,192.168.199.254,Noida,Medium,Blocked,File Access event recorded; status blocked,Yes
+EVT00273,EMP0128,2026-10-10 11:45:00,Application Launch,Database,Office Desktop,192.168.149.217,Meerut,Low,Success,Application Launch event recorded; status success,No
+EVT00274,EMP0125,2026-10-18 15:20:00,USB Connected,CRM,Office Desktop,192.168.165.65,Delhi,Medium,Success,USB Connected event recorded; status success,No
+EVT00275,EMP0238,2026-10-01 14:45:00,File Access,CRM,Office Desktop,192.168.132.166,Pune,High,Success,File Access event recorded; status success,Yes
+EVT00276,EMP0254,2026-10-03 09:15:00,File Download,Document Editor,Windows Laptop,192.168.61.138,Noida,Low,Failed,File Download event recorded; status failed,Yes
+EVT00277,EMP0168,2026-10-08 12:30:00,Application Launch,CRM,Office Desktop,192.168.223.136,Aligarh,Info,Blocked,Application Launch event recorded; status blocked,Yes
+EVT00278,EMP0111,2026-10-28 11:00:00,Network Access,CRM,iPhone,192.168.63.116,Roorkee,High,Success,Network Access event recorded; status success,Yes
+EVT00279,EMP0125,2026-10-16 19:30:00,Login,Spreadsheet,Windows Laptop,192.168.79.153,Lucknow,Medium,Review Required,Login event recorded; status review required,Yes
+EVT00280,EMP0398,2026-10-03 10:30:00,USB Connected,Code Editor,Windows Laptop,192.168.231.8,Lucknow,High,Blocked,USB Connected event recorded; status blocked,Yes
+EVT00281,EMP0360,2026-10-01 09:20:00,Network Access,Code Editor,Office Desktop,192.168.71.18,Chandigarh,Low,Failed,Network Access event recorded; status failed,Yes
+EVT00282,EMP0279,2026-10-15 09:15:00,File Download,Project Management,Android Phone,192.168.72.99,Lucknow,Medium,Review Required,File Download event recorded; status review required,Yes
+EVT00283,EMP0137,2026-10-16 09:15:00,File Download,CRM,MacBook,192.168.82.104,Dehradun,Medium,Failed,File Download event recorded; status failed,Yes
+EVT00284,EMP0230,2026-10-23 04:20:00,Permission Change,Document Editor,iPhone,192.168.82.210,Dehradun,Low,Review Required,Permission Change event recorded; status review required,Yes
+EVT00285,EMP0321,2026-10-22 14:20:00,File Access,Database,iPhone,192.168.20.63,Lucknow,Low,Success,File Access event recorded; status success,No
+EVT00286,EMP0365,2026-10-04 04:00:00,USB Connected,Email,Android Phone,192.168.183.65,Dehradun,Low,Success,USB Connected event recorded; status success,No
+EVT00287,EMP0240,2026-10-12 08:00:00,File Download,Spreadsheet,MacBook,192.168.58.146,Pune,Low,Blocked,File Download event recorded; status blocked,Yes
+EVT00288,EMP0243,2026-10-16 12:15:00,Permission Change,Browser,MacBook,192.168.115.50,Gurugram,Info,Review Required,Permission Change event recorded; status review required,Yes
+EVT00289,EMP0221,2026-10-09 10:30:00,File Download,Document Editor,Office Desktop,192.168.18.118,Bengaluru,Medium,Success,File Download event recorded; status success,No
+EVT00290,EMP0122,2026-10-11 12:20:00,File Download,Browser,MacBook,192.168.249.174,Gurugram,Medium,Failed,File Download event recorded; status failed,Yes
+EVT00291,EMP0399,2026-10-10 04:00:00,Logout,CRM,iPhone,192.168.29.11,Lucknow,Medium,Review Required,Logout event recorded; status review required,Yes
+EVT00292,EMP0282,2026-10-13 19:10:00,Password Change,Code Editor,Android Phone,192.168.2.160,Gurugram,Medium,Review Required,Password Change event recorded; status review required,Yes
+EVT00293,EMP0218,2026-10-06 11:10:00,Password Change,Document Editor,Android Phone,192.168.169.183,Chandigarh,Medium,Failed,Password Change event recorded; status failed,Yes
+EVT00294,EMP0044,2026-10-02 08:10:00,File Download,Code Editor,Android Phone,192.168.170.89,Chandigarh,Info,Failed,File Download event recorded; status failed,Yes
+EVT00295,EMP0270,2026-10-07 18:20:00,Failed Login,CRM,Android Phone,192.168.82.94,Mumbai,Medium,Failed,Failed Login event recorded; status failed,Yes
+EVT00296,EMP0077,2026-10-03 11:00:00,Login,Project Management,iPhone,192.168.145.186,Lucknow,Low,Review Required,Login event recorded; status review required,Yes
+EVT00297,EMP0248,2026-10-24 06:15:00,Login,Project Management,iPhone,192.168.209.51,Aligarh,Medium,Success,Login event recorded; status success,No
+EVT00298,EMP0354,2026-10-02 01:20:00,Network Access,Document Editor,Office Desktop,192.168.139.44,Dehradun,Info,Review Required,Network Access event recorded; status review required,Yes
+EVT00299,EMP0161,2026-10-11 09:00:00,Password Change,Browser,Office Desktop,192.168.144.84,Roorkee,Low,Failed,Password Change event recorded; status failed,Yes
+EVT00300,EMP0038,2026-10-28 16:30:00,USB Connected,Spreadsheet,MacBook,192.168.126.102,Hyderabad,Low,Success,USB Connected event recorded; status success,No
+EVT00301,EMP0292,2026-10-14 23:15:00,File Download,Project Management,iPhone,192.168.32.150,Haridwar,High,Success,File Download event recorded; status success,Yes
+EVT00302,EMP0101,2026-10-15 00:30:00,File Upload,Code Editor,iPhone,192.168.192.181,Hyderabad,Info,Success,File Upload event recorded; status success,No
+EVT00303,EMP0009,2026-10-01 21:15:00,Data Export,Browser,Office Desktop,192.168.210.236,Jaipur,Info,Failed,Data Export event recorded; status failed,Yes
+EVT00304,EMP0384,2026-10-23 04:20:00,Data Export,Database,MacBook,192.168.143.153,Dehradun,Medium,Blocked,Data Export event recorded; status blocked,Yes
+EVT00305,EMP0195,2026-10-22 22:20:00,Network Access,Code Editor,iPhone,192.168.13.113,Aligarh,High,Success,Network Access event recorded; status success,Yes
+EVT00306,EMP0096,2026-10-02 08:20:00,Application Launch,Code Editor,Office Desktop,192.168.157.199,Pune,High,Success,Application Launch event recorded; status success,Yes
+EVT00307,EMP0064,2026-10-08 12:10:00,Permission Change,Code Editor,MacBook,192.168.78.113,Jaipur,Low,Success,Permission Change event recorded; status success,No
+EVT00308,EMP0329,2026-10-24 20:10:00,Password Change,Project Management,MacBook,192.168.25.88,Meerut,Medium,Success,Password Change event recorded; status success,No
+EVT00309,EMP0212,2026-10-12 09:45:00,Permission Change,Document Editor,MacBook,192.168.11.155,Aligarh,Medium,Success,Permission Change event recorded; status success,No
+EVT00310,EMP0149,2026-10-12 01:10:00,Permission Change,Spreadsheet,iPhone,192.168.18.158,Mumbai,Medium,Success,Permission Change event recorded; status success,No
+EVT00311,EMP0230,2026-10-14 04:00:00,Password Change,Document Editor,Linux Workstation,192.168.14.150,Aligarh,Info,Review Required,Password Change event recorded; status review required,Yes
+EVT00312,EMP0245,2026-10-13 01:20:00,Network Access,Database,iPhone,192.168.64.156,Noida,Low,Failed,Network Access event recorded; status failed,Yes
+EVT00313,EMP0325,2026-10-19 00:15:00,Application Launch,Spreadsheet,Linux Workstation,192.168.11.125,Chandigarh,High,Blocked,Application Launch event recorded; status blocked,Yes
+EVT00314,EMP0284,2026-10-16 19:45:00,File Access,CRM,Windows Laptop,192.168.116.40,Meerut,High,Failed,File Access event recorded; status failed,Yes
+EVT00315,EMP0120,2026-10-27 04:20:00,Failed Login,Project Management,iPhone,192.168.232.236,Delhi,High,Failed,Failed Login event recorded; status failed,Yes
+EVT00316,EMP0134,2026-10-24 03:10:00,Failed Login,Code Editor,Android Phone,192.168.119.169,Hyderabad,Low,Review Required,Failed Login event recorded; status review required,Yes
+EVT00317,EMP0201,2026-10-09 16:45:00,File Download,Document Editor,Linux Workstation,192.168.109.71,Aligarh,Medium,Success,File Download event recorded; status success,No
+EVT00318,EMP0179,2026-10-17 12:00:00,USB Connected,Code Editor,Android Phone,192.168.210.198,Dehradun,High,Review Required,USB Connected event recorded; status review required,Yes
+EVT00319,EMP0049,2026-10-19 13:20:00,Password Change,Database,Linux Workstation,192.168.8.184,Noida,Low,Success,Password Change event recorded; status success,No
+EVT00320,EMP0022,2026-10-12 09:20:00,Application Launch,Browser,MacBook,192.168.235.252,Dehradun,Info,Failed,Application Launch event recorded; status failed,Yes
+EVT00321,EMP0379,2026-10-16 11:10:00,Failed Login,Browser,Windows Laptop,192.168.51.148,Dehradun,Low,Failed,Failed Login event recorded; status failed,Yes
+EVT00322,EMP0051,2026-10-22 14:15:00,Logout,Spreadsheet,Linux Workstation,192.168.117.111,Haridwar,Info,Review Required,Logout event recorded; status review required,Yes
+EVT00323,EMP0307,2026-10-09 15:15:00,Network Access,Database,Office Desktop,192.168.171.136,Bengaluru,Low,Blocked,Network Access event recorded; status blocked,Yes
+EVT00324,EMP0255,2026-10-15 07:45:00,USB Connected,Project Management,Windows Laptop,192.168.129.198,Noida,High,Blocked,USB Connected event recorded; status blocked,Yes
+EVT00325,EMP0273,2026-10-16 05:10:00,Data Export,Browser,Android Phone,192.168.129.21,Lucknow,Low,Failed,Data Export event recorded; status failed,Yes
+EVT00326,EMP0385,2026-10-15 02:20:00,Password Change,Database,Windows Laptop,192.168.207.82,Gurugram,High,Review Required,Password Change event recorded; status review required,Yes
+EVT00327,EMP0161,2026-10-21 09:30:00,USB Connected,Project Management,Linux Workstation,192.168.121.175,Lucknow,Info,Success,USB Connected event recorded; status success,No
+EVT00328,EMP0128,2026-10-28 05:00:00,Network Access,Project Management,Office Desktop,192.168.77.146,Chandigarh,Low,Blocked,Network Access event recorded; status blocked,Yes
+EVT00329,EMP0185,2026-10-14 23:30:00,Data Export,Spreadsheet,Office Desktop,192.168.252.16,Bengaluru,Critical,Success,Data Export event recorded; status success,Yes
+EVT00330,EMP0239,2026-10-08 00:10:00,Login,Document Editor,Android Phone,192.168.140.243,Gurugram,High,Success,Login event recorded; status success,Yes
+EVT00331,EMP0368,2026-10-12 21:10:00,File Upload,Browser,MacBook,192.168.74.250,Mumbai,Critical,Failed,File Upload event recorded; status failed,Yes
+EVT00332,EMP0171,2026-10-17 14:15:00,Login,CRM,Office Desktop,192.168.1.161,Jaipur,Critical,Blocked,Login event recorded; status blocked,Yes
+EVT00333,EMP0113,2026-10-23 06:30:00,USB Connected,Email,iPhone,192.168.129.81,Lucknow,High,Success,USB Connected event recorded; status success,Yes
+EVT00334,EMP0117,2026-10-07 22:20:00,Login,Document Editor,MacBook,192.168.191.13,Chandigarh,Info,Review Required,Login event recorded; status review required,Yes
+EVT00335,EMP0088,2026-10-16 02:30:00,File Access,CRM,MacBook,192.168.232.215,Mumbai,High,Blocked,File Access event recorded; status blocked,Yes
+EVT00336,EMP0078,2026-10-14 06:00:00,File Download,Database,iPhone,192.168.170.92,Meerut,High,Success,File Download event recorded; status success,Yes
+EVT00337,EMP0134,2026-10-23 02:10:00,Application Launch,Database,Office Desktop,192.168.143.178,Pune,Low,Success,Application Launch event recorded; status success,No
+EVT00338,EMP0095,2026-10-19 16:00:00,Data Export,Email,MacBook,192.168.139.240,Mumbai,Medium,Success,Data Export event recorded; status success,No
+EVT00339,EMP0154,2026-10-15 07:10:00,USB Connected,Browser,MacBook,192.168.169.93,Aligarh,Low,Success,USB Connected event recorded; status success,No
+EVT00340,EMP0080,2026-10-10 18:20:00,Application Launch,Project Management,Office Desktop,192.168.173.105,Mumbai,Critical,Success,Application Launch event recorded; status success,Yes
+EVT00341,EMP0057,2026-10-24 17:45:00,Password Change,Document Editor,Windows Laptop,192.168.248.32,Delhi,Low,Review Required,Password Change event recorded; status review required,Yes
+EVT00342,EMP0178,2026-10-24 07:00:00,Failed Login,Browser,iPhone,192.168.162.84,Jaipur,Low,Success,Failed Login event recorded; status success,No
+EVT00343,EMP0154,2026-10-04 04:10:00,File Access,Email,MacBook,192.168.178.73,Haridwar,Medium,Success,File Access event recorded; status success,No
+EVT00344,EMP0362,2026-10-01 21:30:00,File Upload,Database,iPhone,192.168.123.134,Delhi,Low,Success,File Upload event recorded; status success,No
+EVT00345,EMP0181,2026-10-26 12:45:00,File Upload,Database,Android Phone,192.168.172.145,Aligarh,High,Success,File Upload event recorded; status success,Yes
+EVT00346,EMP0091,2026-10-16 16:45:00,File Access,CRM,iPhone,192.168.118.231,Haridwar,Critical,Review Required,File Access event recorded; status review required,Yes
+EVT00347,EMP0167,2026-10-10 11:10:00,Logout,CRM,Android Phone,192.168.124.88,Noida,Low,Review Required,Logout event recorded; status review required,Yes
+EVT00348,EMP0195,2026-10-01 14:30:00,File Download,Database,Office Desktop,192.168.38.215,Meerut,High,Failed,File Download event recorded; status failed,Yes
+EVT00349,EMP0324,2026-10-13 03:15:00,File Access,Email,Office Desktop,192.168.239.48,Mumbai,Info,Success,File Access event recorded; status success,No
+EVT00350,EMP0046,2026-10-04 03:20:00,Login,Document Editor,Linux Workstation,192.168.101.188,Noida,Info,Success,Login event recorded; status success,No
+EVT00351,EMP0213,2026-10-11 01:30:00,USB Connected,Document Editor,Office Desktop,192.168.121.173,Pune,Info,Review Required,USB Connected event recorded; status review required,Yes
+EVT00352,EMP0258,2026-10-17 06:20:00,File Access,Code Editor,Windows Laptop,192.168.2.62,Chandigarh,Critical,Success,File Access event recorded; status success,Yes
+EVT00353,EMP0253,2026-10-01 21:30:00,Logout,Email,Android Phone,192.168.32.142,Delhi,Critical,Success,Logout event recorded; status success,Yes
+EVT00354,EMP0282,2026-10-04 07:15:00,Password Change,CRM,Office Desktop,192.168.78.219,Aligarh,Info,Success,Password Change event recorded; status success,No
+EVT00355,EMP0175,2026-10-25 18:45:00,Permission Change,CRM,Linux Workstation,192.168.56.30,Jaipur,Low,Success,Permission Change event recorded; status success,No
+EVT00356,EMP0336,2026-10-18 09:30:00,File Access,Project Management,Windows Laptop,192.168.5.11,Lucknow,Low,Success,File Access event recorded; status success,No
+EVT00357,EMP0090,2026-10-07 02:20:00,Network Access,Code Editor,MacBook,192.168.85.136,Jaipur,Info,Failed,Network Access event recorded; status failed,Yes
+EVT00358,EMP0039,2026-10-23 02:00:00,Permission Change,CRM,Office Desktop,192.168.38.146,Hyderabad,Info,Success,Permission Change event recorded; status success,No
+EVT00359,EMP0236,2026-10-14 13:00:00,File Access,Document Editor,iPhone,192.168.188.113,Noida,Medium,Blocked,File Access event recorded; status blocked,Yes
+EVT00360,EMP0022,2026-10-10 02:45:00,File Access,Browser,Linux Workstation,192.168.75.3,Roorkee,Low,Success,File Access event recorded; status success,No
+EVT00361,EMP0330,2026-10-03 08:15:00,Data Export,Spreadsheet,Linux Workstation,192.168.228.222,Roorkee,Info,Success,Data Export event recorded; status success,No
+EVT00362,EMP0304,2026-10-06 05:45:00,Application Launch,CRM,Linux Workstation,192.168.234.150,Meerut,Critical,Success,Application Launch event recorded; status success,Yes
+EVT00363,EMP0194,2026-10-12 09:30:00,Application Launch,Document Editor,Android Phone,192.168.161.232,Meerut,Low,Success,Application Launch event recorded; status success,No
+EVT00364,EMP0241,2026-10-12 02:45:00,Permission Change,Email,iPhone,192.168.195.212,Dehradun,Critical,Success,Permission Change event recorded; status success,Yes
+EVT00365,EMP0041,2026-10-17 11:15:00,File Upload,Document Editor,Linux Workstation,192.168.55.190,Chandigarh,High,Review Required,File Upload event recorded; status review required,Yes
+EVT00366,EMP0002,2026-10-02 10:15:00,Logout,CRM,MacBook,192.168.231.197,Roorkee,Info,Success,Logout event recorded; status success,No
+EVT00367,EMP0041,2026-10-03 03:00:00,Password Change,Email,MacBook,192.168.207.22,Mumbai,Info,Failed,Password Change event recorded; status failed,Yes
+EVT00368,EMP0369,2026-10-07 03:20:00,Network Access,Code Editor,Linux Workstation,192.168.145.35,Pune,Critical,Success,Network Access event recorded; status success,Yes
+EVT00369,EMP0215,2026-10-26 07:15:00,Network Access,Project Management,Android Phone,192.168.34.241,Meerut,High,Failed,Network Access event recorded; status failed,Yes
+EVT00370,EMP0331,2026-10-16 22:15:00,File Download,Code Editor,iPhone,192.168.15.147,Delhi,High,Success,File Download event recorded; status success,Yes
+EVT00371,EMP0394,2026-10-18 01:10:00,Permission Change,Project Management,Android Phone,192.168.245.126,Meerut,Critical,Failed,Permission Change event recorded; status failed,Yes
+EVT00372,EMP0357,2026-10-26 20:00:00,File Access,Document Editor,MacBook,192.168.150.172,Hyderabad,Medium,Review Required,File Access event recorded; status review required,Yes
+EVT00373,EMP0184,2026-10-25 02:00:00,Password Change,Document Editor,MacBook,192.168.246.50,Delhi,Info,Review Required,Password Change event recorded; status review required,Yes
+EVT00374,EMP0397,2026-10-06 07:10:00,Login,Browser,Linux Workstation,192.168.99.64,Hyderabad,Medium,Success,Login event recorded; status success,No
+EVT00375,EMP0245,2026-10-17 00:00:00,Data Export,CRM,Android Phone,192.168.159.25,Chandigarh,Low,Blocked,Data Export event recorded; status blocked,Yes
+EVT00376,EMP0083,2026-10-06 22:45:00,USB Connected,Database,iPhone,192.168.23.240,Chandigarh,High,Blocked,USB Connected event recorded; status blocked,Yes
+EVT00377,EMP0307,2026-10-04 11:20:00,Login,Document Editor,iPhone,192.168.148.223,Pune,Low,Success,Login event recorded; status success,No
+EVT00378,EMP0301,2026-10-19 19:45:00,File Download,Browser,iPhone,192.168.40.53,Delhi,Critical,Failed,File Download event recorded; status failed,Yes
+EVT00379,EMP0178,2026-10-14 09:20:00,Password Change,Email,Linux Workstation,192.168.231.100,Mumbai,Info,Success,Password Change event recorded; status success,No
+EVT00380,EMP0365,2026-10-13 19:45:00,File Access,Code Editor,MacBook,192.168.84.235,Haridwar,Critical,Success,File Access event recorded; status success,Yes
+EVT00381,EMP0309,2026-10-06 20:00:00,Logout,CRM,Linux Workstation,192.168.170.111,Haridwar,Low,Success,Logout event recorded; status success,No
+EVT00382,EMP0206,2026-10-03 20:10:00,Failed Login,Project Management,iPhone,192.168.32.101,Meerut,Low,Success,Failed Login event recorded; status success,No
+EVT00383,EMP0162,2026-10-23 13:30:00,Permission Change,CRM,iPhone,192.168.176.113,Chandigarh,Low,Review Required,Permission Change event recorded; status review required,Yes
+EVT00384,EMP0257,2026-10-02 20:30:00,Network Access,Code Editor,Windows Laptop,192.168.3.105,Pune,Medium,Success,Network Access event recorded; status success,No
+EVT00385,EMP0048,2026-10-09 11:45:00,Permission Change,Spreadsheet,Windows Laptop,192.168.155.242,Hyderabad,Low,Blocked,Permission Change event recorded; status blocked,Yes
+EVT00386,EMP0315,2026-10-10 00:20:00,Permission Change,Document Editor,Office Desktop,192.168.41.26,Delhi,Low,Blocked,Permission Change event recorded; status blocked,Yes
+EVT00387,EMP0045,2026-10-02 10:10:00,Login,Project Management,Linux Workstation,192.168.36.142,Lucknow,Low,Success,Login event recorded; status success,No
+EVT00388,EMP0400,2026-10-11 17:20:00,Network Access,Spreadsheet,iPhone,192.168.255.167,Pune,Low,Success,Network Access event recorded; status success,No
+EVT00389,EMP0281,2026-10-27 01:20:00,Password Change,Document Editor,Android Phone,192.168.148.11,Delhi,Low,Blocked,Password Change event recorded; status blocked,Yes
+EVT00390,EMP0324,2026-10-20 06:00:00,Password Change,Project Management,Office Desktop,192.168.117.119,Noida,Medium,Review Required,Password Change event recorded; status review required,Yes
+EVT00391,EMP0139,2026-10-25 06:30:00,Network Access,Spreadsheet,Windows Laptop,192.168.179.27,Pune,Low,Blocked,Network Access event recorded; status blocked,Yes
+EVT00392,EMP0062,2026-10-22 21:20:00,Network Access,Project Management,iPhone,192.168.100.47,Aligarh,Info,Success,Network Access event recorded; status success,No
+EVT00393,EMP0127,2026-10-14 06:45:00,Network Access,Project Management,MacBook,192.168.223.134,Aligarh,Critical,Success,Network Access event recorded; status success,Yes
+EVT00394,EMP0072,2026-10-16 12:10:00,File Access,CRM,MacBook,192.168.202.126,Meerut,Medium,Success,File Access event recorded; status success,No
+EVT00395,EMP0046,2026-10-02 19:10:00,Application Launch,Email,Windows Laptop,192.168.79.111,Delhi,High,Success,Application Launch event recorded; status success,Yes
+EVT00396,EMP0041,2026-10-25 18:15:00,USB Connected,Code Editor,Linux Workstation,192.168.97.92,Roorkee,Info,Success,USB Connected event recorded; status success,No
+EVT00397,EMP0262,2026-10-26 02:30:00,Data Export,Email,iPhone,192.168.72.229,Mumbai,Medium,Success,Data Export event recorded; status success,No
+EVT00398,EMP0189,2026-10-06 03:15:00,Data Export,Browser,MacBook,192.168.134.103,Aligarh,Medium,Review Required,Data Export event recorded; status review required,Yes
+EVT00399,EMP0325,2026-10-13 01:00:00,File Upload,Spreadsheet,Android Phone,192.168.107.153,Hyderabad,Low,Success,File Upload event recorded; status success,No
+EVT00400,EMP0240,2026-10-12 02:10:00,Password Change,Project Management,Android Phone,192.168.242.32,Aligarh,Low,Blocked,Password Change event recorded; status blocked,Yes

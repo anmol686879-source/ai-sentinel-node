@@ -1,0 +1,16 @@
+const {test,before,after}=require('node:test'),assert=require('node:assert'),{spawn}=require('child_process'),path=require('path'),os=require('os'),fs=require('fs');
+const dir=fs.mkdtempSync(path.join(os.tmpdir(),'sent-')),PORT=3200+Math.floor(Math.random()*500),B=`http://localhost:${PORT}/api`;
+let srv;const start=async()=>{srv=spawn('node',['--no-warnings','server.js'],{cwd:path.join(__dirname,'..'),env:{...process.env,PORT,DB_FILE:path.join(dir,'t.db'),SIMULATE:'0',NODE_ENV:'test'},stdio:'ignore'});
+ for(let i=0;i<40;i++){try{if((await fetch(B+'/health')).ok)return}catch(e){}await new Promise(r=>setTimeout(r,250))}throw new Error('server did not start')};
+const stop=()=>new Promise(r=>{srv.once('exit',r);srv.kill('SIGTERM')});
+const call=(p,m='GET',b,t)=>fetch(B+p,{method:m,headers:{'Content-Type':'application/json',...(t?{Authorization:'Bearer '+t}:{})},body:b?JSON.stringify(b):undefined}).then(async r=>({s:r.status,j:await r.json()}));
+let tok;before(start);after(async()=>{await stop();fs.rmSync(dir,{recursive:true,force:true})});
+test('health',async()=>{assert.equal((await call('/health')).j.ok,true)});
+test('login rejects bad password, accepts good',async()=>{assert.equal((await call('/login','POST',{username:'admin',password:'x'})).s,401);const r=await call('/login','POST',{username:'admin',password:'sentinel123'});assert.equal(r.s,200);tok=r.j.token});
+test('API needs a token',async()=>{assert.equal((await call('/bootstrap')).s,401);assert.equal((await call('/sv/mv/records')).s,401)});
+test('bootstrap returns alerts and employees',async()=>{const r=await call('/bootstrap','GET',null,tok);assert.ok(r.j.alerts.length>0);assert.ok(Object.keys(r.j.emp).length>=400)});
+test('message + loan datasets are seeded (400 each)',async()=>{for(const k of['mv','dv'])assert.equal((await call(`/sv/${k}/records`,'GET',null,tok)).j.rows.length,400)});
+test('import keeps valid rows and skips invalid ones',async()=>{const r=await call('/sv/mv/import','POST',{rows:[{messagetext:'hello http://a.xyz',label:'Suspicious'},{messagetext:'',label:'x'}]},tok);assert.deepEqual([r.j.added,r.j.skipped],[1,1])});
+test('data survives a restart, sessions persist',async()=>{await call('/settings','PUT',{email:true,auto:true,thr:66,mask:false},tok);await new Promise(r=>setTimeout(r,600));await stop();await start();
+ const r=await call('/bootstrap','GET',null,tok);assert.equal(r.s,200);assert.equal(r.j.settings.thr,66);assert.equal((await call('/sv/mv/records','GET',null,tok)).j.rows.length,401)});
+test('logout invalidates the token',async()=>{await call('/logout','POST',{},tok);assert.equal((await call('/bootstrap','GET',null,tok)).s,401)});

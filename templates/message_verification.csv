@@ -1,0 +1,1 @@
+CheckID,Timestamp,Channel,ClaimedBank,Sender,MessageText,EmailAuthenticationHeader,ContainsURL,URLDomain,RequestsOTP,RequestsPIN,RequestsPayment,Label,RiskScore_0_100,Reason,DataType
