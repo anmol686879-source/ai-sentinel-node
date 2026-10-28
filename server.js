@@ -27,8 +27,8 @@ const q=s=>'"'+s+'"',RAW={},HEAD={},saved={},dirty=new Set();
 for(const k of Object.keys(IDK)){
  HEAD[k]=csvHead(k+'.csv');const cols=HEAD[k];
  await db.exec(`CREATE TABLE IF NOT EXISTS ds_${k}(${cols.map(c=>q(c)+' TEXT'+(c==IDK[k]?' PRIMARY KEY':'')).join(',')})`);
- const count=(await db.get(`SELECT COUNT(*) AS n FROM ds_${k}`)).n;
- if(count)RAW[k]=(await db.all(`SELECT ${cols.map(q).join(',')} FROM ds_${k} ORDER BY ${q(IDK[k])}`)).map(r=>({...r}));
+ const count=Number((await db.get(`SELECT COUNT(*) AS n FROM ds_${k}`)).n);
+ if(count>0)RAW[k]=(await db.all(`SELECT ${cols.map(q).join(',')} FROM ds_${k} ORDER BY ${q(IDK[k])}`)).map(r=>({...r}));
  else if(DEMO){RAW[k]=csvObjs(k+'.csv');dirty.add(k)}
  else RAW[k]=[];
  saved[k]=0}
